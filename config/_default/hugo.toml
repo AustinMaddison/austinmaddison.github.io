@@ -2,6 +2,50 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Austin Maddison'
 
+[params]
+  author_name = 'Austin J. Maddison'
+  author_name_th = 'ออสติน เจตัริน เมดดิสัน'
+
+  [[params.links]]
+    title = 'Github'
+    href = 'https://github.com/AustinMaddison'
+    
+  [[params.links]]
+    title = 'YouTube'
+    href = 'https://github.com/AustinMaddison'
+
+
+  [[params.links]]
+    title = 'Behance'
+    href = 'https://github.com/AustinMaddison'
+
+  [[params.links]]
+    title = 'RSS'
+    href = 'https://github.com/AustinMaddison'
+
+  [[params.links]]
+    title = '@'
+    href = 'mailto:austin.mad.th@gmail.com'
+
+[menus]
+[[menus.main]]
+    name = 'Overview'
+    pageRef = '/'
+    weight = 10
+[[menus.main]]
+    name = 'Articles'
+    pageRef = '/articles'
+    weight = 20
+[[menus.main]]
+    name = 'Projects'
+    pageRef = '/projects'
+    weight = 30
+[[menus.main]]
+    name = 'Notes'
+    pageRef = '/notes'
+    weight = 40
+
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

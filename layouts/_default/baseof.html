@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{.Title}}</title>
-    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
-    {{ with .Site.Params.author.name }}<meta name="author" content="{{ . }}">{{ end }}
+    
     <link rel="stylesheet" href="{{"/dist/output.css" | relURL }}">
     {{ with .OutputFormats.Get "RSS" -}}
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
-    {{- end }}
+    {{ end }}
 </head>
 <body class="bg-zinc-950 overscroll-none">
-    {{ block "main" .}}{{ end }}
+    <div class="flex-row flex justify-center gap-2 mt-16">
+        {{ block "main" .}}{{ end }}
+    </div>
 </body>
 </html>

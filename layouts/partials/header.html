@@ -1,17 +1,32 @@
 <div class="">
     <div class="mb-5">
-        <h1 class="text-zinc-50 font-medium text-md">
-            AUSTIN MADDISON
+        <h1 class="font-medium text-md">
+            {{ .Site.Params.author_name }}
+        </h1>
+        <h1 class="font-sans-thai font-normal text-sm">
+            {{ .Site.Params.author_name_th }}
         </h1>
     </div>
 
-    <div class="container my-5">
+    <div class="container">
         {{ with .Site.GetPage "/about" }}
-        <p class="text-zinc-50 text-justify text-sm ">
-            {{ .Content  | safeHTML }}
-        </p>
+        <about>
+            {{ .Content }}
+        </about>
+        {{ end }}
+    </div>
+
+    <div class="container mt-4 flex justify-between">
+
+        {{ range .Site.Params.links }}
+        <span class="">
+            <a target="_blank" href="{{ .href }}" class=" text-sm text-zinc-400 hover:underline underline-offset-2 cursor-pointer transition-all ">
+                {{ .title }}
+            </a>
+        </span>
         {{ end }}
     </div>
 
 
 </div>
+

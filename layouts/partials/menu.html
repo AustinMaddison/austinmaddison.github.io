@@ -1,10 +1,16 @@
+{{ define "menu" }}    
 <div>
-    <ul>
+
+    {{ range site.Menus.main }}
+    {{ $active := $.IsMenuCurrent .Menu . }}
+
+    <ul class="my-5">
         <li>
-            <a href="" class="text-zinc-50">
-                Overview
+            <a href="{{ .URL }}" class="itemfont-medium {{ if not $active }} text-zinc-400 {{ end }} hover:text-zinc-50 transition-all">
+                {{ .Name }}
             </a>
         </li>
-    </ul>
 
+    {{ end }}
 </div>
+{{ end }}    

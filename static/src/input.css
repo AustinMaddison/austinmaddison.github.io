@@ -1,8 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+p, h1, h2, h3, h4, h5, h6, a {
+    @apply text-zinc-50 ;
+}
+
+about p {
+        @apply text-zinc-50 ;
+        @apply text-sm ;
+        @apply mb-2;
+}
+
+
 @layer base {
+    
+    @font-face {
+        font-family: 'HelveticaNeueLTStd';
+        font-style: normal;
+        font-weight: 100;
+        font-display: swap;
+        src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-UltLt.otf) format('opentype');
+        }
     @font-face {
         font-family: 'HelveticaNeueLTStd';
         font-style: normal;
@@ -129,9 +151,6 @@
             font-display: swap;
             src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-XBlkIt.otf) format('opentype');
             }
-
-
-
   }
 
 

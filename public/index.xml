@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Austin Maddison</title>
+    <title>Overview on Austin Maddison</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Austin Maddison</description>
+    <description>Recent content in Overview on Austin Maddison</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>about</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>Computer Science student at MUIC.&#xA;Interested in computer graphics, art, design, software developmnet and lemon ice tea.</description>
-    </item>
-    <item>
-      <title>Post Title</title>
-      <link>http://localhost:1313/test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/test/</guid>
-      <description>Heading 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer risus est, viverra ut vehicula quis, tempus ac diam. Cras orci leo, condimentum quis nibh ac, interdum viverra tortor. Maecenas malesuada, nibh vel porta ultricies, eros nunc blandit tortor, vitae varius magna mauris eget diam. Aliquam non elit facilisis, sodales lectus nec, posuere enim. Suspendisse potenti. Aliquam erat volutpat. Nunc dignissim, enim sit amet pharetra venenatis, ligula augue luctus nisi, eu blandit nunc ante eget eros.</description>
+      <description>Likes to finger paint with maths and computers.&#xA;Lemon ice tea addict.&#xA;Computer Science undergrad at MUIC.</description>
     </item>
   </channel>
 </rss>

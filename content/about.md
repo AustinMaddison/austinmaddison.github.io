@@ -1,8 +1,12 @@
 ---
 title: "about"
 draft: "false"
----
-Computer Science student at MUIC. 
+---  
+Likes to finger paint with maths and computers.  
+Lemon ice tea addict.  
 
-Interested in computer graphics, art, design, software developmnet and lemon ice tea.  
+Computer Science undergrad at MUIC.
+
+<!-- Interested in computer graphics, design and tooling. -->
+
 

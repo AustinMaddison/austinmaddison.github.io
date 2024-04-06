@@ -7,7 +7,8 @@ module.exports = {
         "1": 1,
       },
       fontFamily: {
-        sans: ['HelveticaNeueLTStd', 'sans-serif'],
+        'sans': ['HelveticaNeueLTStd',  'sans-serif'],
+        'sans-thai': ["Noto Sans Thai", 'sans-serif']
       },
     },
   },
