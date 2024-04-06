@@ -1,5 +1,7 @@
-{{define "main"}}
 
+{{define "posts"}}
+{{range .posts}}
+{{$}}
 <div class="grid grid-cols-3 ">
     <div class="basis-1/4 gap-10 border-solid border-1 border-white ">
     <div class=" bg-black">
@@ -7,8 +9,6 @@
         <p class="text-2sm text-white ">{{.Content | htmlEscape}}</p>
     </div>
     </div>
-
 </div>
-
-
+{{end}}
 {{end}}
