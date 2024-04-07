@@ -1,7 +1,7 @@
 ---
 title: "Projects"
 layout: "projects"
-menu:
+menus:
     main:
         weight: -60
 ---

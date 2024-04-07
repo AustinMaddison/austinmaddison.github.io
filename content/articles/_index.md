@@ -1,7 +1,7 @@
 ---
 title: "Articles"
 layout: "articles"
-menu:
+menus:
     main:
         weight: -80
 ---

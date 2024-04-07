@@ -1,6 +1,6 @@
 ---
 title: "Overview"
-menu:
+menus:
     main:
         weight: -100
 ---

@@ -10,7 +10,7 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
     {{ end }}
 </head>
-<body class="bg-zinc-950 overscroll-none">
+<body class="bg-zinc-950">
     <div class="flex-row flex justify-center gap-2 mt-16">
         {{ block "main" .}}{{ end }}
     </div>

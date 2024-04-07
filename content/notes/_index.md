@@ -1,7 +1,7 @@
 ---
 title: "Notes"
 layout: "notes"
-menu:
+menus:
     main:
         weight: -70
 ---
