@@ -1,4 +1,13 @@
-<aside class="sticky w-80 flex flex-col">
+<aside class=" sticky mt-16 md:my-0 sm:mx-0 md:mx-0 md:ml-10 top-0 md:h-screen md:py-16 md:min-w-64 md:max-w-64 flex flex-col z-0">
     {{ partial "header" . }}
+    
+    <hr class="mt-7 mb-2 border-zinc-500">
+    <div class=" hidden md:block lg:block overflow-auto scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-800 flex-grow">
     {{ block "menu" . }}{{end}}
+    </div>
+
+    <p  class="hidden md:block lg:block text-xs text-zinc-600 cursor-default pt-4">
+        © 2024 All rights reserved.
+    <p>
+    
 </aside>

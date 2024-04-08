@@ -1,27 +1,43 @@
-<div class="">
-    <div class="mb-5">
-        <h1 class="font-medium text-md">
-            {{ .Site.Params.author_name }}
-        </h1>
-        <h1 class="font-sans-thai font-normal text-sm">
-            {{ .Site.Params.author_name_th }}
-        </h1>
+<div class="ml-10 md:ml-0">
+
+    <div class=" mb-3 flex gap-2 max-w-64 min-w-64">
+        <div>
+            <div class="w-14 h-fit">
+                {{ with resources.Get .Site.Params.author_img }}
+                <img src="{{ .RelPermalink }}" class="object-cover w-full h-16" alt="profile image">
+                {{ end }}
+            </div>
+
+        <div></div>
+
+        </div>
+
+
+        <div>
+            <h1 class=" text-zinc-50 font-semibold text-xl cursor-default leading-6">
+                {{ .Site.Params.author_name }}
+            </h1>
+            <h1 class=" text-zinc-50 font-sans-thai font-normal text-sm cursor-default">
+                {{ .Site.Params.author_name_th }}
+            </h1>
+        </div>
+
     </div>
 
     <div class="container">
-        {{ with .Site.GetPage "/about" }}
-        <about>
+        {{ with .Site.GetPage "/header_text" }}
+        <header_text>
             {{ .Content }}
-        </about>
+        </header_text>
         {{ end }}
     </div>
 
-    <div class="container mt-4 flex justify-between">
+    <div class="max-w-56 md:max-w-full container mt-2 flex justify-between tracking-wide  ">
 
         {{ range .Site.Params.links }}
         <span class="">
-            <a target="_blank" href="{{ .href }}" class=" text-sm text-zinc-400 hover:underline underline-offset-2 cursor-pointer transition-all ">
-                {{ .title }}
+            <a target="_blank" href="{{ .href }}" class=" font-normal text-xs text-zinc-400 hover:underline underline-offset-2 cursor-pointer transition-all ">
+               {{ .title }}
             </a>
         </span>
         {{ end }}

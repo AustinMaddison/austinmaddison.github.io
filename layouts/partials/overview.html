@@ -1,2 +1,44 @@
+<div class="md:flex">
+
 {{ partial "sidebar.html" . }}
+
+{{/*  gap bewtween side-bar and main-content  */}}
+<div class="w-12"></div>
+
+<main class="flex-col ">
+    
+    
+    <div class="hidden md:block h-16"></div>
+
+    <div class=" bg-zinc-950 z-10 relative px-10 container overflow-auto flex-grow scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-800 ">
+        
+
+        {{/*  Rich Text Compnenet  */}}
+        <div class=" mt-6 md:mt-0 richtext container mx-auto transition-all">
+            {{ with .Site.GetPage "overview/about" }}
+
+            <div class="mb-5">
+                <t1> 
+                    {{.Title | markdownify }} 
+                </t1>
+            </div>
+       
+            <div class="flex flex-wrap">
+                <div class="flex-1 max-w-28 hidden lg:block">
+                </div>
+                <div class="flex-1 max-w-screen-md">
+                    {{ .Content }}
+                </div>
+
+            </div>
+            {{ end }}
+        </div>
+    
+    </div>
+
+    <div class="md:h-16 "></div>
+
+</main>
+
+</div>
 

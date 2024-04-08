@@ -1,13 +1,13 @@
 {{ define "menu" }}    
-<div>
+<div class="">
 
     {{ range site.Menus.main }}
     {{ $active := $.IsMenuCurrent .Menu . }}
 
     <ul class="my-5">
         <li>
-            <a href="{{ .URL }}" class="itemfont-medium {{ if not $active }} text-zinc-400 {{ end }} hover:text-zinc-50 transition-all">
-                {{ .Name }}
+            <a href="{{ .URL }}" class="font-medium {{ if not $active }} text-zinc-400 {{ end }} hover:text-zinc-50 transition-all">
+                {{ .Name | upper }}
             </a>
         </li>
 
