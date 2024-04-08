@@ -5,19 +5,88 @@
 @tailwind components;
 @tailwind utilities;
 
-p, h1, h2, h3, h4, h5, h6, a {
-    @apply text-zinc-50 ;
+
+@layer components {
+
+        .richtext t1 {
+                @apply transition-all;
+                @apply text-xl md:text-xl lg:text-2xl 
+
+        }
+
+        .richtext p { 
+                @apply transition-all;
+                @apply leading-relaxed;
+                @apply text-sm hyphens-auto md:text-base lg:text-lg lg:hyphens-none;
+        }
+
+        .richtext p { 
+                @apply transition-all;
+                @apply text-sm hyphens-auto md:text-base lg:text-lg lg:hyphens-none;
+                @apply mb-6
+        }
+
+
+        .richtext h1 {
+
+        }
+
+        .richtext h2 {
+
+        }
+
+        .richtext h3 {
+
+        }
+
+        .richtext h4 {
+
+        }
+
+        .richtext h5 {
+
+        }
+        
+        .richtext h5 {
+
+        }
+/* 
+        .richtext figcaption {
+
+        }
+
+        .richtext quoteblock {
+
+        } */
+
 }
 
-about p {
-        @apply text-zinc-50 ;
-        @apply text-sm ;
-        @apply mb-2;
+
+::-webkit-scrollbar {
+        width: 10px;
+    }
+     
+    /* Track */
+    ::-webkit-scrollbar-track {
+        @apply bg-zinc-800;
+    }
+     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        @apply bg-zinc-600;
+    }
+     
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-zinc-300;
+
 }
 
 
 @layer base {
-    
+        html {
+                @apply text-zinc-50;
+        } 
     @font-face {
         font-family: 'HelveticaNeueLTStd';
         font-style: normal;
