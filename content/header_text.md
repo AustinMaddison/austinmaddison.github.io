@@ -8,7 +8,7 @@ draft: "false"
 
 <div class="text-zinc-50 transition-all cursor-default text-sm"> <span class="font-sans-thai text-base">ชาเมะนาว</span> addict.</div>
 <div class="text-zinc-50 transition-all cursor-default text-xs"> 
-<span href="" class="text-zinc-400 hover:underline cursor-pointer text-xs italic">🔗 an austin certified recipe</span>
+<span href="" class="text-zinc-400 hover:underline cursor-pointer text-xs italic">🔗 a recipe by yours truly</span>
 </div>
 
 

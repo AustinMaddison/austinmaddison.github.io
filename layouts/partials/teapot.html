@@ -1,0 +1,116 @@
+{{ with resources.Get "model/teapot.glb" }}
+{{ $model := .RelPermalink }}
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+    const container = document.getElementById('canvas-container');
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(30, container.clientWidth / container.clientHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    container.appendChild(renderer.domElement);
+
+    const surfaceMaterial = new THREE.MeshStandardMaterial({
+        color: 0xffffff,
+        metalness: 0.2, 
+        roughness: 0.6, 
+        
+    });
+
+    const wireframeMaterial = new THREE.MeshBasicMaterial({
+        color: 0x292929,
+        wireframe: true, 
+    });
+
+    let mesh;
+    const loader = new THREE.GLTFLoader();
+    loader.load('{{ $model }}', (gltf) => {
+        console.log('loading model');
+        mesh = gltf.scene;
+
+        mesh.traverse((child) => {
+            if (child.isMesh) {
+
+                child.material = surfaceMaterial;
+                child.castShadow = false;
+                child.receiveShadow = false;
+            }
+        });
+
+        scene.add(mesh);
+        let position = {x: 0, y: -20, z: 0}
+        let scale = {x: 0.5, y: 0.5, z: 0.5}
+        mesh.position.set(position.x, position.y, position.z);
+        mesh.scale.set(scale.x, scale.y, scale.z);
+
+
+    }, (xhr) => {
+        console.log(`loading ${xhr.loaded / xhr.total * 100}%`);
+    }, (error) => {
+        console.error(error);
+    });
+
+
+    let wireframeMesh;
+    loader.load('{{ $model }}', (gltf) => {
+        console.log('loading model');
+        wireframeMesh = gltf.scene;
+
+        wireframeMesh.traverse((child) => {
+            if (child.isMesh) {
+
+                child.material = wireframeMaterial;
+                child.castShadow = false;
+                child.receiveShadow = false;
+            }
+        });
+
+        scene.add(wireframeMesh);
+        let position = {x: 0, y: -20, z: 0}
+        let scale = {x: 0.5, y: 0.5, z: 0.5}
+        wireframeMesh.position.set(position.x, position.y, position.z);
+        wireframeMesh.scale.set(scale.x, scale.y, scale.z);
+
+
+    }, (xhr) => {
+        console.log(`loading ${xhr.loaded / xhr.total * 100}%`);
+    }, (error) => {
+        console.error(error);
+    });
+
+    let light = new THREE.DirectionalLight(0xffffff, .8);
+    let backlight = new THREE.DirectionalLight(0xffffff, 4);
+    light.position.set(0, 5, 5);
+    backlight.position.set(0, 5, -10);
+    scene.add(backlight);
+    scene.add(light);
+    scene.add(new THREE.AmbientLight(0x404040));
+
+    function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+
+    window.addEventListener('resize', onWindowResize);
+
+
+    {{/*  camera.position.z = 5;  */}}
+
+    camera.position.set(0, 0, 100);
+
+
+    const animate = function () {
+        requestAnimationFrame(animate);
+        mesh.rotation.y += 0.01;
+        wireframeMesh.rotation.y += 0.01;
+        renderer.render(scene, camera);
+    };
+
+    animate();
+</script>
+
+{{ end }}

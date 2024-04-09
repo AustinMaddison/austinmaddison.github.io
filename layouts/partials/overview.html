@@ -10,45 +10,26 @@
     
     <div class="hidden md:block h-16"></div>
 
-    <div class=" bg-zinc-950 z-10 relative mx-10  overflow-auto flex-grow scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-800 ">
+    <div class=" bg-zinc-950 md:bg-transparent z-10 relative px-10  overflow-auto flex-grow scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-800 ">
+        
+        {{ block "site_bg_mobile" . }} {{ end }}
+
         <hr class="visible md:invisible border-zinc-500">
 
         {{/*  Rich Text Compnenet  */}}
-        <div class="richtext mt-6 md:mt-0   mx-auto transition-all">
-            {{ with .Site.GetPage "overview/about" }}
-            <div class="mb-5">
-                <t1> 
-                    {{.Title | markdownify }} 
-                </t1>
-            </div>
-            <div class="flex flex-wrap">
-                <div class="flex-1 max-w-28 hidden lg:block">
-                </div>
-                <div class="flex-1 max-w-screen-md">
-                    {{ .Content }}
-                </div>
-            </div>
-            {{ end }}
+        {{ with .Site.GetPage "overview/about" }}
+        {{ block "markdown_body" . }} {{ end }}
+        {{ end }}
+
+        <div id="canvas-container">
+            {{ partial "teapot.html" .}}
         </div>
 
-        <div class="h-16"></div>
 
-        <div class="richtext mt-6 md:mt-0   mx-auto transition-all">
-            {{ with .Site.GetPage "overview/about" }}
-            <div class="mb-5">
-                <t1> 
-                    {{.Title | markdownify }} 
-                </t1>
-            </div>
-            <div class="flex flex-wrap">
-                <div class="flex-1 max-w-28 hidden lg:block">
-                </div>
-                <div class="flex-1 max-w-screen-md">
-                    {{ .Content }}
-                </div>
-            </div>
-            {{ end }}
-        </div>
+        {{ with .Site.GetPage "test" }}
+        {{ block "markdown_body" .  }} {{ end }}
+        {{ end }}
+
     
     
     </div>

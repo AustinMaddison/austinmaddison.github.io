@@ -7,6 +7,7 @@ title = 'Austin Maddison'
   author_name_th = 'ออสติน เจตัริน เมดดิสัน'
   author_img = "img/profile.png"
   site_icon = "img/icon.png"
+  site_bg = "img/bg-abberation.png"
 
   [[params.links]]
     title = 'Github'

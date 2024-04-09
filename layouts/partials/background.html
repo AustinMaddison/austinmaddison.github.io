@@ -1,0 +1,17 @@
+{{ define "site_bg" }}
+
+<div class="relative overflow-hidden">
+    <div class="site-bg">
+        {{ with resources.Get .Site.Params.site_bg }}
+        <img src="{{ .RelPermalink }}" alt class="bg-image" decoding="async" />
+        {{ end }}
+      </div>
+      
+</div>
+
+
+{{ with resources.Get "js/parralax_bg.js" }}
+<script src="{{ .RelPermalink }}"></script>
+{{ end }}
+
+{{ end }}

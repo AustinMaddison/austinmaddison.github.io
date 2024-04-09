@@ -17,7 +17,7 @@
 		},
 		{
 			"type": "shell",
-			"command": "hugo server -D --disableFastRender --watch",
+			"command": "hugo server -D --disableFastRender --watch --port=2540",
 			"problemMatcher": [],
 			"label": "hugo: Serve draft site",
 			"presentation": {
@@ -31,7 +31,7 @@
 		},
 		{
 			"type": "shell",
-			"command": "hugo server --disableFastRender --watch",
+			"command": "hugo server --disableFastRender --watch --port=2540",
 			"problemMatcher": [
 			],
 			"label": "hugo: Serve site",
