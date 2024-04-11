@@ -31,3 +31,5 @@ title = 'Austin Maddison'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+  [markup.tableOfContents]
+    startLevel = 1  # Include <h1> headings
