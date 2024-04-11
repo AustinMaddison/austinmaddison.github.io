@@ -82,21 +82,15 @@
         .markdown-body h4,
         .markdown-body h5,
         .markdown-body h6 {
-                margin-top: 24px;
-                margin-bottom: 16px;
-                font-weight: 600;
-                line-height: 1.25;
+                @apply first:mt-0 mt-[24px] mb-[16px] font-medium leading-normal;
         }
 
         .markdown-body h1 {
-                @apply mb-4 mt-5 font-medium text-3xl pb-1.5 border-b-1 border-zinc-700;
+                @apply mb-4 mt-5 font-medium text-3xl pb-1.5 border-b-1 border-zinc-50 border-opacity-20;
         }
 
         .markdown-body h2 {
-                font-weight: 600;
-                padding-bottom: .3em;
-                font-size: 1.5em;
-                border-bottom: 1px solid #21262d;
+                @apply mb-4 mt-5 font-medium text-2xl pb-1.5 border-b-1 border-zinc-50 border-opacity-20;
         }
         
         .markdown-body h3 {
@@ -126,10 +120,7 @@
         }
         
         .markdown-body blockquote {
-        margin: 0;
-        padding: 0 1em;
-        color: #848d97;
-        border-left: .25em solid #30363d;
+                @apply m-0 px-[1em] text-zinc-50 text-opacity-60 border-l-[0.3em] border-zinc-50 border-opacity-50;
         }
         
         .markdown-body ul,
@@ -214,15 +205,9 @@
         }
         
         .markdown-body hr {
-        box-sizing: content-box;
-        overflow: hidden;
-        background: transparent;
-        border-bottom: 1px solid #21262d;
-        height: .25em;
-        padding: 0;
-        margin: 24px 0;
-        background-color: #30363d;
-        border: 0;
+
+                @apply border-zinc-50 border-opacity-25 my-[1rem];
+
         }
         
         .markdown-body input {
@@ -548,14 +533,36 @@
         .markdown-body li>p {
         margin-top: 16px;
         }
+
         
         .markdown-body li+li {
         margin-top: .25em;
         }
+
+        .markdown-body ul {
+        list-style-type: disc; /* Filled bullet points for unordered lists */
+        }
         
+        .markdown-body ol {
+        list-style-type: decimal; /* Numbers for ordered lists */
+        }
+        
+        .markdown-body ul ul,
+        .markdown-body ol ul {
+        list-style-type: circle; /* Hollow circle for second level unordered lists */
+        }
+        
+        .markdown-body ul ul ul,
+        .markdown-body ol ul ul {
+        list-style-type: square; /* Square for third level unordered lists */
+        }
+
         .markdown-body dl {
         padding: 0;
         }
+
+
+        
         
         .markdown-body dl dt {
         padding: 0;
@@ -1136,8 +1143,8 @@
 
 
 ::selection {
-        @apply text-zinc-50;
-        @apply bg-zinc-600;
+        /* @apply text-zinc-50; */
+        @apply bg-zinc-50 bg-opacity-[15%];
       }
 
 ::-webkit-scrollbar {
