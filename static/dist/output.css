@@ -818,6 +818,7 @@ html{
 
 html, body {
   overscroll-behavior: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -855,8 +856,6 @@ body {
 #TableOfContents ul>li{
   margin-top: 0.25rem;
   letter-spacing: 0.025em;
-  --tw-text-opacity: 1;
-  color: rgb(161 161 170 / var(--tw-text-opacity));
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -866,9 +865,28 @@ body {
   margin-top: 0.5rem;
 }
 
-#TableOfContents ul>li:hover{
+#TableOfContents ul>li>a{
+  scroll-behavior: smooth;
+  --tw-text-opacity: 1;
+  color: rgb(161 161 170 / var(--tw-text-opacity));
+}
+
+#TableOfContents ul>li>a:hover{
   --tw-text-opacity: 1;
   color: rgb(228 228 231 / var(--tw-text-opacity));
+}
+
+#TableOfContents ul>li>.active{
+  --tw-text-opacity: 1;
+  color: rgb(228 228 231 / var(--tw-text-opacity));
+}
+
+#TableOfContents li li{
+  margin-left: 1rem;
+}
+
+#TableOfContents li li:first-child{
+  margin-top: 0.25rem;
 }
 
 .markdown-body{
@@ -951,9 +969,10 @@ body {
 
 .markdown-body a:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+  background-color: rgb(228 228 231 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(9 9 11 / var(--tw-text-opacity));
+  text-underline-offset: 8px;
 }
 
 /* .markdown-body abbr[title] {
@@ -977,8 +996,8 @@ body {
         .markdown-body h4,
         .markdown-body h5,
         .markdown-body h6{
-  margin-top: 24px;
-  margin-bottom: 16px;
+  margin-top: 2.5rem;
+  margin-bottom: 15px;
   font-weight: 500;
   line-height: 1.5;
 }
@@ -993,51 +1012,67 @@ body {
 }
 
 .markdown-body h1{
-  margin-bottom: 1rem;
-  margin-top: 1.25rem;
-  border-bottom-width: 1px;
-  border-color: rgb(250 250 250 / var(--tw-border-opacity));
-  --tw-border-opacity: 0.2;
-  padding-bottom: 0.375rem;
+  margin-bottom: 0.75rem;
+  margin-top: 2.5rem;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 500;
-}
-
-.markdown-body h2{
-  margin-bottom: 1rem;
-  margin-top: 1.25rem;
   border-bottom-width: 1px;
   border-color: rgb(250 250 250 / var(--tw-border-opacity));
   --tw-border-opacity: 0.2;
   padding-bottom: 0.375rem;
+}
+
+.markdown-body h2{
+  margin-bottom: 0.75rem;
+  margin-top: 2.5rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 500;
+  border-bottom-width: 1px;
+  border-color: rgb(250 250 250 / var(--tw-border-opacity));
+  --tw-border-opacity: 0.2;
+  padding-bottom: 0.375rem;
 }
 
-.markdown-body h3 {
+.markdown-body h3{
+  margin-bottom: 0.75rem;
+  margin-top: 2.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+
+.markdown-body h4{
+  margin-bottom: 0.75rem;
+  margin-top: 2.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+
+.markdown-body h5{
+  margin-bottom: 0.75rem;
+  margin-top: 2.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 600;
-  font-size: 1.25em;
 }
 
-.markdown-body h4 {
+.markdown-body h6{
+  margin-bottom: 0.75rem;
+  margin-top: 2.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 600;
-  font-size: 1em;
 }
 
-.markdown-body h5 {
-  font-weight: 600;
-  font-size: .875em;
-}
-
-.markdown-body h6 {
-  font-weight: 600;
-  font-size: .85em;
-  color: #848d97;
-}
-
-.markdown-body p {
+.markdown-body p{
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  line-height: 1.625;
+  letter-spacing: 0.025em;
   margin-top: 0;
   margin-bottom: 10px;
 }
@@ -2434,6 +2469,10 @@ body {
   color: rgb(82 82 91 / var(--tw-text-opacity));
 }
 
+.text-opacity-100{
+  --tw-text-opacity: 1;
+}
+
 .underline-offset-2{
   text-underline-offset: 2px;
 }
@@ -2491,6 +2530,12 @@ body {
 
 .hover\:underline:hover{
   text-decoration-line: underline;
+}
+
+@media (max-width: 1200px){
+  .max-\[1200px\]\:hidden{
+    display: none;
+  }
 }
 
 @media (min-width: 640px){
@@ -2588,6 +2633,10 @@ body {
     flex-direction: row;
   }
 
+  .md\:flex-col{
+    flex-direction: column;
+  }
+
   .md\:bg-transparent{
     background-color: transparent;
   }
@@ -2603,8 +2652,16 @@ body {
     display: block;
   }
 
+  .lg\:flex{
+    display: flex;
+  }
+
   .lg\:h-\[300px\]{
     height: 300px;
+  }
+
+  .lg\:justify-center{
+    justify-content: center;
   }
 }
 
