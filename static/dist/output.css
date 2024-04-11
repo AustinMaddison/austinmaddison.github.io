@@ -468,18 +468,6 @@ html{
 @font-face {
   font-family: 'HelveticaNeueLTStd';
 
-  font-style: normal;
-
-  font-weight: 100;
-
-  font-display: swap;
-
-  src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-UltLt.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNeueLTStd';
-
   font-style: italic;
 
   font-weight: 100;
@@ -498,7 +486,7 @@ html{
 
   font-display: swap;
 
-  src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Lt.otf) format('opentype');
+  src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Th.otf) format('opentype');
 }
 
 @font-face {
@@ -510,7 +498,7 @@ html{
 
   font-display: swap;
 
-  src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-LtIt.otf) format('opentype');
+  src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-ThIt.otf) format('opentype');
 }
 
 @font-face {
@@ -522,7 +510,7 @@ html{
 
   font-display: swap;
 
-  src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Th.otf) format('opentype');
+  src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Lt.otf) format('opentype');
 }
 
 @font-face {
@@ -534,7 +522,7 @@ html{
 
   font-display: swap;
 
-  src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-ThIt.otf) format('opentype');
+  src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-LtIt.otf) format('opentype');
 }
 
 @font-face {
@@ -864,6 +852,25 @@ body {
   overflow: hidden;
 }
 
+#TableOfContents ul>li{
+  margin-top: 0.25rem;
+  letter-spacing: 0.025em;
+  --tw-text-opacity: 1;
+  color: rgb(161 161 170 / var(--tw-text-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+#TableOfContents ul>li:first-child{
+  margin-top: 0.5rem;
+}
+
+#TableOfContents ul>li:hover{
+  --tw-text-opacity: 1;
+  color: rgb(228 228 231 / var(--tw-text-opacity));
+}
+
 .markdown-body{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1037,7 +1044,7 @@ body {
 
 .markdown-body blockquote{
   margin: 0px;
-  border-left-width: 0.3em;
+  border-left-width: 0.2em;
   border-color: rgb(250 250 250 / var(--tw-border-opacity));
   --tw-border-opacity: 0.5;
   padding-left: 1em;
@@ -2207,10 +2214,6 @@ body {
   height: 4rem;
 }
 
-.h-72{
-  height: 18rem;
-}
-
 .h-\[250px\]{
   height: 250px;
 }
@@ -2290,10 +2293,6 @@ body {
           user-select: none;
 }
 
-.resize{
-  resize: both;
-}
-
 .flex-col{
   flex-direction: column;
 }
@@ -2328,10 +2327,6 @@ body {
 
 .overscroll-none{
   overscroll-behavior: none;
-}
-
-.border{
-  border-width: 1px;
 }
 
 .border-zinc-500{
@@ -2394,10 +2389,6 @@ body {
   font-weight: 600;
 }
 
-.uppercase{
-  text-transform: uppercase;
-}
-
 .italic{
   font-style: italic;
 }
@@ -2419,6 +2410,15 @@ body {
   letter-spacing: 0.025em;
 }
 
+.tracking-wider{
+  letter-spacing: 0.05em;
+}
+
+.text-zinc-200{
+  --tw-text-opacity: 1;
+  color: rgb(228 228 231 / var(--tw-text-opacity));
+}
+
 .text-zinc-400{
   --tw-text-opacity: 1;
   color: rgb(161 161 170 / var(--tw-text-opacity));
@@ -2432,10 +2432,6 @@ body {
 .text-zinc-600{
   --tw-text-opacity: 1;
   color: rgb(82 82 91 / var(--tw-text-opacity));
-}
-
-.underline{
-  text-decoration-line: underline;
 }
 
 .underline-offset-2{
@@ -2539,6 +2535,10 @@ body {
     margin-left: 2.5rem;
   }
 
+  .md\:mr-10{
+    margin-right: 2.5rem;
+  }
+
   .md\:mt-0{
     margin-top: 0px;
   }
@@ -2569,6 +2569,11 @@ body {
 
   .md\:min-w-64{
     min-width: 16rem;
+  }
+
+  .md\:min-w-fit{
+    min-width: -moz-fit-content;
+    min-width: fit-content;
   }
 
   .md\:max-w-64{

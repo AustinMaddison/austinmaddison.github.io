@@ -32,6 +32,10 @@
                 overflow: hidden;
         }
 
+        #TableOfContents ul>li {
+               @apply  transition-all mt-1 first:mt-2 text-zinc-400 hover:text-zinc-200 tracking-wide
+        }
+
         .markdown-body { 
                 @apply transition-all;
                 @apply text-zinc-200 text-sm break-before-auto hyphens-auto md:text-base lg:text-lg lg:hyphens-none;
@@ -120,7 +124,7 @@
         }
         
         .markdown-body blockquote {
-                @apply m-0 px-[1em] text-zinc-50 text-opacity-60 border-l-[0.3em] border-zinc-50 border-opacity-50;
+                @apply m-0 px-[1em] text-zinc-50 text-opacity-60 border-l-[0.2em] border-zinc-50 border-opacity-50;
         }
         
         .markdown-body ul,
@@ -1181,13 +1185,6 @@
         src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-UltLt.otf) format('opentype');
         }
     @font-face {
-        font-family: 'HelveticaNeueLTStd';
-        font-style: normal;
-        font-weight: 100;
-        font-display: swap;
-        src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-UltLt.otf) format('opentype');
-        }
-    @font-face {
             font-family: 'HelveticaNeueLTStd';
             font-style: italic;
             font-weight: 100;
@@ -1199,28 +1196,28 @@
             font-style: normal;
             font-weight: 200;
             font-display: swap;
-            src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Lt.otf) format('opentype');
+                src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Th.otf) format('opentype');
             }
     @font-face {
             font-family: 'HelveticaNeueLTStd';
             font-style: italic;
             font-weight: 200;
             font-display: swap;
-            src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-LtIt.otf) format('opentype');
+                src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-ThIt.otf) format('opentype');
             }
     @font-face {
             font-family: 'HelveticaNeueLTStd';
             font-style: normal;
             font-weight: 300;
             font-display: swap;
-            src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Th.otf) format('opentype');
+                src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Lt.otf) format('opentype');
             }
     @font-face {
             font-family: 'HelveticaNeueLTStd';
             font-style: italic;
             font-weight: 300;
             font-display: swap;
-            src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-ThIt.otf) format('opentype');
+        src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-LtIt.otf) format('opentype');
             }
     @font-face {
             font-family: 'HelveticaNeueLTStd';

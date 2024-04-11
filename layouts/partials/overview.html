@@ -1,3 +1,6 @@
+{{ $markdown_page := .Site.GetPage "about" }}
+
+
 <div class="md:flex">
 
 {{ partial "sidebar.html" . }}
@@ -9,6 +12,7 @@
     
     <div class="hidden md:block h-16"></div>
 
+
     <div class="bg-zinc-950 md:bg-transparent z-10 relative px-10  overflow-auto flex-grow scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-800 ">
         
         {{ block "site_bg_mobile" . }} {{ end }}
@@ -16,9 +20,7 @@
         <hr id="canvas-container-width-target" class="visible md:invisible border-zinc-500">
 
         {{/*  Rich Text Compnenet  */}}
-        {{ with .Site.GetPage "about" }}
-        {{ block "markdown_body" . }} {{ end }}
-        {{ end }}
+        {{ block "markdown_body" $markdown_page }} {{ end }}
         
 
     </div>
@@ -26,6 +28,14 @@
     <div class="md:h-16 "></div>
 
 </main>
+
+<div class="w-12"></div>
+
+
+{{ with $markdown_page }}
+{{ partial "toc_sidebar.html" . }}
+{{ end }}
+
 
 </div>
 

@@ -21,7 +21,7 @@ On this site, I discuss **graphics and shader programming, technical art**, and 
 
 ---
 
-Other things that I like doing outside of computers and art is cooking, binging albums, horror games, a hike in nature and <span class="font-sans-thai tracking-tight">ชามะนาว</span>. 
+Other things that I like doing outside of computers and art is cooking, binging albums, horror games, a hike in nature and sipping on ice cold <span class="font-sans-thai tracking-tight">ชามะนาว</span>. 
 
 > This site is currently under active construction, so please excuse any hiccups and barrenness you may encounter. 
 
@@ -35,7 +35,7 @@ Your mommmmmmmmmmmmmmmmmmm hahahahhaahhahahhah
 
 ## Projects
 
-## How does this site work ?
+## How does this site work?
 - [HUGO](https://gohugo.io)  
 static site generator, markdown as content format, powerful HTML templating, very fast build times.
 
