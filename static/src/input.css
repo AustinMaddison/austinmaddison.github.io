@@ -8,21 +8,15 @@
 @layer components {
 
         #canvas-container {
-                width: 100%; /* Or any other specific width */
-                height: 300px; /* Or any other specific height */
-        }
-
-        canvas {
-                max-width: 100%; /* Ensure canvas doesn't exceed container width */
-                max-height: 100%; /* Ensure canvas doesn't exceed container height */
-        }
+                height: 300px;
+                overflow: hidden; 
+         }
 
         html, body {
                 overscroll-behavior: none;
         }
 
-        body
-        {
+        body {
                 overflow-x: hidden; /* This will prevent horizontal scrolling */
         }
 
@@ -31,12 +25,12 @@
                 transform: scale(2, 2, 2);
                 transform: 1ms ease;
                 overflow: hidden;
-            }
+        }
             
         .bg-image {
                 @apply invisible md:visible opacity-80  flex-none;
                 overflow: hidden;
-            }
+        }
 
         .markdown-body { 
                 @apply transition-all;
@@ -88,10 +82,10 @@
         .markdown-body h4,
         .markdown-body h5,
         .markdown-body h6 {
-        margin-top: 24px;
-        margin-bottom: 16px;
-        font-weight: 600;
-        line-height: 1.25;
+                margin-top: 24px;
+                margin-bottom: 16px;
+                font-weight: 600;
+                line-height: 1.25;
         }
 
         .markdown-body h1 {
@@ -99,31 +93,31 @@
         }
 
         .markdown-body h2 {
-        font-weight: 600;
-        padding-bottom: .3em;
-        font-size: 1.5em;
-        border-bottom: 1px solid #21262d;
+                font-weight: 600;
+                padding-bottom: .3em;
+                font-size: 1.5em;
+                border-bottom: 1px solid #21262d;
         }
         
         .markdown-body h3 {
-        font-weight: 600;
-        font-size: 1.25em;
+                font-weight: 600;
+                font-size: 1.25em;
         }
         
         .markdown-body h4 {
-        font-weight: 600;
-        font-size: 1em;
+                font-weight: 600;
+                font-size: 1em;
         }
         
         .markdown-body h5 {
-        font-weight: 600;
-        font-size: .875em;
+                font-weight: 600;
+                font-size: .875em;
         }
         
         .markdown-body h6 {
-        font-weight: 600;
-        font-size: .85em;
-        color: #848d97;
+                font-weight: 600;
+                font-size: .85em;
+                color: #848d97;
         }
         
         .markdown-body p {
@@ -1140,11 +1134,10 @@
 
         } */
 
-}
 
 ::selection {
         @apply text-zinc-50;
-        @apply bg-zinc-700;
+        @apply bg-zinc-600;
       }
 
 ::-webkit-scrollbar {
@@ -1165,6 +1158,7 @@
     ::-webkit-scrollbar-thumb:hover {
         @apply bg-zinc-300;
 
+        }
 }
 
 
