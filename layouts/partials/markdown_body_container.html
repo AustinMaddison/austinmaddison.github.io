@@ -1,13 +1,4 @@
-{{ $markdown_page := .Site.GetPage "about" }}
-
-
-<div class="md:flex">
-
-{{ partial "sidebar.html" . }}
-
-{{/*  gap bewtween side-bar and main-content  */}}
-<div class="w-12"></div>
-
+{{ define "markdown_body_container" }}
 <main class="flex-col ">
     
     <div class="hidden md:block h-16"></div>
@@ -19,8 +10,12 @@
 
         <hr id="canvas-container-width-target" class="visible md:invisible border-zinc-500">
 
+
+        {{ $section := .Section }}
+        {{ $indexPage := .Site.GetPage "section" $section }}
+
         {{/*  Rich Text Compnenet  */}}
-        {{ block "markdown_body" $markdown_page }} {{ end }}
+        {{ block "markdown_body" $indexPage }} {{ end }}
         
 
     </div>
@@ -29,13 +24,4 @@
 
 </main>
 
-{{/*  gap bewtween main contetn and toc  */}}
-<div class="w-12"></div>
-
-{{ with $markdown_page }}
-{{ partial "toc_sidebar.html" . }}
 {{ end }}
-
-
-</div>
-
