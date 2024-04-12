@@ -1,11 +1,8 @@
 {{ define "markdown_body_container" }}
-<main class="flex-col ">
-    
+<main class="w-full">
     <div class="hidden md:block h-16"></div>
-
-
-    <div class="bg-zinc-950 md:bg-transparent z-10 relative px-10  overflow-auto flex-grow scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-800 ">
-        
+    <div class= "px-10 bg-zinc-950  md:bg-transparent z-10 relative md:px-10  overflow-auto min-w-full">
+           
         {{ block "site_bg_mobile" . }} {{ end }}
 
         <hr id="canvas-container-width-target" class="visible md:invisible border-zinc-500">
