@@ -1,18 +1,3 @@
-<div class="md:flex">
-    {{ $section := .Section }}
-    {{ $indexPage := .Site.GetPage "section" $section }}
-
-    {{ partial "sidebar.html" . }}
-
-    {{/*  gap bewtween side-bar and main-content  */}}
-    <div class="w-12"></div>
-
-    {{ block "markdown_body_container" .}} {{end}}
-
-    {{/*  gap bewtween main contetn and toc  */}}
-    <div class="w-12"></div>
-
-    {{ with $indexPage }}
-    {{ partial "toc_sidebar.html" . }}
-    {{ end }}
-</div>
+{{ define "main" }}
+{{ partial "page.html" . }}
+{{ end }}
