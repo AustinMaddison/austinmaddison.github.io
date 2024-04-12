@@ -13,13 +13,13 @@ I'm Austin, an undergrad in computer science at Mahidol University. My focus is 
 On this site, I discuss 🐇**graphics and shader programming, 🎨technical art**, and whatever else that interests me. You can scroll down for [featured notes](#featured-notes) or go to [notes](notes) for all notes.
 
 <div class="sm:mb-3">
-<iframe title="ThreeJs" class=" overscroll-none w-full h-[250px] sm:h-[250px] md:h-[350px] lg:h-[300px]" importance="low" loading="lazy" sandbox="allow-scripts" src="https://austinmaddison.github.io/blog-3d-scenes/overview/teapot/index.html"></iframe>
+<iframe title="ThreeJs" scrolling="no" class="overflow-hidden overscroll-none w-full h-[250px] sm:h-[250px] md:h-[350px] lg:h-[300px]" importance="low" loading="lazy" sandbox="allow-scripts" src="https://austinmaddison.github.io/blog-3d-scenes/overview/teapot/index.html"></iframe>
 </div>
 
 
 
 
-> <span class="text-opacity-100 text-zinc-50">🔨</span> This site is currently under active construction, so please excuse any jank you may encounter. 
+> <span class="text-opacity-100 text-zinc-50">🔨</span> This site is currently <mark>under active construction</mark>, so please excuse any jank you may encounter. 
 
 # Featured Notes
 ## Articles

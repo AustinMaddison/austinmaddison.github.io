@@ -90,6 +90,14 @@
         .markdown-body strong {
                 @apply font-semibold;
         }
+
+        .markdown-body mark {
+                @apply text-zinc-50 rounded-md mx-[1px] px-2;
+                -webkit-box-decoration-break: clone;
+                box-decoration-break: clone;
+                background: rgb(255,216,78);
+                background: linear-gradient(278deg, rgba(0, 0, 0, 0) 0%, rgb(146, 124, 1) 3%, rgba(124, 105, 0, 0.781) 6%, rgba(124, 105, 0, 0.589) 94%, rgb(146, 124, 0) 97%, rgba(0, 0, 0, 0) 100%);
+               }
         
         .markdown-body dfn {
                 @apply italic;
@@ -179,10 +187,10 @@
         font-size: 12px;
         }
         
-        .markdown-body mark {
+        /* .markdown-body mark {
         background-color: rgba(187,128,9,0.15);
         color: #e6edf3;
-        }
+        } */
         
         .markdown-body small {
         font-size: 90%;
