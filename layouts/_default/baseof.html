@@ -16,12 +16,31 @@
     {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
     {{ end }}  */}}
 
+    <style>
+        body {
+          visibility: hidden;
+          opacity: 0;
+        }
+    </style>
+
 </head>
 <body class="bg-zinc-950">
     {{ block "site_bg" . }} {{ end }}
-    <div class="md:flex-row md:flex justify-center  md:mx-auto min-w-[345px]">
+    <div class="sm:flex-row sm:flex justify-center max-[1100px]:container lg:container sm:mx-auto min-w-[345px]">
         {{ block "main" .}}{{ end }}
     </div>
+
+    <script>
+          function showContent() {
+            document.body.style.visibility = 'visible';
+            document.body.style.opacity = 1;
+          }
+          
+          window.addEventListener('DOMContentLoaded', function () {
+            showContent();
+          });
+    </script>
+
 </body>
 
 
