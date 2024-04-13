@@ -28,8 +28,18 @@ title = 'Austin Maddison'
 
 
 [markup]
+  [markup.highlight]
+    noClasses = false
+  
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
   [markup.tableOfContents]
     startLevel = 1  # Include <h1> headings
+  
+  [markup.goldmark.extensions]
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)']]

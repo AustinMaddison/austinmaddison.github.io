@@ -1,0 +1,7 @@
+mjx-container[jax="CHTML"][display="true"]+p {
+    @apply mt-10;    
+}
+
+p+mjx-container[jax="CHTML"][display="true"] {
+    @apply mt-10;    
+}
