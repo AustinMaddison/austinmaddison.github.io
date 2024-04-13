@@ -17,7 +17,7 @@
 		},
 		{
 			"type": "shell",
-			"command": "hugo server -D --disableFastRender --watch --port=2540",
+			"command": "hugo server -D --disableFastRender --watch --port=2540 --noHTTPCache --ignoreCache",
 			"problemMatcher": [],
 			"label": "hugo: Serve draft site",
 			"presentation": {
@@ -31,9 +31,8 @@
 		},
 		{
 			"type": "shell",
-			"command": "hugo server --disableFastRender --watch --port=2540",
-			"problemMatcher": [
-			],
+			"command": "hugo server --disableFastRender --watch --port=2540 --noHTTPCache --ignoreCache",
+			"problemMatcher": [],
 			"label": "hugo: Serve site",
 			"presentation": {
 				"echo": true,
@@ -60,19 +59,22 @@
 				"clear": false
 			}
 		},
-
-
 		{
 			"label": "hugo + tailwind: Serve draft site",
-			"dependsOn": [ "hugo: Serve draft site", "tailwind: Run with watch"],
-			"dependsOrder": "parallel",
-
+			"dependsOn": [
+				"hugo: Serve draft site",
+				"tailwind: Run with watch"
+			],
+			"dependsOrder": "parallel"
 		},
 		{
 			"label": "hugo + tailwind: Serve site",
-			"dependsOn": [ "hugo: Serve site", "tailwind: Run with watch"],
+			"dependsOn": [
+				"hugo: Serve site",
+				"tailwind: Run with watch"
+			],
 			"dependsOrder": "parallel",
-
+			"problemMatcher": []
 		}
 	]
 }
