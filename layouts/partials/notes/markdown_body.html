@@ -1,0 +1,15 @@
+{{ define "notes/markdown_body" }}
+
+<div id="MarkdownBody" class="markdown-body mt-6 md:mt-0  transition-all">
+    
+    <div class="flex">
+        <div class="flex-1 w-full">
+            {{ range .Resources.ByType "page" }}
+            {{ .Content }}
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+
+{{ end }}
