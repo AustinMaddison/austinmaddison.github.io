@@ -7,7 +7,8 @@ menus:
 
 # Hello, <s>World</s> There!
 
-I'm Austin, an undergrad in computer science at Mahidol University. My focus is in computer graphics and technical art. 
+I'm Austin, an undergrad in computer science at Mahidol University. My focus is in computer graphics and technical art.   
+[About me]({{% ref "about" %}})
 
 ---
 On this site, I discuss 🐇**graphics and shader programming, 🎨technical art**, and whatever else that interests me. You can scroll down for [featured notes](#featured-notes) or go to [notes](notes) for all notes.
