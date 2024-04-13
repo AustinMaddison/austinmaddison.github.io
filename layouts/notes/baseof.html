@@ -1,45 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en-us" }}">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{.Title}}</title>
-
-    {{ with resources.Get .Site.Params.site_icon }}
-    <link rel="icon" type="img/png" href="{{ .RelPermalink }}">
-    {{ end }}
-
-    <link rel="stylesheet" href="{{"/dist/output.css" | relURL }}">
-
-    {{/*  {{ with .OutputFormats.Get "RSS" -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
-    {{ end }}  */}}
-
-    <style>
-        body {
-          visibility: hidden;
-          opacity: 0;
-        }
-    </style>
-
+  {{partial "headers.html" . }}
 </head>
 <body class="bg-zinc-950">
     {{ block "site_bg" . }} {{ end }}
     <div class="sm:flex-row sm:flex justify-center sm:mx-auto min-h-screen">
         {{ block "main" .}}{{ end }}
     </div>
-
-    <script>
-          function showContent() {
-            document.body.style.visibility = 'visible';
-            document.body.style.opacity = 1;
-          }
-          
-          window.addEventListener('load', function () {
-            showContent();
-          });
-    </script>
-
 </body>
 
 </html>

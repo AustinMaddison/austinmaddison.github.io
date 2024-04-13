@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
+@import url('syntax.css');
+@import url('math.css');
 
 @tailwind base;
 @tailwind components;
@@ -120,31 +122,31 @@
         }
 
         .markdown-body h1 {
-                @apply mb-4 mt-10 font-medium text-3xl;
+                @apply mb-4 mt-10 font-medium text-3xl scroll-m-10;
                 @apply pb-1.5 border-b-1 border-zinc-50 border-opacity-20;
         }
 
         .markdown-body h2 {
-                @apply mb-4 mt-10 font-medium text-2xl;
+                @apply mb-4 mt-10 font-medium text-2xl scroll-m-10;
                 @apply   border-b-1 pb-1.5 border-zinc-50 border-opacity-20;
 
         }
         
         .markdown-body h3 {
-                @apply mb-3 mt-10 font-medium text-xl;
+                @apply mb-3 mt-10 font-medium text-xl scroll-m-10;
         }
         
         .markdown-body h4 {
-                @apply mb-3 mt-10 font-medium text-lg;
+                @apply mb-3 mt-10 font-medium text-lg scroll-m-10;
         }
         
         .markdown-body h5 {
-                @apply mb-3 mt-10 font-semibold text-base;
+                @apply mb-3 mt-10 font-semibold text-base scroll-m-10;
 
         }
         
         .markdown-body h6 {
-                @apply mb-3 mt-10 font-semibold text-sm;
+                @apply mb-3 mt-10 font-semibold text-sm scroll-m-10;
         }
         
         .markdown-body p {
@@ -777,9 +779,10 @@
         }
         
         .markdown-body .highlight {
-        margin-bottom: 16px;
+                margin-bottom: 16px;
         }
-        
+
+  
         .markdown-body .highlight pre {
         margin-bottom: 0;
         word-break: normal;
@@ -792,8 +795,6 @@
         font-size: 85%;
         line-height: 1.45;
         color: #e6edf3;
-        background-color: #161b22;
-        border-radius: 6px;
         }
         
         .markdown-body pre code,
