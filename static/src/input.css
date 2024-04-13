@@ -53,7 +53,7 @@
 
         .markdown-body { 
                 @apply transition-all;
-                @apply text-zinc-200 text-sm break-before-auto hyphens-auto md:text-base lg:text-lg lg:hyphens-none;
+                @apply text-zinc-200 break-before-auto hyphens-auto lg:hyphens-none;
                 /* @apply mb-6; */
         }
 
@@ -67,6 +67,13 @@
         .markdown-body figure {
                 @apply block;
         }
+
+
+        .markdown-body figcaption p {
+                @apply flex-1 text-center italic text-zinc-50 text-opacity-60 mt-2;
+        }
+
+
         
         .markdown-body summary {
                 @apply list-item;
@@ -92,11 +99,11 @@
         }
 
         .markdown-body mark {
-                @apply text-zinc-50 rounded-md mx-[1px] px-2;
+                @apply text-zinc-50 rounded-sm mx-[1px] px-2;
                 -webkit-box-decoration-break: clone;
                 box-decoration-break: clone;
                 background: rgb(255,216,78);
-                background: linear-gradient(278deg, rgba(0, 0, 0, 0) 0%, rgb(146, 124, 1) 3%, rgba(124, 105, 0, 0.781) 6%, rgba(124, 105, 0, 0.589) 94%, rgb(146, 124, 0) 97%, rgba(0, 0, 0, 0) 100%);
+                background: linear-gradient(278deg, rgba(0, 0, 0, 0) 0%, rgba(161, 138, 7, 0.815) 1%, rgba(124, 105, 0, 0.781) 3%, rgba(124, 105, 0, 0.589) 97%, rgba(160, 146, 67, 0.568) 99%, rgba(0, 0, 0, 0) 100%);
                }
         
         .markdown-body dfn {
@@ -113,12 +120,12 @@
         }
 
         .markdown-body h1 {
-                @apply mb-3 mt-10 font-medium text-3xl;
+                @apply mb-4 mt-10 font-medium text-3xl;
                 @apply pb-1.5 border-b-1 border-zinc-50 border-opacity-20;
         }
 
         .markdown-body h2 {
-                @apply mb-3 mt-10 font-medium text-2xl;
+                @apply mb-4 mt-10 font-medium text-2xl;
                 @apply   border-b-1 pb-1.5 border-zinc-50 border-opacity-20;
 
         }
@@ -141,7 +148,7 @@
         }
         
         .markdown-body p {
-                @apply font-light tracking-wide leading-relaxed text-base;
+                @apply font-light tracking-wide leading-relaxed text-base text-justify;
                 margin-top: 0;
                 margin-bottom: 10px;
         }
@@ -228,7 +235,7 @@
         }
         
         .markdown-body figure {
-        margin: 1em 40px;
+                @apply my-10;
         }
         
         .markdown-body hr {
