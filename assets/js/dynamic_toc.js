@@ -1,37 +1,28 @@
-function isElementInViewport(rect) {
-    return (
-      rect.top >= -1 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
 const tableOfContents = document.getElementById("TableOfContents");
-const allLinks = tableOfContents.querySelectorAll("ul li a");
+const tocAnchors = tableOfContents.querySelectorAll("ul li a");
 
 const markdownBody = document.getElementById("MarkdownBody");
-const allSections = markdownBody.querySelectorAll("h1, h2, h3, h4, h5");
+const headings = Array.from(markdownBody.querySelectorAll("h1, h2, h3, h4, h5"));
 
-const handler = (entries) => {
-    let currentSection = null;
-
-    for (const entry of entries) {
+const obFunc = (entries) => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            currentSection = entry.target;
-            break;
+            const index = headings.indexOf(entry.target);
+            tocAnchors.forEach((tab) => {
+                tab.classList.remove("active");
+            });
+            tocAnchors[index].classList.add("active");
+            tocAnchors[index].scrollIntoView({
+                block: "nearest",
+                inline: "nearest"
+            });
         }
-    }
-
-    if (!currentSection) return;
-
-    allLinks.forEach(link => link.classList.remove("active"));
-    const activeLink = document.querySelector(`a[href="#${currentSection.id}"]`);
-    if (activeLink) activeLink.classList.add("active");
+    });
+};
+const obOption = {
+    rootMargin: "-50px 0px -77%",
+    threshold: 1
 };
 
-const observer = new IntersectionObserver(handler, { root: null, rootMargin: "0px", threshold: 0 });
-
-allSections.forEach(section => observer.observe(section));
-
-
+const observer = new IntersectionObserver(obFunc, obOption);
+headings.forEach((hTwo) => observer.observe(hTwo));
