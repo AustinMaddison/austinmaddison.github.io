@@ -17,7 +17,7 @@ On this site, I discuss 🐇**graphics and shader programming, 🎨technical art
 
 
 
-> <span class="text-opacity-100 text-zinc-50">🔨</span> This site is currently <mark>under active construction</mark>, so please excuse any jank you may encounter. 
+> <span class="text-opacity-100 text-zinc-50">🔨</span> This site is currently <mark>under active construction</mark>, so please excuse any jank you may encounter. Building this site took longer than I initially thought TT. 
 
 # Featured Notes
 ## Articles

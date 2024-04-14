@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode | default "en-us" }}">
+
 <head>
   {{partial "headers.html" . }}
 </head>
+
 <body class="bg-zinc-950">
     {{ block "site_bg" . }} {{ end }}
     <div class="sm:flex-row sm:flex justify-center sm:mx-auto min-h-screen">
         {{ block "main" .}}{{ end }}
     </div>
 </body>
+
+
 
 </html>

@@ -1,14 +1,11 @@
 {{ define "site_bg" }}
 
-
-
 <div class="overflow-hidden h-1/2">
     <div class="site-bg">
         {{ with resources.Get .Site.Params.site_bg }}
         <img src="{{ .RelPermalink }}" alt class="bg-image" decoding="async" />
         {{ end }}
-      </div>
-      
+    </div>
 </div>
 
 
