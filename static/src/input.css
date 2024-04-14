@@ -17,34 +17,35 @@
         html, body {
                 overscroll-behavior: none;
                 scroll-behavior: smooth;
-        }
+                overflow-x:clip
+        }       
 
         body {
-                overflow-x: hidden; /* This will prevent horizontal scrolling */
+                position: relative;
         }
 
         .site-bg {
                 @apply flex absolute -z-20 -top-20 -right-64 ;
                 transform: scale(2, 2, 2);
                 transform: 1ms ease;
-                overflow: hidden;
+                overflow: clip;
         }
             
         .bg-image {
                 @apply invisible md:visible opacity-80  flex-none;
-                overflow: hidden;
+                overflow: clip;
         }
 
         #TableOfContents ul>li {
-               @apply  transition-all mt-1 first:mt-2 tracking-wide;
+               @apply  mt-1 first:mt-2 tracking-wide;
         }
 
         #TableOfContents ul>li>a {
-                @apply  text-zinc-400 scroll-smooth hover:text-zinc-200 ;
+                @apply  transition-all duration-75 text-zinc-50 text-opacity-25 scroll-smooth hover:text-opacity-100 active:text-opacity-100 ;
          }
 
         #TableOfContents ul>li>.active {
-                @apply text-zinc-200;
+                @apply text-opacity-100 ;
                 
         }
 
@@ -141,7 +142,7 @@
         }
         
         .markdown-body h5 {
-                @apply mb-3 mt-10 font-semibold text-base scroll-m-10;
+                @apply mb-3 mt-6 font-semibold text-base scroll-m-10;
 
         }
         
@@ -150,7 +151,7 @@
         }
         
         .markdown-body p {
-                @apply font-light tracking-wide leading-relaxed text-base text-justify;
+                @apply font-light tracking-wide leading-relaxed text-sm sm:text-base text-justify;
                 margin-top: 0;
                 margin-bottom: 10px;
         }
@@ -747,7 +748,6 @@
         padding: .2em .4em;
         margin: 0;
         font-size: 85%;
-        white-space: break-spaces;
         background-color: rgba(110,118,129,0.4);
         border-radius: 6px;
         }
@@ -772,7 +772,6 @@
         .markdown-body pre>code {
         padding: 0;
         margin: 0;
-        word-break: normal;
         white-space: pre;
         background: transparent;
         border: 0;
@@ -785,13 +784,11 @@
   
         .markdown-body .highlight pre {
         margin-bottom: 0;
-        word-break: normal;
         }
         
         .markdown-body .highlight pre,
         .markdown-body pre {
         padding: 16px;
-        overflow: auto;
         font-size: 85%;
         line-height: 1.45;
         color: #e6edf3;
@@ -803,11 +800,7 @@
         max-width: auto;
         padding: 0;
         margin: 0;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        /* overflow: visible; */
         line-height: inherit;
-        /* word-wrap: normal; */
         background-color: transparent;
         border: 0;
         }

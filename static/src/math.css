@@ -1,7 +1,11 @@
 mjx-container[jax="CHTML"][display="true"]+p {
-    @apply mt-10;    
+    @apply sm:mt-10 ;    
 }
 
 p+mjx-container[jax="CHTML"][display="true"] {
-    @apply mt-10;    
+    @apply sm:mt-10;    
+}
+
+mjx-container[jax="CHTML"][display="true"] {
+    @apply scale-75 sm:scale-100
 }
