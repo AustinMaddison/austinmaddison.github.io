@@ -1,0 +1,22 @@
+author_name = 'AUSTIN JETRIN MADDISON'
+author_name_th = 'ออสติน เจตัริน เมดดิสัน'
+author_img = "img/profile.png"
+site_icon = "img/icon.png"
+site_bg = "img/bg-abberation.png"
+
+[[links]]
+    title = 'Github'
+    href = 'https://github.com/AustinMaddison'
+
+[[links]]
+    title = 'YouTube'
+    href = 'https://github.com/AustinMaddison'
+
+[[links]]
+    title = 'Behance'
+    href = 'https://github.com/AustinMaddison'
+
+[[links]]
+    title = '@'
+    href = 'mailto:austin.mad.th@gmail.com'
+
