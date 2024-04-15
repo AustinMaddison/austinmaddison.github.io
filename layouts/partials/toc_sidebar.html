@@ -1,15 +1,24 @@
+{{/*  Check whether its a note or a menu  */}}
+{{ $is_menu := .Params.Menus.main }}
+
+
+
 <div class="flex-1 max-[1280px]:hidden ">
     <aside class="justify-between flex-col select-none sticky sm:mx-0 
-    {{ if  .Params.Menus.main }} 
-    md:mr-10 
-    {{else}} 
-    md:mx-10 
+    {{ if  $is_menu }} 
+        md:mr-10 
+        md:py-[64px] 
+        {{else}} 
+        md:py-[84px] 
+        md:mx-10 
     {{end}} 
-    top-0 md:h-screen md:py-[84px] md:min-w-32 md:max-w-52 md:flex-col z-0 lg:flex">
+    top-0 md:h-screen 
+
+    md:min-w-32 md:max-w-52 md:flex-col z-0 lg:flex">
         <div class="flex-grow"></div>
         <div class="overflow-y-auto">
             <div class="text-sm ">
-                {{ if  .Params.Menus.main }}
+                {{ if  $is_menu }}
                     {{ .TableOfContents }}
                 {{ else }}
                     {{ range .Resources.ByType "page" }}
@@ -18,8 +27,10 @@
                 {{ end }} 
             </div>
         </div>
+        {{/*  Back To Top Button  */}}
         <div class="text-xs block text-zinc-50 tracking-wide font-medium opacity-25 hover:opacity-100 transition ease-in-out duration-75 uppercase mt-5">
             <a class="flex items-center group/item" href="#">
+                {{/*  Arrow Up Icon  */}}
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute  w-5 h-5 group-hover/item:animate-ping group-active/item:animate-none group-active/item:invisible transition delay-500 duration-300 ease-out invisible group-hover/item:visible -translate-y-1">
                     <path fill-rule="evenodd" d="M10 17a.75.75 0 0 1-.75-.75V5.612L5.29 9.77a.75.75 0 0 1-1.08-1.04l5.25-5.5a.75.75 0 0 1 1.08 0l5.25 5.5a.75.75 0 1 1-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0 1 10 17Z" clip-rule="evenodd" />
                   </svg>

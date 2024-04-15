@@ -1,10 +1,10 @@
 .bg {
-    @apply bg-zinc-800;
+    @apply bg-zinc-900;
 }
 
 /* PreWrapper */
 .chroma {
-    @apply bg-zinc-800;
+    @apply bg-zinc-900;
 
 }
 
@@ -14,7 +14,7 @@
 /* Error */
 .chroma .err {
     color: #960050;
-    @apply bg-zinc-800;
+    @apply bg-zinc-900;
 }
 
 /* CodeLine */
@@ -36,7 +36,7 @@
 }
 
 tr .lntd{
-    @apply bg-zinc-800;
+    @apply bg-zinc-900;
 }
 
 /* LineTable */

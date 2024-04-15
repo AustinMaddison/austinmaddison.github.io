@@ -7,9 +7,12 @@
     {{/*  gap bewtween side-bar and main-content  */}}
     <div class="w-24"></div>
 
-    {{ range .Pages }}
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    {{ block "pages_body_container" .}} {{end}}
+
+    {{/*  gap bewtween main contetn and toc  */}}
+    <div class="max-[1100px]:hidden md:block w-12"></div>
+
+    {{ with $indexPage }}
+    {{ partial "toc_sidebar.html" . }}
     {{ end }}
-
-
 </div>

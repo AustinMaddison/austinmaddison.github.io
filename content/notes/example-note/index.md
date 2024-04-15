@@ -1,11 +1,11 @@
 ---
 title: Example Title
-date: '{{ time.Now.Format "27 May 2003" }}'
+date: 27 Feb 2023
 description: Example Description
 thumbnail: thumbnail.png
 cover: cover.png
-tags: [Example Tag]
-categories: [Example Category]
+tags: [tag1, tag2]
+category: category1
 draft: true
 weight: -100   
 ---

@@ -747,7 +747,7 @@
         .markdown-body tt {
         padding: .2em .4em;
         margin: 0;
-        font-size: 85%;
+        font-size: 96%;
         background-color: rgba(110,118,129,0.4);
         border-radius: 6px;
         }
@@ -762,7 +762,7 @@
         }
         
         .markdown-body samp {
-        font-size: 85%;
+        font-size: 96%;
         }
         
         .markdown-body pre code {
@@ -776,9 +776,10 @@
         background: transparent;
         border: 0;
         }
-        
+       
         .markdown-body .highlight {
                 margin-bottom: 16px;
+                @apply border-1 border-zinc-50 border-opacity-15 overflow-hidden text-[14px];
         }
 
   
@@ -789,7 +790,7 @@
         .markdown-body .highlight pre,
         .markdown-body pre {
         padding: 16px;
-        font-size: 85%;
+        font-size: 96%;
         line-height: 1.45;
         color: #e6edf3;
         }

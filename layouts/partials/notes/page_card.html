@@ -1,0 +1,92 @@
+
+{{define "page_card"}}
+
+{{ $title := .Params.title}}
+{{ $description := .Params.description}}
+{{/*  {{ $date := time.AsTime .Params.date }}  */}}
+{{ $date := .Params.date.Format "Jan 2023"}}
+
+
+
+{{ $WordCount := 0 }}
+{{ range .Resources.ByType "page" }}
+    {{  $WordCount = add $WordCount .WordCount }}
+{{ end }}
+
+{{ $WordsPerMin := .Site.Params.words_per_min }}
+
+{{ $MinsToRead := 0 }}
+{{ if le $WordCount $WordsPerMin }}
+{{ $MinsToRead = 1 }}
+{{else}}
+{{ $MinsToRead = math.Ceil ( div (float $WordCount) $WordsPerMin ) }}
+{{ end }}
+
+{{/*  {{ $title = "Phong lighting model and the general BRDF lighting equation" }}  */}}
+{{/*  {{ $description = "Field Primitives 2D and 3D Signed Distance Field Primitives"}}  */}}
+{{/*  {{ $date = "Mar 2024"}}  */}}
+{{/*  {{ $MinsToRead = "12"}}  */}}
+{{/*  {{ $thumbanail = ""}}  */}}
+
+
+<div class="
+hover:border-opacity-40
+  transition duration-300 col-span-2 min-w-full bg-zinc-950 backdrop-blur-xl bg-opacity-80 border-spacing-2 border-1 border-zinc-50 border-opacity-20 flex flex-col">
+    <a  href="{{ .Permalink }}" class="">
+
+        {{/*  Titles  */}}
+        <div class="px-5 py-4 flex flex-col flex-1">
+            <div>
+                <span class="block font-normal text-lg flex-1 mb-1">
+                    {{ $title }}
+                </span>
+            </div>
+            <div>
+                <span class="block font-light text-zinc-400 text-sm tracking-wide text-[0.9rem] flex-1 mb-1 text-justify">
+                    {{ $description }}
+                </span>
+            </div>
+            <div class="text-zinc-400">
+                {{/*  <span class="text-xs"> {{.Params.date.Format "JAN 2006"}} — {{ $MinsToRead }} {{ if ne $MinsToRead 1 }}MINS{{else}}MIN{{end}} READ</span>  */}}
+                <span class="text-[0.7rem]"> {{.Params.date.Format "JAN"}} </span> <span class="text-xs"> {{.Params.date.Format "2006"}} </span> —  <span class="text-[0.7rem]"> {{ .Params.category | upper }} </span>
+            </div>
+        </div>
+    
+        <div class="flex-1 flex flex-col relative h-36 overflow-clip border-t-1 border-zinc-50 border-opacity-10">
+
+            {{/*  Thumbnail  */}}
+            <div class="h-full flex-grow flex justify-center">
+                {{ with .Resources.GetMatch (.Params.thumbnail) }}
+                <img class="object-cover w-full" src="{{ .RelPermalink }}" alt="{{ $title }} thumbnail">
+                {{ end }}
+            </div>
+        
+            <div class="absolute w-full h-full flex flex-col justify-end">
+                <div class="w-full flex-grow flex justify-end ">
+                    <div class="h-full flex-grow flex-col flex justify-end">
+                        
+                        {{/*  Tags  */}}
+                        {{/*  <div class="py-1 px-2 ml-auto mr-2 mb-2 border-1 h-fit bg-zinc-950 bg-opacity-30 border-zinc-50 border-opacity-10 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"  class=" fill-zinc-400 w-3 h-3 block flex-grow mr-1">
+                                <path fill-rule="evenodd" d="M7.487 2.89a.75.75 0 1 0-1.474-.28l-.455 2.388H3.61a.75.75 0 0 0 0 1.5h1.663l-.571 2.998H2.75a.75.75 0 0 0 0 1.5h1.666l-.403 2.114a.75.75 0 0 0 1.474.28l.456-2.394h2.973l-.403 2.114a.75.75 0 0 0 1.474.28l.456-2.394h1.947a.75.75 0 0 0 0-1.5h-1.661l.57-2.998h1.95a.75.75 0 0 0 0-1.5h-1.664l.402-2.108a.75.75 0 0 0-1.474-.28l-.455 2.388H7.085l.402-2.108ZM6.8 6.498l-.571 2.998h2.973l.57-2.998H6.8Z" clip-rule="evenodd" />
+                              </svg>
+                              
+                            {{range .Params.categories}}
+                            <span class="font-light text-xs text-zinc-400 flex-shrink-0 block mr-1">
+                                {{ . }}
+                            </span>
+                            {{end }}
+                        </div>  */}}
+
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+        
+    </a>
+</div>
+
+
+{{end}}

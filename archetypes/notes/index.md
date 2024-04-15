@@ -1,12 +1,11 @@
 ---
-date: '{{ time.Now.Format "27 May 2003" }}'
+date: '{{ time.Now.Format "2006-01-02" }}'
 draft: true
 title: '{{ replace .File.ContentBaseName `-` ` ` | title }}'
 description: Description
 image_thumbnail: "images/thumbnail.png"
 image_cover: "images/cover.png"
-categories:
-    - Example Category
+category: 
 tags:
     - Example Tag
 weight: 1   

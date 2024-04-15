@@ -56,6 +56,3 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed dui sed nisi 
 $$
 I_{o u t}=I_{i n}\left(k_{d}\left({\bf L}\bullet{\bf N}\right)+k_{s}\left({\bf R}\bullet{\bf V}\right)^{n}\right)
 $$
-
-
-

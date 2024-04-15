@@ -4,6 +4,8 @@ author_img = "img/profile.png"
 site_icon = "img/icon.png"
 site_bg = "img/bg-abberation.png"
 
+words_per_min = 180
+
 [[links]]
     title = 'Github'
     href = 'https://github.com/AustinMaddison'

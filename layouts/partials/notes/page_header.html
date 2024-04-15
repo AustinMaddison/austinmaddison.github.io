@@ -1,17 +1,17 @@
 {{ define "notes/page_header" }}
 
 {{ $WordCount := 0 }}
-
 {{ range .Resources.ByType "page" }}
     {{  $WordCount = add $WordCount .WordCount }}
 {{ end }}
 
-{{ $WordsPerMin := 180 }}
-
+{{ $WordsPerMin := .Site.Params.words_per_min }}
 {{ $MinsToRead := 0 }}
+
 {{ if le $WordCount $WordsPerMin }}
 {{ $MinsToRead = 1 }}
 {{else}}
+
 {{ $MinsToRead = math.Ceil ( div (float $WordCount) $WordsPerMin ) }}
 {{ end }}
 
