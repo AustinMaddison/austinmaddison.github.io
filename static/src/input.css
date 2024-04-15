@@ -151,7 +151,8 @@
         }
         
         .markdown-body p {
-                @apply font-light tracking-wide leading-relaxed text-sm sm:text-base text-justify;
+                /* @apply font-light tracking-wide leading-relaxed text-sm sm:text-base text-justify; */
+                @apply font-normal leading-relaxed text-sm sm:text-base text-justify;
                 margin-top: 0;
                 margin-bottom: 10px;
         }

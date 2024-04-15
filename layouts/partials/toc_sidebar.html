@@ -1,15 +1,14 @@
 {{/*  Check whether its a note or a menu  */}}
 {{ $is_menu := .Params.Menus.main }}
 
-
-
+{{/*  Spacing Logic for when on page or on menu  */}}
 <div class="flex-1 max-[1280px]:hidden ">
     <aside class="justify-between flex-col select-none sticky sm:mx-0 
-    {{ if  $is_menu }} 
+    {{ if $is_menu }} 
         md:mr-10 
         md:py-[64px] 
         {{else}} 
-        md:py-[84px] 
+        md:py-[64px] 
         md:mx-10 
     {{end}} 
     top-0 md:h-screen 

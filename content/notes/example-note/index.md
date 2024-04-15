@@ -5,7 +5,7 @@ description: Example Description
 thumbnail: thumbnail.png
 cover: cover.png
 tags: [tag1, tag2]
-category: category1
+categories: [category1]
 draft: true
 weight: -100   
 ---

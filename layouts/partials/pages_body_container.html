@@ -1,13 +1,13 @@
 {{ define "pages_body_container" }}
 <main class="w-full ">
-    <div class="hidden md:block h-16 "></div>
-    <div class= "px-10 bg-zinc-950  md:bg-transparent z-10 relative md:px-10 min-w-full">
+    <div class="hidden lg:block h-16 "></div>
+    <div class= "px-10 bg-zinc-950  lg:bg-transparent z-10 relative lg:px-10 min-w-full">
            
         {{ block "site_bg_mobile" . }} {{ end }}
-        <hr id="canvas-container-width-target" class="visible md:invisible border-zinc-500">
+        <hr id="canvas-container-width-target" class="visible lg:invisible border-zinc-500">
         {{ block "pages_body" . }} {{ end }}
     </div>
-    <div class="md:h-16 "></div>
+    <div class="lg:h-16 "></div>
 
 </main>
 

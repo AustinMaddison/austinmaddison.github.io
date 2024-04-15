@@ -1,4 +1,4 @@
-<div class="md:flex">
+<div class="lg:flex">
     {{ $section := .Section }}
     {{ $indexPage := .Site.GetPage "section" $section }}
 
@@ -12,7 +12,5 @@
     {{/*  gap bewtween main contetn and toc  */}}
     <div class="max-[1100px]:hidden md:block w-12"></div>
 
-    {{ with $indexPage }}
-    {{ partial "toc_sidebar.html" . }}
-    {{ end }}
+    {{ partial "filter_sidebar.html" . }}
 </div>

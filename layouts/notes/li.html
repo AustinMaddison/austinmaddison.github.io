@@ -1,5 +1,5 @@
 
-{{define "page_card"}}
+{{/*  {{define "page_card"}}  */}}
 
 {{ $title := .Params.title}}
 {{ $description := .Params.description}}
@@ -37,7 +37,7 @@ hover:border-opacity-40
         {{/*  Titles  */}}
         <div class="px-5 py-4 flex flex-col flex-1">
             <div>
-                <span class="block font-normal text-lg flex-1 mb-1">
+                <span class="block font-medium text-xl flex-1 mb-1">
                     {{ $title }}
                 </span>
             </div>
@@ -46,12 +46,18 @@ hover:border-opacity-40
                     {{ $description }}
                 </span>
             </div>
+            {{/*  <div class="text-zinc-400">  */}}
+                {{/*  <span class="text-xs"> {{.Params.date.Format "JAN 2006"}} — {{ $MinsToRead }} {{ if ne $MinsToRead 1 }}MINS{{else}}MIN{{end}} READ</span>  */}}
+                {{/*  <span class="text-[0.7rem]"> {{.Params.date.Format "JAN"}} </span> <span class="text-xs"> {{.Params.date.Format "2006"}} </span> —  <span class="text-[0.7rem]">{{ range first 1 .Params.categories }}{{ . | upper }}  */}}
+                  {{/*  {{ end }}</span>  */}}
+            {{/*  </div>  */}}
+
             <div class="text-zinc-400">
                 {{/*  <span class="text-xs"> {{.Params.date.Format "JAN 2006"}} — {{ $MinsToRead }} {{ if ne $MinsToRead 1 }}MINS{{else}}MIN{{end}} READ</span>  */}}
-                <span class="text-[0.7rem]"> {{.Params.date.Format "JAN"}} </span> <span class="text-xs"> {{.Params.date.Format "2006"}} </span> —  <span class="text-[0.7rem]"> {{ .Params.category | upper }} </span>
+                <span class="text-[0.7rem]"> {{.Params.date.Format "JAN"}} </span> <span class="text-xs"> {{.Params.date.Format "2006"}} </span> —  <span class="text-[0.7rem]">{{ index .Params.categories 0 | upper }}</span>
             </div>
         </div>
-    
+        
         <div class="flex-1 flex flex-col relative h-36 overflow-clip border-t-1 border-zinc-50 border-opacity-10">
 
             {{/*  Thumbnail  */}}
@@ -89,4 +95,4 @@ hover:border-opacity-40
 </div>
 
 
-{{end}}
+{{/*  {{end}}  */}}

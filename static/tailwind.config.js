@@ -2,7 +2,12 @@
 module.exports = {
   content: ["../content/*.md", "../layouts/**/*.html"],
   theme: {
+    
     extend: {
+      screens: {
+        'lg': '900px',
+        // => @media (min-width: 992px) { ... }
+      },
       borderWidth: {
         "1": 1,
       },
