@@ -3,7 +3,7 @@
     <ul class="my-5 grid grid-cols-3 justify-between content-center lg:block">
     {{ range site.Menus.main }}
     {{ $active := $.IsMenuCurrent .Menu . }}
-        <li class="flex align-center">
+        <li class="flex align-center lg:block lg:my-5">
             <a href="{{ .URL }}" class="text-lg lg:text-base m-auto lg:text-left font-medium {{ if not $active }} text-zinc-400 {{ end }} hover:text-zinc-50 transition-all ">
                 {{ .Name | upper }}
             </a>
