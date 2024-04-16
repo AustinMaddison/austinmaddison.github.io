@@ -6,7 +6,7 @@ thumbnail: thumbnail.png
 cover: cover.png
 tags: [tag1, tag2]
 categories: [category1]
-draft: true
+draft: false
 weight: -100   
 ---
 

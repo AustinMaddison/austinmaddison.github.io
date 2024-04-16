@@ -1,17 +1,23 @@
 {{ define "pages_body" }}
+{{ $current := . }}
 
 <div class="mt-6 md:mt-0 transition-all">
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-y-6 gap-x-4 ">
-        
-        {{ $current := . }}
-        {{ range seq 50 }}
+
+        {{/*  Debugging grid  */}}
+        {{/*  {{ range seq 50 }}
         {{ with $current }}
 
             {{ range .Pages }}
                 {{ .Render "li" }}
             {{ end }}
         {{ end }}
+        {{ end }}  */}}
+
+        {{ range .Pages }}
+        {{ .Render "li" }}
         {{ end }}
+
     </div>    
 </div>
 
