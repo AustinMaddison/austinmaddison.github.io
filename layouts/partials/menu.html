@@ -1,10 +1,10 @@
 {{ define "menu" }}    
 <div class="mx-10 lg:ml-0">
-    <ul class="my-5 flex lg:block">
+    <ul class="my-5 grid grid-cols-3 justify-between content-center lg:block">
     {{ range site.Menus.main }}
     {{ $active := $.IsMenuCurrent .Menu . }}
-        <li class="flex-1 flex lg:block lg:my-5">
-            <a href="{{ .URL }}" class="m-auto text-center text-lg lg:text-base lg:text-left font-medium {{ if not $active }} text-zinc-400 {{ end }} hover:text-zinc-50 transition-all ">
+        <li class="flex align-center">
+            <a href="{{ .URL }}" class="text-lg lg:text-base m-auto lg:text-left font-medium {{ if not $active }} text-zinc-400 {{ end }} hover:text-zinc-50 transition-all ">
                 {{ .Name | upper }}
             </a>
         </li>
