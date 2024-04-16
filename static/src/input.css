@@ -102,10 +102,12 @@
         }
 
         .markdown-body mark {
-                @apply text-zinc-50 rounded-md mx-[0.5px] px-2 pb-[4px] pt-[1px];
+                @apply text-zinc-50 rounded-md mx-[0.5px];
                 -webkit-box-decoration-break: clone;
                 box-decoration-break: clone;
                 background: rgb(255,216,78);
+                padding: .2em .4em;
+                font-size: 96%;
                 background: linear-gradient(278deg, rgba(0, 0, 0, 0) 0%, rgba(161, 138, 7, 0.815) 1%, rgba(124, 105, 0, 0.781) 3%, rgba(124, 105, 0, 0.589) 97%, rgba(160, 146, 67, 0.568) 99%, rgba(0, 0, 0, 0) 100%);
                }
         
@@ -152,8 +154,7 @@
         
         .markdown-body p {
                 /* @apply font-light tracking-wide leading-relaxed text-sm sm:text-base text-justify; */
-                @apply font-normal leading-relaxed text-sm sm:text-base text-left hyphens-auto;
-                margin-top: 0;
+                @apply font-normal  text-sm leading-relaxed sm:text-base sm:leading-relaxed text-left hyphens-auto;
                 margin-bottom: 10px;
         }
         
