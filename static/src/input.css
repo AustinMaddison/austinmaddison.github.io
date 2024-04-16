@@ -18,6 +18,7 @@
 
         body {
                 position: relative;
+                overflow-y: clip;
         }
 
         .site-bg {
