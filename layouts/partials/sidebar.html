@@ -2,9 +2,9 @@
     <div class="h-16 lg:hidden"></div>
     {{ partial "sidebar_header.html" . }}
     
-    <hr class="mt-7 mb-1 lg:mb-2 border-zinc-500 mx-10 lg:mx-0">
+    <hr class="mt-7 hidden lg:block mb-1 lg:mb-2 border-zinc-500 mx-10 lg:mx-0">
 
-    <div class="lg:block overflow-auto scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-800 flex-grow">
+    <div class="lg:block mt-5 lg:mt-0 overflow-auto scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-800 flex-grow">
     {{ block "menu" . }}{{end}}
     </div>
 

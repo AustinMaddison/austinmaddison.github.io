@@ -1,14 +1,16 @@
 {{ define "menu" }}    
 <div class="mx-10 lg:ml-0">
-    <ul class="my-5 grid grid-cols-3 justify-between content-center lg:block">
+    <div class="my-5 flex justify-between md:max-w-96 lg:block">
     {{ range site.Menus.main }}
     {{ $active := $.IsMenuCurrent .Menu . }}
-        <li class="flex align-center lg:block lg:my-5">
-            <a href="{{ .URL }}" class="text-lg lg:text-base m-auto lg:text-left font-medium {{ if not $active }} text-zinc-400 {{ end }} hover:text-zinc-50 transition-all ">
+        <span class="flex lg:block lg:my-5">
+            <a href="{{ .URL }}" class="text-lg lg:text-base lg:text-left font-medium {{ if not $active }} text-zinc-400 {{ end }} hover:text-zinc-50 transition-all ">
                 {{ .Name | upper }}
             </a>
-        </li>
+        </span>
     {{ end }}
-    </ul>
+    </div>
 </div>
 {{ end }}    
+
+{{/*  max-w-64 lg:max-w-full container mt-2 flex justify-between tracking-wide  */}}
