@@ -102,7 +102,7 @@
         }
 
         .markdown-body mark {
-                @apply text-zinc-50 rounded-sm mx-[1px] px-2;
+                @apply text-zinc-50 rounded-md mx-[0.5px] px-2 pb-[4px] pt-[1px];
                 -webkit-box-decoration-break: clone;
                 box-decoration-break: clone;
                 background: rgb(255,216,78);
@@ -152,7 +152,7 @@
         
         .markdown-body p {
                 /* @apply font-light tracking-wide leading-relaxed text-sm sm:text-base text-justify; */
-                @apply font-normal leading-relaxed text-sm sm:text-base text-justify;
+                @apply font-normal leading-relaxed text-sm sm:text-base text-left hyphens-auto;
                 margin-top: 0;
                 margin-bottom: 10px;
         }
