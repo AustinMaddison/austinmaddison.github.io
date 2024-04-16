@@ -2891,6 +2891,18 @@ body {
   margin-bottom: 0px;
 }
 
+.mt-4{
+  margin-top: 1rem;
+}
+
+.mt-8{
+  margin-top: 2rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
+}
+
 .block{
   display: block;
 }
@@ -3817,6 +3829,10 @@ body {
 
   .lg\:mb-5{
     margin-bottom: 1.25rem;
+  }
+
+  .lg\:mt-6{
+    margin-top: 1.5rem;
   }
 
   .lg\:block{
