@@ -1,17 +1,17 @@
 <div class="ml-10 lg:ml-0">
 
     <div class=" mb-3 flex gap-2 max-w-64 min-w-64">
+        
+        {{/*  Profile Photo  */}}
         <div>
             <div class="w-14 h-fit">
                 {{ with resources.Get .Site.Params.author_img }}
                 <img src="{{ .RelPermalink }}" class="object-cover w-full h-16" alt="profile image">
                 {{ end }}
             </div>
-
-        <div></div>
-
         </div>
 
+        {{/*  Name */}}
         <div>
             <h1 class=" text-zinc-50 font-semibold text-xl cursor-default leading-6">
                 {{ .Site.Params.author_name }}
@@ -23,6 +23,7 @@
 
     </div>
 
+    {{/*  Small About Me  */}}
     <div class="container">
         {{ with .Site.GetPage "/header_text" }}
         <header_text>
@@ -31,7 +32,9 @@
         {{ end }}
     </div>
 
-    <div class="max-w-56 lg:max-w-full container mt-2 flex justify-between tracking-wide  ">
+
+    {{/*  Contacts  */}}
+    <div class="max-w-64 lg:max-w-full container mt-2 flex justify-between tracking-wide  ">
 
         {{ range .Site.Params.links }}
         <span class="">

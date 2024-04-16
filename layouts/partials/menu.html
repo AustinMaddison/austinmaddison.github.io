@@ -1,16 +1,14 @@
 {{ define "menu" }}    
-<div class="">
-
+<div class="mx-10 lg:ml-0">
+    <ul class="my-5 flex lg:block justify-center">
     {{ range site.Menus.main }}
     {{ $active := $.IsMenuCurrent .Menu . }}
-
-    <ul class="my-5">
-        <li>
-            <a href="{{ .URL }}" class="font-medium {{ if not $active }} text-zinc-400 {{ end }} hover:text-zinc-50 transition-all">
+        <li class="flex-1 justify-center flex lg:block lg:my-5">
+            <a href="{{ .URL }}" class="flex-shrink text-center text-lg lg:text-base lg:text-left font-medium {{ if not $active }} text-zinc-400 {{ end }} hover:text-zinc-50 transition-all ">
                 {{ .Name | upper }}
             </a>
         </li>
-
     {{ end }}
+    </ul>
 </div>
 {{ end }}    
