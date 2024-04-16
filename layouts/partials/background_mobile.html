@@ -1,9 +1,0 @@
-
-{{ define "site_bg_mobile" }}
-<div class="flex lg:hidden absolute -z-20 w-[1rem] flex-none justify-start overscroll-none">
-    {{ with resources.Get .Site.Params.site_bg }}
-    <img src="{{ .RelPermalink }}" alt class="invisible md:visible  w-[1rem] flex-none max-w-none block opacity-20" decoding="async">
-    {{ end }}
-</div>
-
-{{ end }}

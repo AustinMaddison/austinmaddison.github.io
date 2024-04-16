@@ -646,7 +646,7 @@ mjx-container[jax="CHTML"][display="true"]{
   color: rgb(250 250 250 / var(--tw-text-opacity));
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  background: rgb(255,216,78);
+  background: rgb(255, 216, 78);
   padding: .2em .4em;
   font-size: 96%;
   background: linear-gradient(278deg, rgba(0, 0, 0, 0) 0%, rgba(161, 138, 7, 0.815) 1%, rgba(124, 105, 0, 0.781) 3%, rgba(124, 105, 0, 0.589) 97%, rgba(160, 146, 67, 0.568) 99%, rgba(0, 0, 0, 0) 100%);
@@ -678,11 +678,24 @@ mjx-container[jax="CHTML"][display="true"]{
 }
 
 .markdown-body h1{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+@media (min-width: 640px){
+  .markdown-body h1{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+.markdown-body h1{
   margin-bottom: 1rem;
   margin-top: 2.5rem;
   scroll-margin: 2.5rem;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
   font-weight: 500;
   border-bottom-width: 1px;
   border-color: rgb(250 250 250 / var(--tw-border-opacity));
@@ -691,11 +704,24 @@ mjx-container[jax="CHTML"][display="true"]{
 }
 
 .markdown-body h2{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 640px){
+  .markdown-body h2{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+.markdown-body h2{
   margin-bottom: 1rem;
   margin-top: 2.5rem;
   scroll-margin: 2.5rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
   font-weight: 500;
   border-bottom-width: 1px;
   border-color: rgb(250 250 250 / var(--tw-border-opacity));
@@ -704,61 +730,106 @@ mjx-container[jax="CHTML"][display="true"]{
 }
 
 .markdown-body h3{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 640px){
+  .markdown-body h3{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.markdown-body h3{
   margin-bottom: 0.75rem;
   margin-top: 2.5rem;
   scroll-margin: 2.5rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
   font-weight: 500;
+}
+
+.markdown-body h4{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 640px){
+  .markdown-body h4{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 .markdown-body h4{
   margin-bottom: 0.75rem;
   margin-top: 2.5rem;
   scroll-margin: 2.5rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
   font-weight: 500;
 }
 
-.markdown-body h5{
-  margin-bottom: 0.75rem;
-  margin-top: 1.5rem;
-  scroll-margin: 2.5rem;
+.markdown-body h5, h6{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
   font-size: 1rem;
   line-height: 1.5rem;
-  font-weight: 600;
-}
-
-.markdown-body h6{
-  margin-bottom: 0.75rem;
-  margin-top: 2.5rem;
-  scroll-margin: 2.5rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 600;
-}
-
-.markdown-body p {
-  /* @apply font-light tracking-wide leading-relaxed text-sm sm:text-base text-justify; */
-  -webkit-hyphens: auto;
-          hyphens: auto;
-  text-align: left;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 400;
-  line-height: 1.625;
 }
 
 @media (min-width: 640px){
-  .markdown-body p{
+  .markdown-body h5, h6{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.markdown-body h5, h6{
+  scroll-margin: 2.5rem;
+  font-weight: 600;
+}
+
+@media (min-width: 640px){
+  .markdown-body h5, h6{
+    margin-bottom: 0.75rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.markdown-body h5, h6{
+  margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.markdown-body p, 
+.markdown-body ul {
+  /* @apply font-light tracking-wide leading-relaxed text-sm sm:text-base text-justify; */
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+@media (min-width: 640px){
+  .markdown-body p, 
+.markdown-body ul{
     font-size: 1rem;
     line-height: 1.5rem;
     line-height: 1.625;
   }
 }
 
-.markdown-body p {
+.markdown-body p, 
+.markdown-body ul{
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  text-align: left;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 
@@ -799,14 +870,14 @@ mjx-container[jax="CHTML"][display="true"]{
 .markdown-body tt,
 .markdown-body code,
 .markdown-body samp {
-  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
   font-size: 12px;
 }
 
 .markdown-body pre {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
   font-size: 12px;
 }
 
@@ -992,15 +1063,15 @@ color: #e6edf3;
 .markdown-body kbd {
   display: inline-block;
   padding: 3px 5px;
-  font: 11px ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+  font: 11px ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
   line-height: 10px;
   color: #e6edf3;
   vertical-align: middle;
   background-color: #161b22;
-  border: solid 1px rgba(110,118,129,0.4);
-  border-bottom-color: rgba(110,118,129,0.4);
+  border: solid 1px rgba(110, 118, 129, 0.4);
+  border-bottom-color: rgba(110, 118, 129, 0.4);
   border-radius: 6px;
-  box-shadow: inset 0 -1px 0 rgba(110,118,129,0.4);
+  box-shadow: inset 0 -1px 0 rgba(110, 118, 129, 0.4);
 }
 
 .markdown-body .octicon {
@@ -1368,7 +1439,7 @@ color: #e6edf3;
   padding: .2em .4em;
   margin: 0;
   font-size: 96%;
-  background-color: rgba(110,118,129,0.4);
+  background-color: rgba(110, 118, 129, 0.4);
   border-radius: 6px;
 }
 
@@ -1403,7 +1474,13 @@ color: #e6edf3;
   border-width: 1px;
   border-color: rgb(250 250 250 / var(--tw-border-opacity));
   --tw-border-opacity: 0.15;
-  font-size: 14px;
+  font-size: 10px;
+}
+
+@media (min-width: 640px){
+  .markdown-body .highlight{
+    font-size: 14px;
+  }
 }
 
 .markdown-body .highlight pre {
@@ -1627,7 +1704,7 @@ color: #e6edf3;
 .markdown-body g-emoji {
   display: inline-block;
   min-width: 1ch;
-  font-family: "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1em;
   font-style: normal !important;
   font-weight: 400;
@@ -2557,10 +2634,11 @@ html{
   }
 }
 
-html, body {
+html,
+        body {
   overscroll-behavior: none;
   scroll-behavior: smooth;
-  overflow-x:clip
+  overflow-x: clip
 }
 
 body {
@@ -2580,15 +2658,6 @@ body {
   box-sizing: border-box;
 }
 
-/* .site-bg {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-size: cover;
-            } */
-
 .bg-image {
   box-sizing: border-box;
   height: 100vh;
@@ -2598,7 +2667,7 @@ body {
   opacity: 0.8;
 }
 
-@media (min-width: 768px){
+@media (min-width: 900px){
   .bg-image{
     visibility: visible;
   }
@@ -2817,10 +2886,6 @@ body {
   display: none;
 }
 
-.h-14{
-  height: 3.5rem;
-}
-
 .h-16{
   height: 4rem;
 }
@@ -2839,6 +2904,10 @@ body {
 
 .h-5{
   height: 1.25rem;
+}
+
+.h-6{
+  height: 1.5rem;
 }
 
 .h-\[250px\]{
@@ -2982,6 +3051,10 @@ body {
 
 .flex-col{
   flex-direction: column;
+}
+
+.place-items-center{
+  place-items: center;
 }
 
 .items-center{
@@ -3161,9 +3234,13 @@ body {
   font-family: Noto Sans Thai, sans-serif;
 }
 
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1;
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-\[0\.65rem\]{
+  font-size: 0.65rem;
 }
 
 .text-\[0\.7rem\]{
@@ -3545,6 +3622,21 @@ body {
   .sm\:flex-row{
     flex-direction: row;
   }
+
+  .sm\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .sm\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:text-xs{
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
 }
 
 @media (min-width: 768px){
@@ -3576,6 +3668,10 @@ body {
 
   .md\:block{
     display: block;
+  }
+
+  .md\:h-14{
+    height: 3.5rem;
   }
 
   .md\:h-16{
@@ -3713,5 +3809,3 @@ body {
     padding-bottom: 4rem;
   }
 }
-
-
