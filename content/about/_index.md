@@ -38,6 +38,5 @@ Other things that I like doing outside of computers and art is cooking, binging 
 {{% figdiv src="kanom_jeen.jpg" class="mb-5 overflow-clip h-" img_class="object-cover h-32 w-full" %}}
 
 
-
 ### How was this site made?
-I use a static site generator [Hugo](https://gohugo.io/), it runs using the go programming language it has powerful, flexible and blazingly fast.  
+I use a static site generator [Hugo](https://gohugo.io/), it runs using the go programming language. It's templatinng and content management features are powerful, flexible and blazingly fast.  
