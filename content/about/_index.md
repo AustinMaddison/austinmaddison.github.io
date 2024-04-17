@@ -18,7 +18,7 @@ Other things that I like doing outside of computers and art is cooking, binging 
 
 ## FAQ
 ### What is your favourite show?
-**Severance**. The score, story, cinematography and acting is oustanding. You have to see it to believe it. Just thinking about it gives me goosebumps.  
+**Severance**. The score, story, cinematography and performances is oustanding. You have to see it to believe it. Just thinking about it gives me goosebumps.  
 
 {{% figdiv src="3.jpg" class="mb-5" %}}
 <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 mb-5">
