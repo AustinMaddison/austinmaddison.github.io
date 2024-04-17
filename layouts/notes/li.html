@@ -4,7 +4,7 @@
 {{ $title := .Params.title}}
 {{ $description := .Params.description}}
 {{/*  {{ $date := time.AsTime .Params.date }}  */}}
-{{ $date := .Params.date.Format "Jan 2023"}}
+{{/*  {{ $date := .Params.date.Format "Jan 2023"}}  */}}
 
 {{ $WordCount := 0 }}
 {{ range .Resources.ByType "page" }}
