@@ -1,19 +1,17 @@
 {{ define "notes/markdown_body_container" }}
 
-
-
 <main class="w-full">
 
     <div class="h-6  md:h-14 transition-all"></div>
     <div class= "px-10 bg-zinc-950  md:bg-transparent z-10 relative md:px-10 overflow-clip min-w-full">
         {{ block "notes/page_header" . }} {{end}}
         {{ block "notes/markdown_body" . }} {{ end }}
-        {{/*  {{ partial "notes/scroll-to-top-mobile.html" }}  */}}
+        {{ partial "notes/scroll_to_top_small.html" }}
         {{ block "notes/page_footer" . }} {{ end }}
     </div>
 
     <div class="h-6 md:h-16 transition-all"></div>
-    
+
   
 
 </main>

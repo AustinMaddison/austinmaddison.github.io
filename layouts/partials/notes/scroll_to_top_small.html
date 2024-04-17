@@ -1,0 +1,79 @@
+<div class="h-3"></div>
+<button
+class=" hidden sticky bottom-16 right-10 z-10 float-end rounded-full bg-zinc-50 bg-opacity-15 backdrop-blur-md p-3  shadow-md transition duration-150 ease-in-out group/item"
+id="ScrollToTopSmall">
+<span class="[&>svg]:w-4 group/item">
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="3"
+    stroke="currentColor"
+    class="absolute w-5 h-5  group-hover/item:animate-ping group-active/item:animate-none group-active/item:invisible transition delay-500 duration-300 ease-out invisible group-hover/item:visible -translate-y-1">
+    <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+    </svg>
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="3"
+    stroke="currentColor"
+    class="w-5 h-5 transition delay-75 duration-300 ease-out group-hover/item:-translate-y-1 group-active/item:duration-75 group-active/item:delay-0 group-active/item:-translate-y-0">
+    <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+    </svg>
+</span>
+</button>
+
+<script>
+  // Get the button
+const mybutton = document.getElementById("ScrollToTopSmall");
+
+var lastScrollPos = 0;
+
+const scrollFunction = () => {
+
+  let isScrollDown = false;
+  let isAtTop = false;
+  let isAtBottom = false;
+  let currentScrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+  if(currentScrollPos > lastScrollPos){
+    isScrollDown = true;
+  } else{
+    isScrollDown = false;
+  }
+  lastScrollPos = currentScrollPos;
+
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20 ) {
+    isAtTop = false;
+  } else {
+     isAtTop = true;
+  }
+
+  if ((window.innerHeight + Math.round(window.scrollY)) >= document.body.offsetHeight) {
+    isAtBottom = true;
+  } else {
+    isAtBottom = false;
+  }
+
+  if ( (!isAtTop && !isScrollDown) | isAtBottom ) {
+    mybutton.classList.remove("hidden");
+  } else {
+    mybutton.classList.add("hidden");
+  }
+};
+const backToTop = () => {
+window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+window.addEventListener("scroll", scrollFunction);
+</script>

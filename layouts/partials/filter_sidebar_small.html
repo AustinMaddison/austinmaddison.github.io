@@ -16,19 +16,7 @@
 {{ $is_menu = or $is_menu $is_taxonomy }}
 
 {{/*  Spacing Logic for when on page or on menu  */}}
-<div class="flex-1">
-    <aside class="justify-between flex-col select-none sticky sm:mx-0 
-    {{ if $is_menu }} 
-        md:mr-10 
-        md:py-[64px] 
-        {{else}} 
-        md:py-[64px] 
-        md:mx-10 
-    {{end}} 
-    top-0 md:h-screen 
-
-    md:min-w-32 md:max-w-52 md:flex-col z-0 lg:flex">
-        <div class="flex-grow"></div>
+<div id="FilterSmall" class="flex-1 select-none">
         <div class="overflow-y-auto">
             <div class="text-sm ">
 
@@ -49,10 +37,13 @@
                           
                     </div>
                     <hr class="mt-2 mb-3 border-zinc-50 border-opacity-15">
-                    <ul>
+                    <ul class="flex flex-row">
                         {{ range $category, $val := .Site.Taxonomies.categories }}
                         {{ if ne ($category | lower ) ( $current_filter | lower ) }}
-                        <li class="mt-1 first:mt-0">
+                        <li class="flex-shrink
+                        first:pl-0 first:pr-2 px-2 
+                        first:border-r-1  border-r-1  last:border-0
+                        border-zinc-50 border-opacity-10  ">
                             <a class="transition-all duration-75 text-zinc-50 text-opacity-30 scroll-smooth hover:text-opacity-100 active:text-opacity-100" href="{{ .Page.Permalink }}">
                                 {{ $category | title }}
                             </a>
@@ -76,16 +67,19 @@
                     {{/*  <div class="text-xs font-medium mb-1 text-opac">
                         TAGS
                     </div>  */}}
-                    <ul>
+                    <ul class="flex flex-row">
                         {{ range $tag, $val := .Site.Taxonomies.tags }}
                         {{ if ne ($tag | lower ) ( $current_filter | lower ) }}
-                        <li class="mt-1 first:mt-0">
+                        <li class="flex-shrink
+                        first:pl-0 first:pr-2 px-2 
+                        first:border-r-1  border-r-1  last:border-0
+                        border-zinc-50 border-opacity-10  ">
                             <a class="transition-all duration-75 text-zinc-50 text-opacity-30 scroll-smooth hover:text-opacity-100 active:text-opacity-100" href="{{ .Page.Permalink }}">
                                 {{ $tag | title }}
                             </a>
                         </li>
                         {{ else }}
-                        <li class="mt-1 first:mt-0 flex items-center group/item">
+                        <li class="mt-1 first:mt-0 flex-shirnk flex items-center group/item">
                             <a class="group/item  mr-1 flex-none transition-all duration-75 text-zinc-50 text-opacity-90 scroll-smooth hover:text-opacity-100 active:text-opacity-100" href="{{ $remove_filter_permalink }}">
                                 {{ $tag | title }}
                             </a>
@@ -97,6 +91,7 @@
                         {{ end }}
                         {{ end }}
                     </ul>
+                    <hr class="mt-3 mb-6 border-zinc-50 border-opacity-10">
                     
                 </nav>
                 {{ end }} 
@@ -104,25 +99,6 @@
         </div>
 
 
-
-
-        {{/*  Back To Top Button  */}}
-        <div class="text-xs block text-zinc-50 tracking-wide font-medium opacity-25 hover:opacity-100 transition ease-in-out duration-75 uppercase mt-5">
-            <a class="flex items-center group/item" href="#">
-                {{/*  Arrow Up Icon  */}}
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute  w-5 h-5 group-hover/item:animate-ping group-active/item:animate-none group-active/item:invisible transition delay-500 duration-300 ease-out invisible group-hover/item:visible -translate-y-1">
-                    <path fill-rule="evenodd" d="M10 17a.75.75 0 0 1-.75-.75V5.612L5.29 9.77a.75.75 0 0 1-1.08-1.04l5.25-5.5a.75.75 0 0 1 1.08 0l5.25 5.5a.75.75 0 1 1-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0 1 10 17Z" clip-rule="evenodd" />
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="asbolute w-5 h-5 transition delay-75 duration-300 ease-out group-hover/item:-translate-y-1 group-active/item:duration-75 group-active/item:delay-0 group-active/item:-translate-y-0">
-                    <path fill-rule="evenodd" d="M10 17a.75.75 0 0 1-.75-.75V5.612L5.29 9.77a.75.75 0 0 1-1.08-1.04l5.25-5.5a.75.75 0 0 1 1.08 0l5.25 5.5a.75.75 0 1 1-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0 1 10 17Z" clip-rule="evenodd" />
-                  </svg>
-                  
-                <span class="ml-1">
-                    Back To Top
-                </span>
-            </a>
-        </div>
-    </aside>
     
     </div>
     

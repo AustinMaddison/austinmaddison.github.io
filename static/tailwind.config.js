@@ -2,7 +2,6 @@
 module.exports = {
   content: ["../content/*.md", "../layouts/**/*.html"],
   theme: {
-    
     extend: {
       screens: {
         'lg': '900px',

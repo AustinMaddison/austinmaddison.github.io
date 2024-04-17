@@ -2,7 +2,8 @@
 {{ $is_menu := .Params.Menus.main }}
 
 {{/*  Spacing Logic for when on page or on menu  */}}
-<div class="flex-1 max-[1280px]:hidden"> 
+<div class="flex-1 block max-[1280px]:hidden
+"> 
     <aside class="justify-between flex-col select-none sticky sm:mx-0 
     {{ if $is_menu }} 
         md:mr-10 
@@ -33,7 +34,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="absolute  w-5 h-5 group-hover/item:animate-ping group-active/item:animate-none group-active/item:invisible transition delay-500 duration-300 ease-out invisible group-hover/item:visible -translate-y-1">
                     <path fill-rule="evenodd" d="M10 17a.75.75 0 0 1-.75-.75V5.612L5.29 9.77a.75.75 0 0 1-1.08-1.04l5.25-5.5a.75.75 0 0 1 1.08 0l5.25 5.5a.75.75 0 1 1-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0 1 10 17Z" clip-rule="evenodd" />
                   </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="asbolute w-5 h-5 transition delay-75 duration-300 ease-out group-hover/item:-translate-y-1 group-active/item:duration-75 group-active/item:delay-0 group-active/item:-translate-y-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 transition delay-75 duration-300 ease-out group-hover/item:-translate-y-1 group-active/item:duration-75 group-active/item:delay-0 group-active/item:-translate-y-0">
                     <path fill-rule="evenodd" d="M10 17a.75.75 0 0 1-.75-.75V5.612L5.29 9.77a.75.75 0 0 1-1.08-1.04l5.25-5.5a.75.75 0 0 1 1.08 0l5.25 5.5a.75.75 0 1 1-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0 1 10 17Z" clip-rule="evenodd" />
                   </svg>
                   
