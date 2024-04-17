@@ -2975,6 +2975,14 @@ body {
   height: 0.5rem;
 }
 
+.h-\[\]{
+  height: ;
+}
+
+.h-\[18px\]{
+  height: 18px;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
@@ -3166,6 +3174,10 @@ body {
   border-width: 1px;
 }
 
+.border{
+  border-width: 1px;
+}
+
 .border-b-1{
   border-bottom-width: 1px;
 }
@@ -3186,6 +3198,21 @@ body {
 .border-zinc-500{
   --tw-border-opacity: 1;
   border-color: rgb(113 113 122 / var(--tw-border-opacity));
+}
+
+.border-zinc-100{
+  --tw-border-opacity: 1;
+  border-color: rgb(244 244 245 / var(--tw-border-opacity));
+}
+
+.border-zinc-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(228 228 231 / var(--tw-border-opacity));
+}
+
+.border-zinc-300{
+  --tw-border-opacity: 1;
+  border-color: rgb(212 212 216 / var(--tw-border-opacity));
 }
 
 .border-opacity-10{
