@@ -2,21 +2,18 @@
 <main class="w-full">
     <div class="hidden lg:block h-16"></div>
     <div class= "px-10  bg-zinc-950 lg:bg-transparent z-10 relative lg:px-10 min-w-full">
-           
-
-        <hr id="canvas-container-width-target" class="visible lg:invisible border-zinc-500">
-
 
         {{ $section := .Section }}
         {{ $indexPage := .Site.GetPage "section" $section }}
-
-        {{/*  Rich Text Compnenet  */}}
-        {{ block "markdown_body" $indexPage }} {{ end }}
         
-
+        {{/*  Rich Text Compnenet  */}}
+        <hr id="canvas-container-width-target" class="visible lg:invisible border-zinc-500">
+        {{ block "markdown_body" $indexPage }} {{ end }}
+        {{ block "page_footer" . }} {{ end }}
+        
     </div>
 
-    <div class="lg:h-16 "></div>
+    <div class="h-6 md:h-16 transition-all"></div>
 
 </main>
 

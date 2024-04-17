@@ -2,7 +2,7 @@ const tableOfContents = document.getElementById("TableOfContents");
 const tocAnchors = tableOfContents.querySelectorAll("ul li a");
 
 const markdownBody = document.getElementById("MarkdownBody");
-const headings = Array.from(markdownBody.querySelectorAll("h1, h2, h3, h4, h5"));
+const headings = Array.from(markdownBody.querySelectorAll("h1, h2"));
 
 const obFunc = (entries) => {
     entries.forEach((entry) => {
@@ -20,7 +20,7 @@ const obFunc = (entries) => {
     });
 };
 const obOption = {
-    rootMargin: "-50px 0px -77%",
+    rootMargin: "0px 0px -90% 0px",
     threshold: 1
 };
 
