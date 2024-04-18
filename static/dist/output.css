@@ -3316,12 +3316,25 @@ body {
   padding-bottom: 0px;
 }
 
+.px-20{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 .pb-3{
   padding-bottom: 0.75rem;
 }
 
 .pt-4{
   padding-top: 1rem;
+}
+
+.pr-2{
+  padding-right: 0.5rem;
+}
+
+.pl-2{
+  padding-left: 0.5rem;
 }
 
 .text-center{
@@ -4047,6 +4060,10 @@ body {
 }
 
 .first\:\[\&\>span\]\:pr-2>span:first-child{
+  padding-right: 0.5rem;
+}
+
+.first\:\[\&\>span\]\:\[\&\>span\]\:pr-2>span>span:first-child{
   padding-right: 0.5rem;
 }
 
