@@ -3365,6 +3365,18 @@ body {
   line-height: 1rem;
 }
 
+.text-\[0\.45rem\]{
+  font-size: 0.45rem;
+}
+
+.text-\[0\.5rem\]{
+  font-size: 0.5rem;
+}
+
+.text-\[0\.55rem\]{
+  font-size: 0.55rem;
+}
+
 .font-light{
   font-weight: 300;
 }
@@ -4017,12 +4029,39 @@ body {
   padding-right: 0.5rem;
 }
 
+.\[\&\>span\]\:px-0>span{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .\[\&\>span\]\:pl-2>span{
   padding-left: 0.5rem;
 }
 
+.\[\&\>span\]\:pr-2>span{
+  padding-right: 0.5rem;
+}
+
+.first\:\[\&\>span\]\:\[\&\>span\]\:px-2>span>span:first-child{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.first\:\[\&\>span\]\:px-0>span:first-child{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .first\:\[\&\>span\]\:pr-2>span:first-child{
   padding-right: 0.5rem;
+}
+
+.first\:\[\&\>span\]\:pr-0>span:first-child{
+  padding-right: 0px;
+}
+
+.first\:\[\&\>span\]\:pl-2>span:first-child{
+  padding-left: 0.5rem;
 }
 
 .\[\&\>svg\]\:w-4>svg{

@@ -19,19 +19,19 @@
 
 
 <div class="flex mt-3 select-none">
-    <div class="flex flex-grow place-items-center first:[&>span]:pr-2 [&>span]:px-2 last[&>span]:pl-2">
+    <div class="flex flex-grow place-items-center first:[&>span]:pr-2 [&>span]:pr-2 last[&>span]:pl-2">
         <span class="border-r-1 border-zinc-50 border-opacity-30 
-         ml-1 uppercase tracking-wider text-opacity-50 font-medium text-[0.65rem] sm:text-xs transition-all ">
+         ml-1 uppercase tracking-wider text-opacity-50 font-medium text-[0.55rem] sm:text-xs transition-all ">
             {{ time.Format "Jan 2006" .Params.Date }}  
         </span>
         <span class="border-r-1 border-zinc-50 border-opacity-30 
-        ml-1 uppercase tracking-wider text-opacity-50 font-medium text-[0.65rem] sm:text-xs transition-all ">
+        ml-1 uppercase tracking-wider text-opacity-50 font-medium text-[0.55rem] sm:text-xs transition-all ">
             {{range .Params.categories }}
             {{.}}   
             {{end}}
         </span>
         <span class="
-        ml-1 tracking-wider text-opacity-50 font-medium text-[0.65rem] sm:text-xs transition-all ">
+        ml-1 tracking-wider text-opacity-50 font-medium text-[0.55rem] sm:text-xs transition-all ">
             {{ $last := index .Params.tags 1 }}
             {{range .Params.tags }}
             #{{. | title }}{{if ne . $last}}{{end}}
@@ -40,7 +40,7 @@
     </div>
 
     <div class="flex justify-end items-center">
-        <p  class="text-[0.65rem] sm:text-xs text-zinc-50 text-opacity-25 cursor-default transition-all">
+        <p  class="text-[0.55rem] sm:text-xs text-zinc-50 text-opacity-25 cursor-default transition-all">
             © 2024 All rights reserved.
         <p>
     </div>
