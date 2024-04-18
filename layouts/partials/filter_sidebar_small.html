@@ -41,7 +41,7 @@
                     <ul class="flex flex-row">
                         {{ range $category, $val := .Site.Taxonomies.categories }}
                         {{ if ne ($category | lower ) ( $current_filter | lower ) }}
-                        <li class="py-0
+                        <li class=" items-center py-0
                         align-middle
                         first:pl-0 first:pr-2 px-2 
                         first:border-r-1  border-r-1  last:border-0
@@ -51,10 +51,10 @@
                             </a>
                         </li>
                         {{ else }}
-                        <li class="py-0 align-middle
+                        <li class=" items-center py-0 align-middle
                         first:pl-0 first:pr-2 px-2 
                         first:border-r-1  border-r-1  last:border-0
-                        border-zinc-50 border-opacity-10 items-center group/item">
+                        border-zinc-50 border-opacity-10 group/item">
                             <a class="align-middle group/item   flex-none transition-all duration-75 text-zinc-50 text-opacity-90 scroll-smooth hover:text-opacity-100 active:text-opacity-100" href="{{ $remove_filter_permalink }}">
                                 {{ $category | title }}
                             </a>
@@ -73,7 +73,8 @@
                     <ul class="flex flex-row">
                         {{ range $tag, $val := .Site.Taxonomies.tags }}
                         {{ if ne ($tag | lower ) ( $current_filter | lower ) }}
-                        <li class="py-0 align-middle
+                        <li class=" items-center 
+                        py-0 align-middle
                         first:pl-0 first:pr-2 px-2 
                         first:border-r-1  border-r-1  last:border-0
                         border-zinc-50 border-opacity-10  ">
@@ -82,10 +83,10 @@
                             </a>
                         </li>
                         {{ else }}
-                        <li class="py-0 align-middle
+                        <li class=" items-center py-0 align-middle
                         first:pl-0 first:pr-2 px-2 
                         first:border-r-1  border-r-1  last:border-0
-                        border-zinc-50 border-opacity-10 items-center group/item">
+                        border-zinc-50 border-opacity-10 group/item">
                             <a class="align-middle group/item   flex-none transition-all duration-75 text-zinc-50 text-opacity-90 scroll-smooth hover:text-opacity-100 active:text-opacity-100" href="{{ $remove_filter_permalink }}">
                                 {{ $tag | title }}
                             </a>
