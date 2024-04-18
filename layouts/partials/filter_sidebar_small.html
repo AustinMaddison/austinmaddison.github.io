@@ -28,7 +28,7 @@
                     </div>  */}}
                     <div class="border-b-1 py-3 border-zinc-50 border-opacity-20">
                     <div class="flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class=" flex-shrink opacity-30 w-3 h-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class=" py-0 opacity-30 w-3 h-3">
                             <path d="M14 2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2.172a2 2 0 0 0 .586 1.414l2.828 2.828A2 2 0 0 1 6 9.828v4.363a.5.5 0 0 0 .724.447l2.17-1.085A2 2 0 0 0 10 11.763V9.829a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 0 14 4.172V2Z" />
                         </svg>
                         <span class="align-middle ml-1 text-xs font-medium tracking-wide text-opacity-40 text-zinc-50">
@@ -41,7 +41,7 @@
                     <ul class="flex flex-row">
                         {{ range $category, $val := .Site.Taxonomies.categories }}
                         {{ if ne ($category | lower ) ( $current_filter | lower ) }}
-                        <li class="flex-shrink
+                        <li class="py-0
                         align-middle
                         first:pl-0 first:pr-2 px-2 
                         first:border-r-1  border-r-1  last:border-0
@@ -51,7 +51,7 @@
                             </a>
                         </li>
                         {{ else }}
-                        <li class="flex-shrink align-middle
+                        <li class="py-0 align-middle
                         first:pl-0 first:pr-2 px-2 
                         first:border-r-1  border-r-1  last:border-0
                         border-zinc-50 border-opacity-10 items-center group/item">
@@ -73,7 +73,7 @@
                     <ul class="flex flex-row">
                         {{ range $tag, $val := .Site.Taxonomies.tags }}
                         {{ if ne ($tag | lower ) ( $current_filter | lower ) }}
-                        <li class="flex-shrink align-middle
+                        <li class="py-0 align-middle
                         first:pl-0 first:pr-2 px-2 
                         first:border-r-1  border-r-1  last:border-0
                         border-zinc-50 border-opacity-10  ">
@@ -82,7 +82,7 @@
                             </a>
                         </li>
                         {{ else }}
-                        <li class="flex-shrink align-middle
+                        <li class="py-0 align-middle
                         first:pl-0 first:pr-2 px-2 
                         first:border-r-1  border-r-1  last:border-0
                         border-zinc-50 border-opacity-10 items-center group/item">
