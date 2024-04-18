@@ -3319,6 +3319,10 @@ body {
   text-align: justify;
 }
 
+.align-middle{
+  vertical-align: middle;
+}
+
 .font-sans-thai{
   font-family: Noto Sans Thai, sans-serif;
 }

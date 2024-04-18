@@ -31,7 +31,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class=" flex-shrink opacity-30 w-3 h-3">
                             <path d="M14 2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v2.172a2 2 0 0 0 .586 1.414l2.828 2.828A2 2 0 0 1 6 9.828v4.363a.5.5 0 0 0 .724.447l2.17-1.085A2 2 0 0 0 10 11.763V9.829a2 2 0 0 1 .586-1.414l2.828-2.828A2 2 0 0 0 14 4.172V2Z" />
                         </svg>
-                        <span class="ml-1 text-xs font-medium tracking-wide text-opacity-40 text-zinc-50">
+                        <span class="align-middle ml-1 text-xs font-medium tracking-wide text-opacity-40 text-zinc-50">
                             FILTER
                         <span>
                           
@@ -41,16 +41,17 @@
                         {{ range $category, $val := .Site.Taxonomies.categories }}
                         {{ if ne ($category | lower ) ( $current_filter | lower ) }}
                         <li class="flex-shrink
+                        align-middle
                         first:pl-0 first:pr-2 px-2 
                         first:border-r-1  border-r-1  last:border-0
                         border-zinc-50 border-opacity-10  ">
-                            <a class="transition-all duration-75 text-zinc-50 text-opacity-30 scroll-smooth hover:text-opacity-100 active:text-opacity-100" href="{{ .Page.Permalink }}">
+                            <a class="align-middle transition-all duration-75 text-zinc-50 text-opacity-30 scroll-smooth hover:text-opacity-100 active:text-opacity-100" href="{{ .Page.Permalink }}">
                                 {{ $category | title }}
                             </a>
                         </li>
                         {{ else }}
-                        <li class="mt-1 first:mt-0 flex items-center group/item">
-                            <a class="group/item  mr-1 flex-none transition-all duration-75 text-zinc-50 text-opacity-90 scroll-smooth hover:text-opacity-100 active:text-opacity-100" href="{{ $remove_filter_permalink }}">
+                        <li class="align-middle mt-1 first:mt-0 flex items-center group/item">
+                            <a class="align-middle group/item  mr-1 flex-none transition-all duration-75 text-zinc-50 text-opacity-90 scroll-smooth hover:text-opacity-100 active:text-opacity-100" href="{{ $remove_filter_permalink }}">
                                 {{ $category | title }}
                             </a>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 -translate-x-4 opacity-0 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition duration-150 delay-75 ease-out">
@@ -70,17 +71,17 @@
                     <ul class="flex flex-row">
                         {{ range $tag, $val := .Site.Taxonomies.tags }}
                         {{ if ne ($tag | lower ) ( $current_filter | lower ) }}
-                        <li class="flex-shrink
+                        <li class="flex-shrink align-middle
                         first:pl-0 first:pr-2 px-2 
                         first:border-r-1  border-r-1  last:border-0
                         border-zinc-50 border-opacity-10  ">
-                            <a class="transition-all duration-75 text-zinc-50 text-opacity-30 scroll-smooth hover:text-opacity-100 active:text-opacity-100" href="{{ .Page.Permalink }}">
+                            <a class="align-middle transition-all duration-75 text-zinc-50 text-opacity-30 scroll-smooth hover:text-opacity-100 active:text-opacity-100" href="{{ .Page.Permalink }}">
                                 {{ $tag | title }}
                             </a>
                         </li>
                         {{ else }}
-                        <li class="mt-1 first:mt-0 flex-shirnk flex items-center group/item">
-                            <a class="group/item  mr-1 flex-none transition-all duration-75 text-zinc-50 text-opacity-90 scroll-smooth hover:text-opacity-100 active:text-opacity-100" href="{{ $remove_filter_permalink }}">
+                        <li class="align-middle mt-1 first:mt-0 flex-shirnk flex items-center group/item">
+                            <a class="align-middle group/item  mr-1 flex-none transition-all duration-75 text-zinc-50 text-opacity-90 scroll-smooth hover:text-opacity-100 active:text-opacity-100" href="{{ $remove_filter_permalink }}">
                                 {{ $tag | title }}
                             </a>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 -translate-x-4 opacity-0 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition duration-150 delay-75 ease-out">
