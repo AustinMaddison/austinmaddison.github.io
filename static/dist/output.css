@@ -2774,6 +2774,14 @@ body {
   visibility: hidden;
 }
 
+.static{
+  position: static;
+}
+
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
@@ -2796,6 +2804,42 @@ body {
 
 .top-0{
   top: 0px;
+}
+
+.bottom-14{
+  bottom: 3.5rem;
+}
+
+.bottom-12{
+  bottom: 3rem;
+}
+
+.bottom-10{
+  bottom: 2.5rem;
+}
+
+.bottom-0{
+  bottom: 0px;
+}
+
+.bottom-1{
+  bottom: 0.25rem;
+}
+
+.bottom-2{
+  bottom: 0.5rem;
+}
+
+.bottom-20{
+  bottom: 5rem;
+}
+
+.top-2{
+  top: 0.5rem;
+}
+
+.right-0{
+  right: 0px;
 }
 
 .z-0{
@@ -2837,6 +2881,11 @@ body {
 .my-5{
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+.mx-2{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .mb-0{
@@ -2919,6 +2968,34 @@ body {
   margin-top: 1.75rem;
 }
 
+.ml-0{
+  margin-left: 0px;
+}
+
+.mr-0{
+  margin-right: 0px;
+}
+
+.mr-10{
+  margin-right: 2.5rem;
+}
+
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+
+.mr-11{
+  margin-right: 2.75rem;
+}
+
+.mb-20{
+  margin-bottom: 5rem;
+}
+
+.mb-16{
+  margin-bottom: 4rem;
+}
+
 .block{
   display: block;
 }
@@ -2927,12 +3004,8 @@ body {
   display: flex;
 }
 
-.table{
-  display: table;
-}
-
-.table-cell{
-  display: table-cell;
+.inline-flex{
+  display: inline-flex;
 }
 
 .grid{
@@ -2984,6 +3057,42 @@ body {
   height: 100%;
 }
 
+.h-10{
+  height: 2.5rem;
+}
+
+.h-\[50px\]{
+  height: 50px;
+}
+
+.h-\[10px\]{
+  height: 10px;
+}
+
+.h-\[1px\]{
+  height: 1px;
+}
+
+.h-\[4px\]{
+  height: 4px;
+}
+
+.h-8{
+  height: 2rem;
+}
+
+.h-\[\]{
+  height: ;
+}
+
+.h-\[34px\]{
+  height: 34px;
+}
+
+.h-\[35px\]{
+  height: 35px;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
@@ -3014,6 +3123,14 @@ body {
 
 .w-full{
   width: 100%;
+}
+
+.w-10{
+  width: 2.5rem;
+}
+
+.w-6{
+  width: 1.5rem;
 }
 
 .min-w-64{
@@ -3172,6 +3289,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.whitespace-nowrap{
+  white-space: nowrap;
+}
+
 .rounded-lg{
   border-radius: 0.5rem;
 }
@@ -3266,6 +3387,18 @@ body {
   padding: 1rem;
 }
 
+.p-10{
+  padding: 2.5rem;
+}
+
+.p-5{
+  padding: 1.25rem;
+}
+
+.p-6{
+  padding: 1.5rem;
+}
+
 .px-10{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -3291,6 +3424,11 @@ body {
   padding-right: 2rem;
 }
 
+.py-0{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .py-1{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -3311,30 +3449,20 @@ body {
   padding-bottom: 1.5rem;
 }
 
-.py-0{
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.px-20{
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
 .pb-3{
   padding-bottom: 0.75rem;
 }
 
-.pt-4{
-  padding-top: 1rem;
+.pl-2{
+  padding-left: 0.5rem;
 }
 
 .pr-2{
   padding-right: 0.5rem;
 }
 
-.pl-2{
-  padding-left: 0.5rem;
+.pt-4{
+  padding-top: 1rem;
 }
 
 .text-center{
@@ -4038,6 +4166,60 @@ body {
   }
 }
 
+.\[\&\:first_span\]\:ml-0:first span{
+  margin-left: 0px;
+}
+
+.first\:\[\&\:first_span\]\:ml-0:first span:first-child{
+  margin-left: 0px;
+}
+
+.last\:\[\&\>a\>div\>a\>span\]\:ml-2>a>div>a>span:last-child{
+  margin-left: 0.5rem;
+}
+
+.\[\&\>a\>div\>span\]\:mx-2>a>div>span{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.\[\&\>a\>div\>span\]\:mx-1>a>div>span{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.first\:\[\&\>a\>div\>span\]\:ml-0>a>div>span:first-child{
+  margin-left: 0px;
+}
+
+.first\:\[\&\>a\>div\>span\]\:mr-2>a>div>span:first-child{
+  margin-right: 0.5rem;
+}
+
+.first\:\[\&\>a\>div\>span\]\:pr-2>a>div>span:first-child{
+  padding-right: 0.5rem;
+}
+
+.last\:\[\&\>a\>div\>span\]\:ml-2>a>div>span:last-child{
+  margin-left: 0.5rem;
+}
+
+.last\:\[\&\>div\>div\>a\>span\]\:ml-2>div>div>a>span:last-child{
+  margin-left: 0.5rem;
+}
+
+.last\:\[\&\>div\>div\>span\]\:ml-2>div>div>span:last-child{
+  margin-left: 0.5rem;
+}
+
+.last\:\[\&\>div\>span\]\:ml-2>div>span:last-child{
+  margin-left: 0.5rem;
+}
+
+.last\:\[\&\>divspan\]\:ml-2>divspan:last-child{
+  margin-left: 0.5rem;
+}
+
 .\[\&\>p\]\:mb-2>p{
   margin-bottom: 0.5rem;
 }
@@ -4055,18 +4237,55 @@ body {
   padding-left: 0.5rem;
 }
 
-.\[\&\>span\]\:pr-2>span{
-  padding-right: 0.5rem;
-}
-
 .first\:\[\&\>span\]\:pr-2>span:first-child{
-  padding-right: 0.5rem;
-}
-
-.first\:\[\&\>span\]\:\[\&\>span\]\:pr-2>span>span:first-child{
   padding-right: 0.5rem;
 }
 
 .\[\&\>svg\]\:w-4>svg{
   width: 1rem;
+}
+
+.last\:\[\&\]\:ml-2:last-child{
+  margin-left: 0.5rem;
+}
+
+.\[\&_span\]\:mx-2 span{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.\[\&_span\]\:ml-2 span{
+  margin-left: 0.5rem;
+}
+
+.first\:\[\&_span\]\:mr-2 span:first-child{
+  margin-right: 0.5rem;
+}
+
+.first\:\[\&_span\]\:ml-0 span:first-child{
+  margin-left: 0px;
+}
+
+.first\:\[\&_span\]\:mr-0 span:first-child{
+  margin-right: 0px;
+}
+
+.first\:\[\&_span\]\:ml-2 span:first-child{
+  margin-left: 0.5rem;
+}
+
+.first\:\[\&_span\]\:pr-2 span:first-child{
+  padding-right: 0.5rem;
+}
+
+.last\:\[\&_span\]\:ml-2 span:last-child{
+  margin-left: 0.5rem;
+}
+
+.first\:\[\&span\]\:pr-2span:first-child{
+  padding-right: 0.5rem;
+}
+
+.last\:\[\&span\]\:ml-2span:last-child{
+  margin-left: 0.5rem;
 }
