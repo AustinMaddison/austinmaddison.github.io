@@ -17,11 +17,13 @@ preview: thumbnail.jpg
 
 {{% header %}}
 
+
 {{% fig src="image.png" %}}
 
 <video autoplay loop muted>
-  <source src="videocover.webm" type="video/webm">
+  <source src="walk.mp4" type="video/mp4">
 </video>
+
 
 
 {{% fig src="sidebyside.jpg" %}}
@@ -30,7 +32,15 @@ preview: thumbnail.jpg
 
 <div class="h-5"></div>
 
-> I called the demo Banana Boy but the project was named to Hello Mascot to be more generic for thier product portfolio's market.  
+
+<div class="flex">
+  <span class="flex-1 text-center text-opacity-50 text-zinc-50 italic text-sm"> 
+    I called the demo Banana Boy but the project was named to Hello Mascot to be more generic for thier product portfolio's market. 
+  </span>  
+</div>
+
+
+
 
 # Introduction
 This project began last year in my first internship at Adapter Digital. They are a digital agency based in Bangkok. How I alnded the internship is actaully a funny story.  
