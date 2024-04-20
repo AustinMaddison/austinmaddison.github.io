@@ -21,9 +21,7 @@
                 {{ if  $is_menu }}
                     {{ .TableOfContents }}
                 {{ else }}
-                    {{ range .Resources.ByType "page" }}
-                        {{ .TableOfContents }}
-                    {{ end }}
+                    {{ .TableOfContents }}
                 {{ end }} 
             </div>
         </div>

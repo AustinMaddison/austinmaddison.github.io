@@ -1,9 +1,6 @@
 {{ define "notes/page_header" }}
 
-{{ $WordCount := 0 }}
-{{ range .Resources.ByType "page" }}
-    {{  $WordCount = add $WordCount .WordCount }}
-{{ end }}
+{{ $WordCount := .WordCount }}
 
 {{ $WordsPerMin := .Site.Params.words_per_min }}
 {{ $MinsToRead := 0 }}

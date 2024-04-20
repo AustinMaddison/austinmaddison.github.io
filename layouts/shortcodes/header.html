@@ -1,9 +1,8 @@
-{{ $index :=.Page.Parent }}
 <div class="my-12 flex-col align-center">
     <div class="flex-1 font-medium text-3xl sm:text-5xl mb-2 text-center mx-auto w-full transition-all">
-        {{ $index.Params.title }}    
+        {{ .Page.Params.title }}    
     </div>
     <div class="flex-1 text-base sm:text-lg text-center w-full transition-all">
-        {{ $index.Params.description }}
+        {{ .Page.Params.description }}
     </div>
 </div>
