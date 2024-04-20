@@ -20,7 +20,7 @@ preview: thumbnail.jpg
 
 {{% fig src="image.png" %}}
 
-<video autoplay loop muted>
+<video autoplay loop muted playsinline>
   <source src="walk.mp4" type="video/mp4">
 </video>
 
