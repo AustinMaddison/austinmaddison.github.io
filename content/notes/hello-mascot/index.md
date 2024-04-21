@@ -73,13 +73,13 @@ The interview was great. It was the first time I had a conversation with somebod
 While my university dorm was in Nakhon Pathom, not far from Bangkok, my roots in Phuket made me accustomed to feeling isolated in my interests in computers, art, and technology. Discovering Bangkok's vibrant tech, engineering, and art scene was a revelation. Finally finding a community that shared some of my passions was an incredible feeling.
 
 # The Brief
-Real estate development project (The Forestias) would like a new interesting way to elevate the experience of their public spaces. One of the ways is with interactive experiences with their area assigned mascots. The  interactive experience has to be be an installation. 
+Real estate development project (The Forestias) would like a new interesting way to elevate the experience of their public spaces. One of the ways is with <mark>interactive experiences with their area assigned mascots.</mark> The interactive experience has to be be an installation. 
 
 ## Constraints
-The installation consists of  <mark>1080x5760 pixels (16:3) screen</mark> and a single <mark>motion capture camera.</mark> The demo that will be running on the installation will be using the Krungsri banana mascot because the studio had the original rig for it already and the character has no copyright. Lastly, the technology we must use is Unity. 
+The installation consists of <mark>1080x5760 pixel (16:3) screen</mark> and a single <mark>motion capture camera.</mark> The demo that will be running on the installation will be using the Krungsri banana mascot because the studio had the original rig for it already and the character has no copyright. Lastly, the technology we must use is Unity. 
 
 # Pre-Production
-Consisted of brainstorming, research and planning. Here are some screenshots.
+Some screenshots I found from preproduction.
 
 ![alt text](image-2.png)
 
@@ -107,14 +107,25 @@ I was given the source files for krungsri's banana character. I immediately real
   </div>
 </div>
 
-### My Rig + Run Animation
+### Low Poly Model + Rig + Run Animation
 
 <video autoplay loop muted playsinline  >
   <source src="rig.mp4" type="video/mp4">
 </video>
 
-### LookDev
 
+### High Poly Sculpt
+<div class="">
+  <img width="400px" class="mx-auto" src="high-poly.jpg">
+</div>
+
+### Baked Normals and ID Mask
+<div>
+  <img src="maps.jpg">
+</div>
+
+
+### LookDev
 <video autoplay loop muted playsinline  >
   <source src="rig-lookdev.mp4" type="video/mp4">
 </video>
@@ -134,10 +145,10 @@ What is interesting about the character's shaders is the shader that drives the 
 
 Each expression for the <mark>mouth and eyes are indexed</mark> and <mark>multiple sin cos, modulo functions are manually tuned and combined to get the desired mouth and eye index over time</mark>. Then the face expressions shader is composited onto the body's base yellow claymation shader. Maybe in a future article I write in detail how I made the shaders for the character.
 
-#### Mouths
+#### Eyes
 ![eyes](eyes.jpg)
 
-#### Eyes
+#### Mouths
 ![mouths](mouths.jpg)
 
 ## Environment
@@ -163,14 +174,11 @@ Blocking out the scene is super duper important, allows me to <mark>use proxies 
 
 Like all kinds of visual mediums its a highly iterative process. I had to really trust the process and power through the not so flattering early stages of the environment's look development. What really transformed the scene was [set dressing](#set-dressing) obviously but not so obviously the the [post-processing](#post-processing).
 
-
-
-
-
-
 <div class="h-5"></div>
 
 ## Set Dressing
+I export the blockout out of engine and bring into my DCC to model and sculpt the props
+
 ### Hero Props
 #### Flowers
 #### Coconut Tree
@@ -178,13 +186,15 @@ Like all kinds of visual mediums its a highly iterative process. I had to really
 #### Rocks
 #### Statue
 
+## Primary Props
+#### Hills
+
 ### Secondary Props
 #### Clouds
 #### River
 #### Vegetation
 ##### Trees
 ##### Grass
-#### Hills
 
 ## Materials and Shaders
 I was heavily inspired by some of the stylized platformer games, some I even grew up on such as my little planet. I loved how tactile all the materials were in these games. 
