@@ -40,7 +40,7 @@ hover:border-opacity-40
                 </span>
             </div>
             <div>
-                <span class="block font-light text-zinc-400 text-sm tracking-wide text-[0.9rem] flex-1 mb-1 text-justify">
+                <span class="block font-light text-zinc-400 text-sm tracking-wide text-[0.9rem] flex-1 mb-2 text-left">
                     {{ $description }}
                 </span>
             </div>
@@ -50,7 +50,7 @@ hover:border-opacity-40
                   {{/*  {{ end }}</span>  */}}
             {{/*  </div>  */}}
 
-            <div class="text-zinc-400">
+            <div class="text-zinc-400  leading-3">
                 {{/*  <span class="text-xs"> {{.Params.date.Format "JAN 2006"}} — {{ $MinsToRead }} {{ if ne $MinsToRead 1 }}MINS{{else}}MIN{{end}} READ</span>  */}}
                 <span class="text-[0.7rem]"> {{.Params.date.Format "JAN"}} </span> <span class="text-xs"> {{.Params.date.Format "2006"}} </span> —  <span class="text-[0.7rem]">{{ index .Params.categories 0 | upper }}</span>
             </div>

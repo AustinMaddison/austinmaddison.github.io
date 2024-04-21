@@ -3332,12 +3332,12 @@ body {
   padding-top: 1rem;
 }
 
-.text-center{
-  text-align: center;
+.text-left{
+  text-align: left;
 }
 
-.text-justify{
-  text-align: justify;
+.text-center{
+  text-align: center;
 }
 
 .align-middle{
@@ -3420,6 +3420,10 @@ body {
 
 .italic{
   font-style: italic;
+}
+
+.leading-3{
+  line-height: .75rem;
 }
 
 .leading-6{
