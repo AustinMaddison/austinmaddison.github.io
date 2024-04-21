@@ -17,11 +17,7 @@ preview: thumbnail.jpg
 
 {{% header %}}
 
-
 {{% fig src="image.png" %}}
-
-
-
 
 <iframe class="w-full" height="330px" src="https://www.youtube.com/embed/hmK6vug5r68?si=IfmBeWxxLIpL46_o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -38,22 +34,22 @@ preview: thumbnail.jpg
 
 
 
-#### Lookdev + Animation Test
+#### Level LookDev + Animation Loop Test
 
-<video autoplay loop muted playsinline controls>
+<video autoplay loop muted playsinline  >
   <source src="lookdev.mp4" type="video/mp4">
 </video>
 
 <div class="h-5"></div>
 
-<video autoplay loop muted playsinline controls>
+<video autoplay loop muted playsinline  >
   <source src="lookdev-left.mp4" type="video/mp4">
 </video>
 
 <div class="h-5"></div>
 
 
-<video autoplay loop muted playsinline controls>
+<video autoplay loop muted playsinline  >
   <source src="lookdev-right.mp4" type="video/mp4">
 </video>
 
@@ -74,12 +70,15 @@ This project began last year in my first internship at Adapter Digital. They are
 The interview was great. It was the first time I had a conversation with somebody who understood the craft as much as I did, and it felt amazing to connect with someone on that level. The interview was lengthy, and I believe we enjoyed every minute of it. That is how I got the internship.
 
 ## Moving to Bangkok
-While my university dorm was in Nakhon Pathom, not far from Bangkok, my roots in Phuket made me accustomed to feeling isolated in my interests in computers, art, and technology. Discovering Bangkok's vibrant tech, engineering, and art scene was a revelation. Finally finding a community that shared some of my passions was an incredible feeling of connection.
+While my university dorm was in Nakhon Pathom, not far from Bangkok, my roots in Phuket made me accustomed to feeling isolated in my interests in computers, art, and technology. Discovering Bangkok's vibrant tech, engineering, and art scene was a revelation. Finally finding a community that shared some of my passions was an incredible feeling.
 
 # The Brief
-Real estate development project (The Forestias) would like a new interesting way to elevate the experience of their public spaces. One of the ways is with interactive experiences with their area assigned mascots. The constraints of this interactive experience is that it will be an installation. The installation consists of 16:3 (1080x5760 pixels) screen and a single motion capture camera. The demo that will be running on the installation will be using the Krungsri banana mascot because the studio had the original rig for it already and the character has no copyright. Lastly, the technology we must use is Unity. 
+Real estate development project (The Forestias) would like a new interesting way to elevate the experience of their public spaces. One of the ways is with interactive experiences with their area assigned mascots. The  interactive experience has to be be an installation. 
 
-## Pre-Production
+## Constraints
+The installation consists of  <mark>1080x5760 pixels (16:3) screen</mark> and a single <mark>motion capture camera.</mark> The demo that will be running on the installation will be using the Krungsri banana mascot because the studio had the original rig for it already and the character has no copyright. Lastly, the technology we must use is Unity. 
+
+# Pre-Production
 Consisted of brainstorming, research and planning. Here are some screenshots.
 
 ![alt text](image-2.png)
@@ -93,9 +92,6 @@ Consisted of brainstorming, research and planning. Here are some screenshots.
 ![alt text](image-4.png)
 
 <div class="h-5"></div>
-
-
-
 
 # Production
 ## Character
@@ -113,13 +109,13 @@ I was given the source files for krungsri's banana character. I immediately real
 
 ### My Rig + Run Animation
 
-<video autoplay loop muted playsinline controls>
+<video autoplay loop muted playsinline  >
   <source src="rig.mp4" type="video/mp4">
 </video>
 
 ### LookDev
 
-<video autoplay loop muted playsinline controls>
+<video autoplay loop muted playsinline  >
   <source src="rig-lookdev.mp4" type="video/mp4">
 </video>
 <div class="mb-5"></div>
@@ -127,15 +123,16 @@ I was given the source files for krungsri's banana character. I immediately real
 ### Face shader
 
 <div class="w-full mt-5">
-    <video width="350px" autoplay loop muted playsinline controls class="mx-auto" >
+    <video width="350px" autoplay loop muted playsinline   class="mx-auto" >
       <source src="face-demo.mp4" type="video/mp4">
     </video>
 </div>
 
 <div class="h-5"></div>
 
-What is interesting about the character's shaders is the shader that drives the character's face. The scheduling of the blinks and mouth shapes are totally driven by wave functions. The CPU at anytime can interrupt and override a specific eye + mouth expression on an event. I did not take a screenshot nor have to correct development environment at home to open the project file so for now I will just give a gist on how it works. The expressions for the mouth and eyes are indexed and multiple sin cos, modulos functions are manually tuned and combined to get the desired index over time mouth and eye shapes. Then the face shader is composited onto the body's base claymation shader. Maybe in a future article I write how I made the shaders for the character.
+What is interesting about the character's shaders is the shader that drives the character's face. The <mark>scheduling of the blinks and mouth shapes are totally driven by wave functions.</mark> The CPU at anytime can interrupt and override a specific eye + mouth expression on an event. I did not take a screenshot nor have to correct development environment at home to open the project file so for now I will just give a gist on how it works. 
 
+Each expression for the <mark>mouth and eyes are indexed</mark> and <mark>multiple sin cos, modulo functions are manually tuned and combined to get the desired mouth and eye index over time</mark>. Then the face expressions shader is composited onto the body's base yellow claymation shader. Maybe in a future article I write in detail how I made the shaders for the character.
 
 #### Mouths
 ![eyes](eyes.jpg)
@@ -143,24 +140,32 @@ What is interesting about the character's shaders is the shader that drives the 
 #### Eyes
 ![mouths](mouths.jpg)
 
-
 ## Environment
+
 ### Concept
-So I made a sketch, it isn't amazing by any means but it provides some guidance on what props shaders, and materials will the scene need as well as the loose placement and overall composition of everything. Also gives opportunity to decide where to put interactive events in the level for the gameplay.
 
 ![alt text](image-5.png)
+
+So I made a sketch, it isn't amazing by any means but it provides some guidance on what props, shaders, and materials will the scene need as well as the loose placement and overall composition. It also gives me an opportunity to decide where to put triggers in the level for the interactive events.
+
 
 ### Blockout
 
 ![blockout](blockout.jpg)
 <div class="mb-5"></div>
-Blocking out is super duper important, allows me to use proxies to establish volume, proportions, and composition of the scene early on. That way when I start creating the props I have a better understanding on scale, variation, level of detail etc. Also when its time to set dress, the outcome is predictable. Another great bonus of having a blockout it works as a great sandbox for programming the gameplay because it abstracts all the visual noise and complex assets away.  
+Blocking out the scene is super duper important, allows me to <mark>use proxies to establish volume, proportions, and composition of the scene early on.</mark> That way when I start creating the props I have a better understanding on scale, variation, level of detail etc. Also when its time to set dress, the outcome is predictable. <mark>Blockouts also work as a sandbox for programming the gameplay</mark> because it abstracts all the visual noise and unessential objects away.  
 
 ### Timelapse
-<video autoplay loop muted playsinline controls>
+<video autoplay loop muted playsinline  >
   <source src="timelapse.mp4" type="video/mp4">
 </video>
 <div class="mb-5"></div>
+
+Like all kinds of visual mediums its a highly iterative process. I had to really trust the process and power through the not so flattering early stages of the environment's look development. What really transformed the scene was [set dressing](#set-dressing) obviously but not so obviously the the [post-processing](#post-processing).
+
+
+
+
 
 
 <div class="h-5"></div>
@@ -193,13 +198,22 @@ You could immediately read exactly what each material might feel like in my litt
 ### Substance Designer
 ### Wind Vertex Shader
 
+## Post-Processing
+
 ## Dialogue Boxes
 
-## Player Interaction
-### Mocap
-### Google API
+## Gameplay Programming and Player Interaction
+For implementing the game mechanics I had someone in the lab to assist me, P'Kiew. He is a experienced C# unity developer. I was so lucky to have him help and mentor me. He contributed in hooking up the mocap, core game systems and game mechanics on the final week of internship (week 4).  
+
+### Mocap (Google's API)
 ### Extracting Essential Data
 
 # Conclusion
-## Wish there was more time.
+
+
+### Wish there was more time.
+My internship being as long as my summer break (4 weeks) it was admittedly short. This is due to it being an independent internship and not a university sponsored one. However, I was surprised how much was accomplished in the time I had. Wish I had more time to polish the features and turn it into a game with a fun gameplay loop. 
+
+Also at the time I wished I spent more time talking to the team. Everybody in the innovation / creative lab at Adapter Digital were so incredibly kind and welcoming. I couldn't of asked for a better internship experience especially almost halfway in my undergraduate program 💗. 
+
 ## References
