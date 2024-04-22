@@ -1,3 +1,23 @@
+.toggle-collapsible {
+    @apply px-4 border-1 border-zinc-50 border-opacity-15 py-3 flex flex-row w-full justify-between;
+}
+
+.toggle-content {
+    @apply p-4 w-full border-x-1 border-b-1 border-zinc-100 border-opacity-15 hidden;
+}
+
+.toggle-arrow {
+    @apply  transition-all w-5 h-5 fill-zinc-100;
+}
+
+.toggle-arrow.active {
+    @apply  transition-all rotate-180;
+}
+
+.toggle-text {
+    @apply  my-auto text-sm sm:text-base;
+}
+
 .markdown-body {
     @apply transition-all;
     @apply text-zinc-200 break-before-auto hyphens-auto lg:hyphens-none;

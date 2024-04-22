@@ -77,13 +77,13 @@ While my university dorm was in Nakhon Pathom, not far from Bangkok, my roots in
 
 # The Brief
 The brief went a little something like this:
-A real estate development project (The Forestias) would like a new interesting way to elevate their high end residential experiences with digital interactive experiences. Some of their recreational facilities will have mascots and they would like a way to interact with them. This interactive solution had to come in the form of a installation 
+A real estate development project (The Forestias) would like a new interesting way to elevate their high end residential experiences with digital interactive experiences. <mark>Some of their recreational facilities will have mascots and they would like a way to interact with them.</mark> This interactive solution had to come in the form of a <mark>interactive installation</mark>.
 
 ## Constraints
 The installation consists of <mark>1080x5760 pixel (16:3) screen</mark> and a single <mark>motion capture camera.</mark> The demo that will be running on the installation will be using the Krungsri banana mascot because the studio had the original rig for it already and the character has no copyright. Lastly, the technology we must use is Unity. 
 
 # Pre-Production
-Pre production was important as my internship was short. So I had to really nail the scope and timeline for this project to a tea. Had about 4 weeks to create the visuals, hook up the mechanics that are driven by the mocap camera. No pressure am I right? I couldn't find all the preproduction material I prepared but here are some screenshots I found. 
+Pre production was important as my internship was short. So I had to really nail the scope and timeline for this project to a tea. Had about 4 weeks to create the visuals, hook up the mechanics that are driven by the mocap camera. No pressure am I right? I couldn't find all the pre-production material I prepared but here are some screenshots I found. 
 
 ![alt text](image-2.png)
 
@@ -103,7 +103,7 @@ As the weeks went on I was not able to provide enough variety of interactive ele
 
 # Production
 ## Character
-I was given the source files for krungsri's banana character. I immediately realized that the rig provided would not be suitable for the project. Its topology, UVs and polygonal density would make it suboptimal for rendering in realtime on a large screen. So I had to make my own.
+I was given the source files for Krungsri's banana character. I immediately realized that the rig provided would not be suitable for the project. Its topology, UVs and polygonal density would make it suboptimal for rendering in realtime on a large screen. So I had to make my own.
 
 ### Source Character Rig
 <div class="grid grid-cols-2">
@@ -165,7 +165,7 @@ Each expression for the <mark>mouth and eyes are indexed</mark> and <mark>multip
 
 ![alt text](image-5.png)
 
-So I made a sketch, it isn't amazing by any means but it provides some guidance on what props, shaders, and materials will the scene need as well as the loose placement and overall composition. It also gives me an opportunity to decide where to put triggers in the level for the interactive events.
+So I made a sketch, it isn't amazing by any means but it <mark>provides guidance on what props, shaders, and materials</mark> will the scene need as well as the <mark>loose placement and overall composition</mark>. It also gives me an opportunity to decide where to put triggers in the level for the interactive events.
 
 
 ### Blockout
@@ -185,16 +185,44 @@ Like all kinds of visual mediums its a highly iterative process. I had to really
 <div class="h-5"></div>
 
 ## Set Dressing
-I export the blockouts out of engine and bring into my DCC as reference to model the props. The workflow for all the props are quite typical industry standard stuff. I first model/sculpt the high-poly then model a low-poly. I use the low poly meshes to bake normals, cavity, ambient occlusion, alpha, color ID and whatever I forsee that I need for creating materials and shaders. I do most of my material authoring in Substance Designer. I use Substance Designer for authoring materials because it is totally procedural meaning all material and pattern definitions are parametric. This is great because it allows me to reuse node groups across many assets with different UVs and color IDs. It also means making changes are easier and less time consuming compared to a painting approach. Lastly the target output resolution of the texture maps can be changed without degrading quality. There is some things that are just more intuitive to do painterly, when that does happen I use Substance Painter.    
+I export the blockouts out of engine and bring into my DCC as reference to model the props. The workflow for all the props are quite typical industry standard stuff.  
 
 ## Materials and Shaders
-### Substance Designer
+
+### Workflow
+Typical <mark>highpoly to lowpoly workflow.</mark> I first model/sculpt the high-poly then model a low-poly. I use the low poly meshes to bake normals, cavity, ambient occlusion, alpha, color ID and whatever I forsee that I need for creating materials and shaders. <mark>I do most of my material authoring in Substance Designer</mark>. As for shaders I use the Unity's HDRP lit and unlit shaders as a base build extra visual features around those. 
+
+#### Authoring
+I use Substance Designer for authoring materials because it is totally procedural meaning all <mark>material and pattern definitions are parametric</mark>. This is great because it allows me to reuse node groups across many assets with different UVs and color IDs. It also means making changes are easier and less time consuming compared to a painting approach. Lastly the target output resolution of the texture maps can be changed without degrading quality. 
+
+There is some things that are just more intuitive to do painterly, when that does happen I use Substance Painter.   
+
+#### Reference
 I was heavily inspired by some of the stylized platformer games, some I even grew up on such as my little planet. I loved how tactile all the materials were in these games. 
 
 ![reference](reference.jpg)
 
-You could immediately read exactly what each material might feel like in my little planet. The cardboard, plastic, felt cloth, stitching, metallic joinery and so on. Every surface had a material description comprehensive enough to communicate to the player exactly what an object was made out of. It really grounded the visuals you saw on screen to reality, emphasizing this notion of a window of sorts. I wanted to incorporate a similar level of tactileness to into my materials and shaders to give a similar window into shoebox effect.  
+What I liked about the art direction of little big planet is that you can immediately read exactly what each material was which is not true for all stylistic visuals. The cardboard, plastic, felt cloth, stitching, metallic joinery and so on. Every surface had a material description comprehensive enough to communicate to the player exactly what an object was made out of. It really grounded the visuals you saw on screen to reality, emphasizing this notion of a window into something thats both fiction but grounded in real life. I wanted to incorporate a similar level of tactileness to into my materials and shaders to give a similar window into shoebox effect.  
 
+#### Base Materials
+I made a set of base materials in substance designer. These base materials were used for props and the landscape. Since all the materials are parametric changing colors and other material properties could be done for per prop material. 
+
+<div class="grid grid-cols-4 gap-1">
+    <div><img class="h-auto max-w-full" src="mat1.jpg"></div>
+    <div><img class="h-auto max-w-full" src="mat2.jpg"></div>
+    <div><img class="h-auto max-w-full" src="mat3.jpg"></div>
+    <div><img class="h-auto max-w-full" src="mat4.jpg"></div>
+    <div><img class="h-auto max-w-full" src="mat5.jpg"></div>
+    <div><img class="h-auto max-w-full" src="mat6.jpg"></div>
+    <div><img class="h-auto max-w-full" src="mat7.jpg"></div>
+    <div><img class="h-auto max-w-full" src="mat8.jpg"></div>
+</div>
+
+
+
+{{< toggle "Clay material graph"  >}}
+    <img class="h-auto max-w-full" src="abstract-leaves.png">
+{{< /toggle  >}}
 
 ### Hero Props
 #### Flowers
