@@ -555,6 +555,24 @@ mjx-container[jax="CHTML"][display="true"]{
   padding-right: 1rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.toggle-collapsible:hover{
+  --tw-border-opacity: 0.25;
+}
+
+.toggle-collapsible.active{
+  --tw-border-opacity: 0.2;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.toggle-collapsible.active:hover{
+  --tw-border-opacity: 0.25;
 }
 
 .toggle-content{
@@ -572,17 +590,21 @@ mjx-container[jax="CHTML"][display="true"]{
   height: 1.25rem;
   width: 1.25rem;
   fill: #f4f4f5;
-  transition-property: all;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 
 .toggle-arrow.active{
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  transition-property: all;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 
 .toggle-text{
@@ -2777,7 +2799,7 @@ body {
 }
 
 @media screen and (min-width: 1280px) {
-  #FilterSmall, #ScrollToTopSmall {
+  #FilterSmall, #ScrollToTopSmall, #ScrollTopSmallSpacing {
     display: none;
     /*Won't be displayed on screens below or equal to 980px width*/
   }
@@ -2996,6 +3018,10 @@ body {
   display: block;
 }
 
+.inline-block{
+  display: inline-block;
+}
+
 .inline{
   display: inline;
 }
@@ -3188,8 +3214,8 @@ body {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-4{
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-row{
@@ -3731,6 +3757,10 @@ body {
   margin-bottom: 0px;
 }
 
+.last\:mb-3:last-child{
+  margin-bottom: 0.75rem;
+}
+
 .last\:border-0:last-child{
   border-width: 0px;
 }
@@ -3941,6 +3971,11 @@ body {
   .sm\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .sm\:text-xs{

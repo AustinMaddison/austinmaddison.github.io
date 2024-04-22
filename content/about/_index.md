@@ -6,9 +6,11 @@ menus:
 ---
 
 # About Me
-I am a programmer/designer navigating the intersection of technology and art. Right now, I'm an undergrad in computer science at Mahidol University, with aspirations to pivot and pursue a career in computer graphics. 
+I am a programmer/designer navigating the intersection of technology and art. I'm currently an undergraduate student majoring in computer science at Mahidol University. Although I'm pivoting away from a career in design/artistry, my passion lies in the realm of computer graphics. While I haven't displayed my design work here, you can find examples of my artistic endeavors on my [Behance](https://www.behance.net/austinmaddison) portfolio. 
 
 I'm particularly interested in proprietary tool and shader development for real-time and offline productions.
+
+
 
 Other things that I like doing outside of computers and art is cooking, binging albums, horror games, a hike in nature and sipping on ice cold <span class="font-sans-thai font-normal tracking-tight">ชามะนาว</span>.
 
@@ -25,6 +27,8 @@ Growing up in South Africa I always had these interests clash, I was drawn to th
 [Morhan McGuire]()  
 [Eric Haines]()   
 [Tomas Möller]()   
+[Mat "MJP"]()
+[John Chapman](https://john-chapman.github.io/)   
 [Santa Monica Studios](https://www.remedygames.com/article/gdc2024) <span class="text-zinc-50 text-opacity-40">*Did I mention I love Remedy?*</span>  
 [Man Vs Machine](https://www.remedygames.com/article/gdc2024) <span class="text-zinc-50 text-opacity-40">*Did I mention I love Remedy?*</span>  
 [Remedy](https://www.remedygames.com/article/gdc2024) <span class="text-zinc-50 text-opacity-40">*Did I mention I love Remedy?*</span>  

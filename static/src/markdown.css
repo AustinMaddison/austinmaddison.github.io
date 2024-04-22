@@ -1,5 +1,9 @@
 .toggle-collapsible {
-    @apply px-4 border-1 border-zinc-50 border-opacity-15 py-3 flex flex-row w-full justify-between;
+    @apply px-4 border-1 transition-all border-zinc-50 border-opacity-15 hover:border-opacity-25 py-3 flex flex-row w-full justify-between;
+}
+
+.toggle-collapsible.active {
+    @apply  transition-all border-opacity-20 hover:border-opacity-25;
 }
 
 .toggle-content {
@@ -7,11 +11,11 @@
 }
 
 .toggle-arrow {
-    @apply  transition-all w-5 h-5 fill-zinc-100;
+    @apply  transition duration-300 ease-in-out w-5 h-5 fill-zinc-100;
 }
 
 .toggle-arrow.active {
-    @apply  transition-all rotate-180;
+    @apply  transition duration-300 ease-in-out rotate-180;
 }
 
 .toggle-text {
