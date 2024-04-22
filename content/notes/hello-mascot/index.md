@@ -210,13 +210,13 @@ What I liked about the art direction of little big planet is that you can immedi
 I made a set of base materials in substance designer. These base materials were used for props and the landscape. Since all the materials are parametric changing colors and other material properties could be done for per prop material. 
 
 <div class="grid grid-cols-3 gap-1">
-    <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat8.jpg"><span class="inline-block text-xs sm:text-sm">Clay Base</span></div>
-    <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat1.jpg"><span class="inline-block text-xs sm:text-sm">Clay River Water</span></div>
-    <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat2.jpg"><span class="inline-block text-xs sm:text-sm">Striped Plastic w/ Grain</span></div>
-    <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat5.jpg"><span class="inline-block text-xs sm:text-sm">Clay Grass w/ Grain</span></div>
-    <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat6.jpg"><span class="inline-block text-xs sm:text-sm">Clay Grass Alternative</span></div>
-    <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat3.jpg"><span class="inline-block text-xs sm:text-sm">Marbled Wood</span></div>
-    <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat7.jpg"><span class="inline-block text-xs sm:text-sm">Clay Stone w/ Specular Speckles</span></div>
+    <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat8.jpg"><span class="mt-1 inline-block text-xs sm:text-sm">Clay Base</span></div>
+    <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat1.jpg"><span class="mt-1 inline-block text-xs sm:text-sm">Clay River Water</span></div>
+    <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat2.jpg"><span class="mt-1 inline-block text-xs sm:text-sm">Striped Plastic w/ Grain</span></div>
+    <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat5.jpg"><span class="mt-1 inline-block text-xs sm:text-sm">Clay Grass w/ Grain</span></div>
+    <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat6.jpg"><span class="mt-1 inline-block text-xs sm:text-sm">Clay Grass Alternative</span></div>
+    <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat3.jpg"><span class="mt-1 inline-block text-xs sm:text-sm">Marbled Wood</span></div>
+    <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat7.jpg"><span class="mt-1 inline-block text-xs sm:text-sm">Clay Stone w/ Specular Speckles</span></div>
 </div>
 
 #### Base Material Graphs (Substance Designer)
