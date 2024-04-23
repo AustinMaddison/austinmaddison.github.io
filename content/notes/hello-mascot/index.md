@@ -246,33 +246,97 @@ I made a set of base materials in substance designer. These base materials were 
 ---
 
 ## Hero Props
+
+<div class="grid grid-cols-1 gap-y-4 gap-x-4">
+
+<div>
+
 ### Flowers
+<video autoplay loop muted playsinline  >
+  <source src="flowers.mp4" type="video/mp4">
+</video>
+</div>
+
+<div>
+
 ### Coconut Tree
+<video autoplay loop muted playsinline  >
+  <source src="coconut.mp4" type="video/mp4">
+</video>
+</div>
+
+<div>
+
 ### Fish
+<video autoplay loop muted playsinline  >
+  <source src="fish.mp4" type="video/mp4">
+</video>
+
+</div>
+
+<div>
+
 ### Rocks
+<video autoplay loop muted playsinline  >
+  <source src="rocks.mp4" type="video/mp4">
+</video>
+
+</div>
+
+<div>
+
 ### Statue
+<video autoplay loop muted playsinline  >
+  <source src="statue.mp4" type="video/mp4">
+</video>
+</div>
+
+<div>
+
+### God Rays
+<video autoplay loop muted playsinline  >
+  <source src="god-rays.mp4" type="video/mp4">
+</video>
+</div>
+
+<div>
+
+### Bees
+<video autoplay loop muted playsinline  >
+  <source src="bees.mp4" type="video/mp4">
+</video>
+</div>
+
+</div>
 
 ## Primary Props
 ### Hills
+<div class="grid grid-cols-2 gap-y-4 gap-x-4">
+<img class="h-auto max-w-full" src="hill-1.jpg">
+<img class="h-auto max-w-full" src="hill-2.jpg">
+</div>
+
+### Clouds
+<div class="grid grid-cols-2 gap-y-4 gap-x-4">
+<img class="h-auto max-w-full" src="clouds.jpg">
+</div>
 
 ## Secondary Props
-### Clouds
-### River
+
+<div class="grid grid-cols-2 gap-y-4 gap-x-4">
+<img class="h-auto max-w-full" src="trees-prop.jpg">
+<img class="h-auto max-w-full" src="vegetation-1.jpg">
+<img class="h-auto max-w-full" src="vegetation-2.jpg">
+<img class="h-auto max-w-full" src="rays.jpg">
+</div>
+
 
 ### Vegetation
 The tree leaves were just convex geometry on top of a trunk mesh, nothing too special.
 For the grass I used polygonal cards and for the ivy I used polygonal strips. I leveraged the baked maps produced from the high-poly meshes to provide normals and alpha's to the low-poly cards. Also baked other maps such as thickness, curvature for more advanced shader effects like subsurface scattering. You can actually see the difference it makes in the [timelaspe](#timelapse). There was a transition where everything had a yellow cast and was quite dull then all of the sudden its bright a vibrant. 
 
-##### Trees
-
-
-##### Grass
-##### Ivy
 
 #### Wind Vertex Shader
-
-
-
 
 
 
@@ -281,15 +345,24 @@ Post processing was really key in getting the final look. Since Unity's HDRP is 
 
 
 ## Dialogue Boxes
+<video autoplay loop muted playsinline  >
+  <source src="dialogue.mp4" type="video/mp4">
+</video>
 
-## Gameplay Programming and Player Interaction
-For implementing the game mechanics I had someone in the lab to assist me, P'Kiew. He is a experienced C# unity developer. I was so lucky to have him help and mentor me. He contributed in hooking up the mocap, core game systems and game mechanics on the final week of internship (week 4).  
+## Gameplay Programming 
+For implementing the game mechanics I had someone in the lab to assist me, P'Kiew. He is a experienced C# unity developer. I was so lucky to have him help and mentor me. He contributed in hooking up the mocap, core game systems and game mechanics on the final week of internship (week 4). 
 
-### Mocap (Google's API)
-### Extracting Essential Data
+### Design Pattern
+The pattern that was settled on was a scene manager and singletons that manage certain aspects of the game world. Nothing here was super fancy as Unity handles a lot of complicated logic for us such as physics, triggers and colliders.  Our job was to just hook up routines and animations based on player input controls or triggerable events in the game world. The challenge was mostly tuning parameters during play tests.
+
+### Play Testing
+
+
+### Pose Estimation (Google's API)
+For the body pose detection and estimation for the motion controls we used Google's Media Pipe API. Since Unity uses C# .NET it was relatively easy to get it working in the engine. We extract joint positions of interest such as wrists and shoulders to control the characters x-position on screen, gravity of toppled over rocks and trigger dialogue with the character.    
+
 
 # Conclusion
-
 
 ### Wish there was more time.
 My internship being as long as my summer break (4 weeks) it was admittedly short. This is due to it being an independent internship and not a university sponsored one. However, I was surprised how much was accomplished in the time I had. Wish I had more time to polish the features and turn it into a game with a fun gameplay loop. 
