@@ -333,7 +333,7 @@ I made a set of base materials in substance designer. These base materials were 
 
 ### Vegetation
 The tree leaves were just convex geometry on top of a trunk mesh, nothing too special.
-For the grass I used polygonal cards and for the ivy I used polygonal strips. I leveraged the baked maps produced from the high-poly meshes to provide normals and alpha's to the low-poly cards. Also baked other maps such as thickness, curvature for more advanced shader effects like subsurface scattering. You can actually see the difference it makes in the [timelaspe](#timelapse). There was a transition where everything had a yellow cast and was quite dull then all of the sudden its bright a vibrant. 
+For the grass I used polygonal cards and for the ivy I used polygonal strips. I leveraged the baked maps produced from the high-poly meshes to provide normals and alpha's to the low-poly cards. Also baked other maps such as thickness, curvature for more advanced shader effects like subsurface scattering. 
 
 
 #### Wind Vertex Shader
@@ -341,7 +341,7 @@ For the grass I used polygonal cards and for the ivy I used polygonal strips. I 
 
 
 ## Post-Processing
-Post processing was really key in getting the final look. Since Unity's HDRP is physically based it has a tendency of desaturating highly exposed areas of the frame. For the kind on look I was going for was more vibrant and had lots of lifted shadows, it was essential to color grade.
+Post processing was really key in getting the final look. Since Unity's HDRP is physically based it has a tendency of desaturating highly exposed areas of the frame. For the kind on look I was going for was more vibrant and had lots of lifted shadows, it was essential to color grade.You can actually see the difference it makes in the [timelaspe](#timelapse). There was a transition where everything had a yellow cast and was quite dull then all of the sudden its bright a vibrant. 
 
 
 ## Dialogue Boxes
