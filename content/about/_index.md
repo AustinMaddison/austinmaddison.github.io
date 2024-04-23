@@ -27,10 +27,10 @@ Growing up in South Africa I always had these interests clash, I was drawn to th
 [Morhan McGuire]()  
 [Eric Haines]()   
 [Tomas Möller]()   
-[Mat "MJP"]()
-[John Chapman](https://john-chapman.github.io/)   
-[Santa Monica Studios](https://www.remedygames.com/article/gdc2024) <span class="text-zinc-50 text-opacity-40">*Did I mention I love Remedy?*</span>  
-[Man Vs Machine](https://www.remedygames.com/article/gdc2024) <span class="text-zinc-50 text-opacity-40">*Did I mention I love Remedy?*</span>  
+[Mat "MJP"]()  
+[John Chapman](https://john-chapman.github.io/)     
+[Santa Monica Studios](https://www.remedygames.com/article/gdc2024)   
+[Man Vs Machine](https://www.remedygames.com/article/gdc2024)  
 [Remedy](https://www.remedygames.com/article/gdc2024) <span class="text-zinc-50 text-opacity-40">*Did I mention I love Remedy?*</span>  
 [Weta Digital/FX](https://www.wetafx.co.nz/)
 and many more...
