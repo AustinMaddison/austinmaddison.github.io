@@ -24,7 +24,7 @@ preview: thumbnail.jpg
 <div class="h-5"></div>
 
 
-#### Lookdev Stills
+#### LookDev Stills
 
 <img src="cover-long.jpg">
 <div class="h-5"></div>
@@ -57,7 +57,7 @@ Just triggering all the animations simultaneously in a loop for demonstration pu
 
 <div class="flex mt-5">
   <span class="flex-1 text-center text-opacity-50 text-zinc-50 italic text-sm"> 
-    I called the demo Banana Boy but the project was named to Hello Mascot to be more generic for thier product portfolio's market. 
+    I called the demo Banana Boy but the project was named to Hello Mascot to be more generic for their product portfolio's market. 
   </span>  
 </div>
 
@@ -80,7 +80,7 @@ This project began last year in my first internship at Adapter Digital. They are
 How I landed the interview and internship is actually a funny story.  
 
 ## The Interview
- Initially a recruitment team approached me with a design tech / 3D motion designer position, I asked if I could get an internship instead because I was a full-time student. When I was interviewed by the people running the design/innovation lab they were surprised to learn that I was still in my first year of university because they really liked my work on behance. 
+ Initially a recruitment team approached me with a design tech / 3D motion designer position, I asked if I could get an internship instead because I was a full-time student. When I was interviewed by the people running the design/innovation lab they were surprised to learn that I was still in my first year of university because they really liked my work on Behance. 
 
 The interview was great. It was the first time I had a conversation with somebody who understood the craft as much as I did, and it felt amazing to connect with someone on that level. 
 
@@ -214,7 +214,7 @@ I export the blockouts out of engine and bring into my DCC as reference to model
 ## Materials
 
 ### Workflow
-Typical <mark>highpoly to lowpoly workflow.</mark> I first model/sculpt the high-poly then model a low-poly. I use the low poly meshes to bake normals, cavity, ambient occlusion, alpha, color ID and whatever I forsee that I need for creating materials and shaders. <mark>I do most of my material authoring in Substance Designer</mark>. As for shaders I use the Unity's HDRP lit and unlit shaders as a base build extra visual features around those. 
+I used a <mark>highpoly to lowpoly workflow.</mark> I first model/sculpt the high-poly then model a low-poly. I use the low poly meshes to bake normals, cavity, ambient occlusion, alpha, color ID and whatever I forsee that I need for creating materials and shaders. <mark>I do most of my material authoring in Substance Designer</mark>. As for shaders I use the Unity's HDRP lit and unlit shaders as a base build extra visual features around those. 
 
 ### Authoring
 I use Substance Designer for authoring materials because it is totally procedural meaning all <mark>material and pattern definitions are parametric</mark>. This is great because it allows me to reuse node groups across many assets with different UVs and color IDs. It also means making changes are easier and less time consuming compared to a painting approach. Lastly the target output resolution of the texture maps can be changed without degrading quality. 
@@ -229,11 +229,11 @@ There is some things that are just more intuitive to do painterly, when that doe
 
 
 ### Reference
-I was heavily inspired by some of the stylized platformer games, some I even grew up on such as my little planet. I loved how tactile all the materials were in these games. 
+I was heavily inspired by some of the stylized platformer games, some I even grew up on such as little big planet. 
 
 ![reference](reference.jpg)
 
-What I liked about the art direction of little big planet is that you can immediately read exactly what each material was which is not true for all stylistic visuals. The cardboard, plastic, felt cloth, stitching, metallic joinery and so on. Every surface had a material description comprehensive enough to communicate to the player exactly what an object was made out of. It really grounded the visuals you saw on screen to reality, emphasizing this notion of a window into something thats both fiction but grounded in real life. I wanted to incorporate a similar level of tactileness to into my materials and shaders to give a similar window into shoebox effect.  
+What I liked about the art direction of little big planet is that you can immediately read exactly what each material was which is not true for all stylistic visuals. The cardboard, plastic, felt cloth, stitching, metallic joinery and so on. Every surface had a material description comprehensive enough to communicate to the player exactly what an object was made out of. It really grounded the visuals you saw on screen to reality, emphasizing this notion of a window into something thats both fiction but grounded in real life. I wanted to incorporate a similar level of tactileness to my materials to give that similar window into a shoebox effect.  
 
 ---
 
