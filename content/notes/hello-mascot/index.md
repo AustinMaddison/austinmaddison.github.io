@@ -65,12 +65,24 @@ Just triggering all the animations simultaneously in a loop for demonstration pu
 # Introduction
 Hello Mascot! is a product that I helped develop for Adapter Digitals portfolio which compliments their ongoing efforts on diversifying the kind of media they can deliver to their clients. I will describe my journey to getting the internship as well as the general breakdown of the project. Let's begin!
 
-This project began last year in my first internship at Adapter Digital. They are a digital agency based in Bangkok. How I landed the internship is actually a funny story.  
+<div class="grid grid-cols-2 gap-1 mb-3">
+    <img class="h-auto max-w-full" src="intern-2.JPG">
+    <img class="h-auto max-w-full" src="intern-1.JPG">
+    <img class="h-auto max-w-full" src="intern-4.jpg">
+    <div class="flex">
+    <img class="h-full object-cover bg-cover" src="intern-3.PNG">
+    </div>
+</div>
+
+
+This project began last year in my first internship at Adapter Digital. They are a digital agency based in Bangkok. I arrived around the time they were debuting their software product [X-Sight Analysis](https://xsight.adapterdigital.com/en/). 
+
+How I landed the interview and internship is actually a funny story.  
 
 ## The Interview
  Initially a recruitment team approached me with a design tech / 3D motion designer position, I asked if I could get an internship instead because I was a full-time student. When I was interviewed by the people running the design/innovation lab they were surprised to learn that I was still in my first year of university because they really liked my work on behance. 
 
-The interview was great. It was the first time I had a conversation with somebody who understood the craft as much as I did, and it felt amazing to connect with someone on that level. The rest is history.
+The interview was great. It was the first time I had a conversation with somebody who understood the craft as much as I did, and it felt amazing to connect with someone on that level. 
 
 ## Moving to Bangkok
 While my university dorm was in Nakhon Pathom, not far from Bangkok, my roots in Phuket made me accustomed to feeling isolated in my interests in computers, art, and technology. Discovering Bangkok's vibrant tech, engineering, and art scene was a revelation. Finally finding a community that shared some of my passions was an incredible feeling! Really got me pumped for the the work I was going to do.
@@ -139,7 +151,7 @@ I was given the source files for Krungsri's banana character. I immediately real
 </video>
 <div class="mb-5"></div>
 
-### Face shader
+### Face Shader
 
 <div class="w-full mt-5">
     <video width="350px" autoplay loop muted playsinline   class="mx-auto" >
@@ -149,9 +161,14 @@ I was given the source files for Krungsri's banana character. I immediately real
 
 <div class="h-5"></div>
 
-What is interesting about the character's shaders is the shader that drives the character's face. The <mark>scheduling of the blinks and mouth shapes are totally driven by wave functions.</mark> The CPU at anytime can interrupt and override a specific eye + mouth expression on an event. I did not take a screenshot nor have to correct development environment at home to open the project file so for now I will just give a gist on how it works. 
-
+What is interesting about the character's shaders is the shader that drives the character's face. The <mark>scheduling of the blinks and mouth shapes are totally driven by wave functions.</mark> The CPU at anytime can interrupt and override a specific eye + mouth expression on an event.
 Each expression for the <mark>mouth and eyes are indexed</mark> and <mark>multiple sin cos, modulo functions are manually tuned and combined to get the desired mouth and eye index over time</mark>. Then the face expressions shader is composited onto the body's base yellow claymation shader. Maybe in a future article I write in detail how I made the shaders for the character.
+{{< toggle "Shader Graph" >}}
+<video autoplay loop muted playsinline  >
+  <source src="banana-boy-shader-graph.mp4" type="video/mp4">
+</video>
+{{< /toggle >}}
+
 
 #### Eyes
 ![eyes](eyes.jpg)
@@ -172,6 +189,15 @@ So I made a sketch, it isn't amazing by any means but it <mark>provides guidance
 
 ![blockout](blockout.jpg)
 <div class="mb-5"></div>
+
+<div class="w-full mt-5">
+    <video width="350px" autoplay loop muted playsinline   class="mx-auto" >
+      <source src="blockout-wip.mp4" type="video/mp4">
+    </video>
+</div>
+
+
+<div class="mb-5"></div>
 Blocking out the scene is super duper important, allows me to <mark>use proxies to establish volume, proportions, and composition of the scene early on.</mark> That way when I start creating the props I have a better understanding on scale, variation, level of detail etc. Also when its time to set dress, the outcome is predictable. <mark>Blockouts also work as a sandbox for programming the gameplay</mark> because it abstracts all the visual noise and unessential objects away.  
 
 ### Timelapse
@@ -182,12 +208,10 @@ Blocking out the scene is super duper important, allows me to <mark>use proxies 
 
 Like all kinds of visual mediums its a highly iterative process. I had to really <mark>trust the process and power through</mark> the not so flattering early stages of the environment's look development. What really transformed the scene was [set dressing](#set-dressing) obviously but not so obviously the the [post-processing](#post-processing).
 
-<div class="h-5"></div>
-
 ## Set Dressing
 I export the blockouts out of engine and bring into my DCC as reference to model the props. The workflow for all the props are quite typical industry standard stuff.  
 
-## Materials and Shaders
+## Materials
 
 ### Workflow
 Typical <mark>highpoly to lowpoly workflow.</mark> I first model/sculpt the high-poly then model a low-poly. I use the low poly meshes to bake normals, cavity, ambient occlusion, alpha, color ID and whatever I forsee that I need for creating materials and shaders. <mark>I do most of my material authoring in Substance Designer</mark>. As for shaders I use the Unity's HDRP lit and unlit shaders as a base build extra visual features around those. 
@@ -196,6 +220,13 @@ Typical <mark>highpoly to lowpoly workflow.</mark> I first model/sculpt the high
 I use Substance Designer for authoring materials because it is totally procedural meaning all <mark>material and pattern definitions are parametric</mark>. This is great because it allows me to reuse node groups across many assets with different UVs and color IDs. It also means making changes are easier and less time consuming compared to a painting approach. Lastly the target output resolution of the texture maps can be changed without degrading quality. 
 
 There is some things that are just more intuitive to do painterly, when that does happen I use Substance Painter.   
+
+<div class="grid grid-cols-2 gap-3">
+    <img class="h-auto max-w-full" src="mat-bake-1.jpg">
+    <img class="h-auto max-w-full" src="mat-bake-2.jpg">
+    <img class="h-auto max-w-full" src="mat-bake-3.jpg">
+</div>
+
 
 ### Reference
 I was heavily inspired by some of the stylized platformer games, some I even grew up on such as my little planet. I loved how tactile all the materials were in these games. 
@@ -245,7 +276,7 @@ I made a set of base materials in substance designer. These base materials were 
 
 ---
 
-## Hero Props
+## Hero Props and VFX
 
 <div class="grid grid-cols-1 gap-y-4 gap-x-4">
 
@@ -255,9 +286,18 @@ I made a set of base materials in substance designer. These base materials were 
 <video autoplay loop muted playsinline  >
   <source src="flowers.mp4" type="video/mp4">
 </video>
+
+<div class="mt-4 mb-4 grid grid-cols-3 gap-y-4 gap-x-4">
+<div class="flex h-[200px]"><video autoplay loop muted playsinline class="bg-cover object-cover h-auto w-full"> <source src="flower-1.mp4" type="video/mp4"> </video></div>
+<div class="flex h-[200px]"><video autoplay loop muted playsinline class="bg-cover object-cover h-auto w-full"> <source src="flower-2.mp4" type="video/mp4"> </video></div>
+<div class="flex h-[200px]"><video autoplay loop muted playsinline class="bg-cover object-cover h-auto w-full"> <source src="flower-3.mp4" type="video/mp4"> </video></div>
+</div>
+Third times the charm :)
 </div>
 
+
 <div>
+
 
 ### Coconut Tree
 <video autoplay loop muted playsinline  >
@@ -330,48 +370,86 @@ I made a set of base materials in substance designer. These base materials were 
 <img class="h-auto max-w-full" src="rays.jpg">
 </div>
 
+## Shaders
 
 ### Vegetation
 The tree leaves were just convex geometry on top of a trunk mesh, nothing too special.
 For the grass I used polygonal cards and for the ivy I used polygonal strips. I leveraged the baked maps produced from the high-poly meshes to provide normals and alpha's to the low-poly cards. Also baked other maps such as thickness, curvature for more advanced shader effects like subsurface scattering. 
 
 
-#### Wind Vertex Shader
+### Wind Shader For Vegetation and Clouds
+#### Vegetation
+<video autoplay loop muted playsinline  >
+  <source src="vegetation-shader-preview.mp4" type="video/mp4">
+</video>
+<div class="h-5"></div>
+<video autoplay loop muted playsinline  >
+  <source src="vegetation-shader.mp4" type="video/mp4">
+</video>
 
+#### Clouds
+<video autoplay loop muted playsinline  >
+  <source src="cloud-shader.mp4" type="video/mp4">
+</video>
+
+<div class="h-5"></div>
+
+{{< toggle "Wind Shader Graph"  >}}
+    <img class="h-auto max-w-full" src="vegetation-shadergraph.jpg">
+{{< /toggle  >}}
+
+### River Shader
+<video autoplay loop muted playsinline  >
+  <source src="river-shader.mp4" type="video/mp4">
+</video>
+
+<div class="h-5"></div>
+{{< toggle "River Shader Graph"  >}}
+    <img class="h-auto max-w-full" src="river-shadergraph.jpg">
+{{< /toggle  >}}
 
 
 ## Post-Processing
-Post processing was really key in getting the final look. Since Unity's HDRP is physically based it has a tendency of desaturating highly exposed areas of the frame. For the kind on look I was going for was more vibrant and had lots of lifted shadows, it was essential to color grade.You can actually see the difference it makes in the [timelaspe](#timelapse). There was a transition where everything had a yellow cast and was quite dull then all of the sudden its bright a vibrant. 
+Post processing was really key in getting the final look. Since Unity's HDRP is physically based the default tonemapped image has a tendency of desaturating the intended diffuse colors of the objects. For the kind of look I was going for (vibrant and lots of lifted shadows), it was essential to color grade. You can see the difference it makes in the [timelaspe](#timelapse). There was a transition where everything had this ugly yellow cast and felt really dull then all of the sudden its bright and vibrant. 
 
 
 ## Dialogue Boxes
-<video autoplay loop muted playsinline  >
-  <source src="dialogue.mp4" type="video/mp4">
-</video>
+
+<div class="w-full">
+    <div class="flex h-[500px]">
+    <video autoplay loop muted playsinline class="bg-cover object-cover h-auto w-full"> <source src="dialogue-wip.mp4" type="video/mp4"> </video>
+    </div>
+</div>
 
 ## Gameplay Programming 
 For implementing the game mechanics I had someone in the lab to assist me, P'Kiew. He is a experienced C# unity developer. I was so lucky to have him help and mentor me. He contributed in hooking up the mocap, core game systems and game mechanics on the final week of internship (week 4). 
 
 ### Design Pattern
-The pattern that was settled on was a scene manager and singletons that manage certain aspects of the game world. Nothing here was super fancy as Unity handles a lot of complicated logic for us such as physics, triggers and colliders.  Our job was to just hook up routines and animations based on player input controls or triggerable events in the game world. The challenge was mostly tuning parameters during play tests.
+The pattern we mostly used singletons. We used singletons as managers that take certain responsibilities aspects of the virtual world. Nothing here was super fancy as Unity handles a lot of complicated logic for us such as physics, triggers and colliders automatically.  Our focus was in mostly hooking up routines and animations based on player input controls or triggered events in the level. The challenge was mostly tuning parameters post play tests.
+
+### Pose Estimation (Google's API)
+We leveraged [Google's Media Pipe API](https://developers.google.com/mediapipe/solutions/vision/pose_landmarker) for precise body pose detection and estimation, seamlessly integrating it into Unity's C# .NET environment. This integration allowed us to utilize key joint positions, such as wrists and shoulders, to dynamically control various aspects of the virtual world. For instance, we utilized these joint positions to control the horizontal movement of the character, adjust the levitation strength of the toppled rocks, and trigger in-game dialogue with the character. 
 
 ### Play Testing
 
+<div class="grid grid-cols-2 gap-1 mb-3">
+    <div class="flex"><video autoplay loop muted playsinline class="bg-cover object-cover h-auto w-full"> <source src="playtesting.mp4" type="video/mp4"> </video></div>
+    <div class="flex"><img class="h-full object-cover bg-cover" src="intern-3.jpg"></div>
+</div>
 
-### Pose Estimation (Google's API)
-For the body pose detection and estimation for the motion controls we used Google's Media Pipe API. Since Unity uses C# .NET it was relatively easy to get it working in the engine. We extract joint positions of interest such as wrists and shoulders to control the characters x-position on screen, gravity of toppled over rocks and trigger dialogue with the character.    
-
+Did lots of informal play tests letting people in the office or myself test the current build of the project to develop features and or iron out bugs.   
 
 # Conclusion
 
 ### Wish there was more time.
 My internship being as long as my summer break (4 weeks) it was admittedly short. This is due to it being an independent internship and not a university sponsored one. However, I was surprised how much was accomplished in the time I had. Wish I had more time to polish the features and turn it into a game with a fun gameplay loop. 
 
-<div class="mb-5">
-  <img width="400px" class="mx-auto" src="adapter-team.jpg">
+<div class="grid grid-cols-2 gap-1 mb-3">
+    <div class="flex"><video autoplay loop muted playsinline class="bg-cover object-cover h-auto w-full"> <source src="end.mp4" type="video/mp4"> </video></div>
+    <div class="flex"><img class="h-full object-cover bg-cover" src="adapter-team.jpg"></div>
 </div>
 
-I wished I spent more time talking to the team. Everybody in the innovation / design lab at Adapter Digital were so incredibly kind and welcoming. I couldn't of asked for a better internship experience especially almost halfway in my undergraduate program ❤️. 
+I wished I spent more time talking to the team. Everybody in the innovation / design lab at Adapter Digital were so incredibly kind and welcoming. I couldn't of asked for a better internship experience❤️. 
 
 
 
