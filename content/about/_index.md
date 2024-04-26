@@ -6,12 +6,11 @@ menus:
 ---
 
 # About Me
-I am a programmer/designer navigating the intersection of technology and art. I'm currently an undergraduate student majoring in computer science at Mahidol University. Although I'm pivoting away from a career in design/artistry, my passion lies in the realm of computer graphics. 
+I am a programmer/designer navigating the intersection of technology and art. I'm currently an undergraduate student majoring in computer science at Mahidol University. Although I'm pivoting away from a career focused in purely on design and technical art, my passion remains in computer graphics. 
 
-I'm particularly interested in proprietary tool and shader development for real-time and offline productions.
+I'm particularly interested in proprietary tooling, scene description and shader development for real-time and offline productions.
 
-While I haven't displayed my design work here, you can find examples of my artistic endeavors on my [Behance](https://www.behance.net/austinmaddison) portfolio. 
-
+While I won't display my prior design work here, you can find them on my [Behance](https://www.behance.net/austinmaddison) portfolio. 
 
 Other things that I like doing outside of computers and art is cooking, binging albums, horror games, a hike in nature and sipping on ice cold <span class="font-sans-thai font-normal tracking-tight">ชามะนาว</span>.
 
@@ -20,6 +19,27 @@ Other things that I like doing outside of computers and art is cooking, binging 
 Growing up in South Africa I always had these interests clash, I was drawn to the arts but I was also drawn to the maths and sciences. I was fascinated to know how things were made, I always watched the extras on all the DVDs I had at home and binged the hell out of How Its Made on the Discovery channel. I loved creation and how math and sciences were the means of doing that. However there was this notion growing up that these interests were to be separate. Attempting of having a deep interest in both were seen as counterproductive or unrealistic. Yet to me it always made sense that having a deep interest in both the arts and STEM could coexist and even intersect each other in interesting ways.
 
 --- -->
+
+
+
+
+## Experience
+
+{{< experience >}}
+
+## FAQ
+### What is your favorite show?
+**Severance**. The score, story, cinematography and performances are outstanding. You have to see it to believe it. Just thinking about it gives me goosebumps.  
+
+{{% figdiv src="3.jpg" class="mb-5" %}}
+
+### What is one meal you can eat everyday?
+<span class="font-sans-thai">ขนมจีนแกงไตปลา</span>
+
+
+### Who inspires you?
+
+Besides all the amazing people in my life: family, friends, mentors and ajarns here are some people and places that really make me go wow, I want to do something like that.
 
 **Some Heros (People and Studios)**:  
 [Wolfgang Engel](https://diaryofagraphicsprogrammer.blogspot.com/)  
@@ -35,21 +55,6 @@ Growing up in South Africa I always had these interests clash, I was drawn to th
 [Remedy](https://www.remedygames.com/article/gdc2024) <span class="text-zinc-50 text-opacity-40">*Did I mention I love Remedy?*</span>  
 [Weta Digital/FX](https://www.wetafx.co.nz/)
 and many more...
-
----
-
-## Experience
-
-{{< experience >}}
-
-## FAQ
-### What is your favorite show?
-**Severance**. The score, story, cinematography and performances are outstanding. You have to see it to believe it. Just thinking about it gives me goosebumps.  
-
-{{% figdiv src="3.jpg" class="mb-5" %}}
-
-### What is one meal you can eat everyday?
-<span class="font-sans-thai">ขนมจีนแกงไตปลา</span>
 
 ### How was this site made?
 I use a static site generator [Hugo](https://gohugo.io/), and HTML and tailwind CSS. It's templating and content management features are powerful, flexible and blazing fast.  
