@@ -23,7 +23,6 @@ preview: thumbnail.jpg
 
 <div class="h-5"></div>
 
-
 #### LookDev Stills
 
 <img src="cover-long.jpg">
@@ -31,8 +30,6 @@ preview: thumbnail.jpg
 <img src="cover-left.jpg">
 <div class="h-5"></div>
 <img src="cover-right.jpg">
-
-
 
 #### Level LookDev + Animation Loop Test
 Just triggering all the animations simultaneously in a loop for demonstration purposes.  
@@ -70,7 +67,7 @@ Hello Mascot! is a product that I helped develop for Adapter Digitals portfolio 
     <img class="h-auto max-w-full" src="intern-1.JPG">
     <img class="h-auto max-w-full" src="intern-4.jpg">
     <div class="flex">
-    <img class="h-full object-cover bg-cover" src="intern-3.PNG">
+    <img class="h-full object-cover bg-cover" src="intern-3.jpg">
     </div>
 </div>
 
