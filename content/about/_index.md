@@ -6,10 +6,11 @@ menus:
 ---
 
 # About Me
-I am a programmer/designer navigating the intersection of technology and art. I'm currently an undergraduate student majoring in computer science at Mahidol University. Although I'm pivoting away from a career in design/artistry, my passion lies in the realm of computer graphics. While I haven't displayed my design work here, you can find examples of my artistic endeavors on my [Behance](https://www.behance.net/austinmaddison) portfolio. 
+I am a programmer/designer navigating the intersection of technology and art. I'm currently an undergraduate student majoring in computer science at Mahidol University. Although I'm pivoting away from a career in design/artistry, my passion lies in the realm of computer graphics. 
 
 I'm particularly interested in proprietary tool and shader development for real-time and offline productions.
 
+While I haven't displayed my design work here, you can find examples of my artistic endeavors on my [Behance](https://www.behance.net/austinmaddison) portfolio. 
 
 
 Other things that I like doing outside of computers and art is cooking, binging albums, horror games, a hike in nature and sipping on ice cold <span class="font-sans-thai font-normal tracking-tight">ชามะนาว</span>.
@@ -21,7 +22,7 @@ Growing up in South Africa I always had these interests clash, I was drawn to th
 --- -->
 
 **Some Heros (People and Studios)**:  
-[Wolfgang Engel](https://diaryofagraphicsprogrammer.blogspot.com/) 
+[Wolfgang Engel](https://diaryofagraphicsprogrammer.blogspot.com/)  
 [Inigo Quilez](https://iquilezles.org/)   
 [Krzysztof Narkowicz](https://knarkowicz.wordpress.com/)   
 [Morhan McGuire]()  
@@ -29,14 +30,13 @@ Growing up in South Africa I always had these interests clash, I was drawn to th
 [Tomas Möller]()   
 [Mat "MJP"]()  
 [John Chapman](https://john-chapman.github.io/)     
-[Santa Monica Studios](https://www.remedygames.com/article/gdc2024)   
-[Man Vs Machine](https://www.remedygames.com/article/gdc2024)  
+[Santa Monica Studios](https://sms.playstation.com/)   
+[Man Vs Machine](https://mvsm.com/)  
 [Remedy](https://www.remedygames.com/article/gdc2024) <span class="text-zinc-50 text-opacity-40">*Did I mention I love Remedy?*</span>  
 [Weta Digital/FX](https://www.wetafx.co.nz/)
 and many more...
 
 ---
-
 
 ## Experience
 
