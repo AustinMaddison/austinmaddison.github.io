@@ -63,12 +63,10 @@ Just triggering all the animations simultaneously in a loop for demonstration pu
 Hello Mascot! is a product that I helped develop for Adapter Digitals portfolio which compliments their ongoing efforts on diversifying the kind of media they can deliver to their clients. I will describe my journey to getting the internship as well as the general breakdown of the project. Let's begin!
 
 <div class="grid grid-cols-2 gap-1 mb-3">
-    <img class="h-auto max-w-full" src="intern-2.jpg">
-    <img class="h-auto max-w-full" src="intern-1.jpg">
-    <img class="h-auto max-w-full" src="intern-4.jpg">
-    <div class="flex">
-    <img class="h-full object-cover bg-cover" src="intern-3.jpg">
-    </div>
+    <div class="flex"><img class="w-full object-cover bg-cover" src="intern-1.jpg"></div>
+    <div class="flex"><img class="w-full object-cover bg-cover" src="intern-4.jpg"></div>
+    <div class="flex"><img class="w-full object-cover bg-cover" src="xsight2.jpg"></div>
+    <div class="flex"><img class="w-full object-cover bg-cover" src="xsight.jpg"></div>
 </div>
 
 
