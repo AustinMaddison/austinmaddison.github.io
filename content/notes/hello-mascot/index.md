@@ -63,8 +63,8 @@ Just triggering all the animations simultaneously in a loop for demonstration pu
 Hello Mascot! is a product that I helped develop for Adapter Digitals portfolio which compliments their ongoing efforts on diversifying the kind of media they can deliver to their clients. I will describe my journey to getting the internship as well as the general breakdown of the project. Let's begin!
 
 <div class="grid grid-cols-2 gap-1 mb-3">
-    <img class="h-auto max-w-full" src="intern-2.JPG">
-    <img class="h-auto max-w-full" src="intern-1.JPG">
+    <img class="h-auto max-w-full" src="intern-2.jpg">
+    <img class="h-auto max-w-full" src="intern-1.jpg">
     <img class="h-auto max-w-full" src="intern-4.jpg">
     <div class="flex">
     <img class="h-full object-cover bg-cover" src="intern-3.jpg">
@@ -94,15 +94,15 @@ The installation consists of <mark>1080x5760 pixel (16:3) screen</mark> and a si
 # Pre-Production
 Pre production was important as my internship was short. So I had to really nail the scope and timeline for this project to a tea. Had about 4 weeks to create the visuals, hook up the mechanics that are driven by the mocap camera. No pressure am I right? I couldn't find all the pre-production material I prepared but here are some screenshots I found. 
 
-![alt text](image-2.png)
+![alt text](image-2.jpg)
 
 <div class="h-5"></div>
 
-![alt text](image-3.png)
+![alt text](image-3.jpg)
 
 <div class="h-5"></div>
 
-![alt text](image-4.png)
+![alt text](image-4.jpg)
 
 <div class="h-5"></div>
 
@@ -117,10 +117,10 @@ I was given the source files for Krungsri's banana character. I immediately real
 ### Source Character Rig
 <div class="grid grid-cols-2">
   <div class="cols-2" >
-    <img src="krungsri.png">
+    <img class="bg-cover h-full" src="krungsri.jpg">
   </div>
   <div>
-    <img src="krungsri-wireframe.jpg">
+    <img class="bg-cover w-full" src="krungsri-wireframe.jpg">
   </div>
 </div>
 
@@ -133,7 +133,7 @@ I was given the source files for Krungsri's banana character. I immediately real
 
 ### High Poly Sculpt
 <div class="">
-  <img width="400px" class="mx-auto" src="high-poly.jpg">
+  <img width="300px" class="mx-auto" src="high-poly.jpg">
 </div>
 
 ### Baked Normals and ID Mask
