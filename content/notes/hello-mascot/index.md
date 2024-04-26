@@ -429,7 +429,7 @@ We leveraged [Google's Media Pipe API](https://developers.google.com/mediapipe/s
 
 <div class="grid grid-cols-2 gap-1 mb-3">
     <div class="flex"><video autoplay loop muted playsinline class="bg-cover object-cover h-auto w-full"> <source src="playtesting.mp4" type="video/mp4"> </video></div>
-    <div class="flex"><img class="h-full object-cover bg-cover" src="intern-3.jpg"></div>
+    <div class="flex"><img class="h-full object-cover bg-cover" src="intern-3.1.jpg"></div>
 </div>
 
 Did lots of informal play tests letting people in the office or myself test the current build of the project to develop features and or iron out bugs.   
