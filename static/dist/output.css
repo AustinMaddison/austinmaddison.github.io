@@ -3139,6 +3139,10 @@ body {
   width: 100%;
 }
 
+.w-auto{
+  width: auto;
+}
+
 .min-w-64{
   min-width: 16rem;
 }

@@ -115,10 +115,10 @@ I was given the source files for Krungsri's banana character. I immediately real
 ### Source Character Rig
 <div class="grid grid-cols-2">
   <div class="cols-2" >
-    <img class="bg-cover h-full" src="krungsri.jpg">
+    <img class="bg-cover h-full w-auto" src="krungsri.jpg">
   </div>
   <div>
-    <img class="bg-cover w-full" src="krungsri-wireframe.jpg">
+    <img class="bg-cover h-full w-auto" src="krungsri-wireframe.jpg">
   </div>
 </div>
 
@@ -175,7 +175,7 @@ Each expression for the <mark>mouth and eyes are indexed</mark> and <mark>multip
 
 ### Concept
 
-![alt text](image-5.png)
+![alt text](image-5.jpg)
 
 So I made a sketch, it isn't amazing by any means but it <mark>provides guidance on what props, shaders, and materials</mark> will the scene need as well as the <mark>loose placement and overall composition</mark>. It also gives me an opportunity to decide where to put triggers in the level for the interactive events.
 
