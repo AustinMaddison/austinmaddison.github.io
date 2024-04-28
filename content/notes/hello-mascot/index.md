@@ -115,10 +115,10 @@ I was given the source files for Krungsri's banana character. I immediately real
 ### Source Character Rig
 <div class="grid grid-cols-2">
   <div class="cols-2" >
-    <img class="bg-cover h-full w-auto" src="krungsri.jpg">
+    <img class="bg-cover w-full h-auto" src="krungsri.jpg">
   </div>
   <div>
-    <img class="bg-cover h-full w-auto" src="krungsri-wireframe.jpg">
+    <img class="bg-cover w-full h-auto" src="krungsri-wireframe.jpg">
   </div>
 </div>
 
