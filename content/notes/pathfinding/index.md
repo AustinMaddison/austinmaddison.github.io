@@ -34,15 +34,14 @@ preview: ../interactive-installation/thumbnail.png
 For the 2D Grid world representation.
 
 $$
-\begin{align}
+\begin{array}{left}
+    G &= (V, E) \\
+    ||V|| &= w \cdot h \\  
+    ||E|| &= 4 w-2 h-2 w-2 w \cdot h \newline\
+    \\
     \text{Worst case} \newline  
-    \text{Number of nodes:} n $= w \cdot h \newline  
-    \text{Number of edges:} e $= 4 w-2 h-2 w-2 w \cdot h \newline\
-\end{align}
-$$
-
-$$  
-\mathrm{BRDF}=\frac{L_{o}}{L_{i}\cos\theta_{i}d w_{i}}
+      &= ||E||   
+\end{array}
 $$
 
 Since in a 2D grid every node has 6 neighbors and long
