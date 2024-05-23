@@ -8,7 +8,9 @@ menus:
 # About Me
 I am a programmer/designer navigating the intersection of technology and art. I'm currently an undergraduate student majoring in computer science at Mahidol University. Although I'm pivoting away from a career focused in purely on design and technical art, my passion remains in computer graphics. 
 
-I'm particularly interested in proprietary tooling, scene description and shader development for real-time and offline productions.
+By all means I am not a computer graphics expert, I been a computer graphics artist and enthusiast and only begun my journey into nitty gritty parts of computer graphics technology. 
+
+Currently, I'm particularly interested in proprietary tooling, scene description and shader development for real-time and offline productions.
 
 While I won't display my prior design work here, you can find them on my [Behance](https://www.behance.net/austinmaddison) portfolio. 
 

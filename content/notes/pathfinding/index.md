@@ -28,7 +28,6 @@ preview: ../interactive-installation/thumbnail.png
 ## Types
 ### Informed vs Uninformed?
 
-
 ## Run Time Complexity
 
 For the 2D Grid world representation.
@@ -45,7 +44,6 @@ $$
 $$
 
 Since in a 2D grid every node has 6 neighbors and long
-
 #### Tentative Distance
 
 ### Heuristic
