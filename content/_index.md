@@ -15,7 +15,7 @@ I'm Austin, an undergrad in computer science at Mahidol University. My focus is 
 On this site, I discuss **`🐇graphics and shader programming`**, **`🎨technical art`**, my own projects and whatever else that interests me. [Notes](notes).
 
 
-{{% 3js "https://austinmaddison.github.io/Site-3D-Scenes/overview/teapot/index.html" %}}
+{{% 3js "https://austin-maddison.xyz/Site-3D-Scenes/overview/teapot/index.html" %}}
 
 > <span class="text-opacity-100 text-zinc-50">🔨</span> This site is currently <mark>under active construction</mark>, so please excuse any jank you may encounter, <mark>mobile is not recommended for now</mark>. Building this site took longer than I initially thought TT. 
 

@@ -2,9 +2,9 @@
 title: Technical Artist & Designer
 company: Freelance
 type: Part-Time
-date: 01 Jan 2023
+date: 01 Jan 2020
 date_end: 01 Apr 2023
-location: Nakhon Pathom
+location: Thailand
 ---
 Collaborated with studios on advertising projects.
 

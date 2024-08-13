@@ -6,10 +6,11 @@ date: 01 Aug 2023
 date_end: 01 Sep 2023
 location: Bangkok, Ari
 ---
-Designed and executed a 3D interactive installation demo for adapter’s product portfolio.  
+Created a 3D interactive installation demo for the lab’s product portfolio.
 
-Managed major aspects of the project, including modeling, rigging, materials, shaders, lighting, and VFX.  
+Demo was targeted to be proposed for CP’s Forestia residential project.
 
-Created a shader driven stylized sprite based face animation system.
+Worked on all the modelling, rigging, animation, materials, shaders, lighting and VFX. 
 
-Collaborated with a skilled C# developer to implement essential systems, including realtime mocap controls.
+For the gameplay and motion capture programming, I collaborated with a skilled programmer in the 
+innovation lab.

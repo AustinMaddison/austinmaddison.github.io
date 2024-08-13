@@ -6,11 +6,15 @@ menus:
 ---
 
 # About Me
-I am a programmer/designer navigating the intersection of technology and art. I'm currently an undergraduate student majoring in computer science at Mahidol University. Although I'm pivoting away from a career focused in purely on design and technical art, my passion remains in computer graphics. 
+I am a programmer and designer navigating the intersection of technology and art. I'm currently an undergraduate student majoring in computer science at Mahidol University. Although I'm pivoting away from a career focused in purely on design and technical art, my passion remains in computer graphics. 
 
-By all means I am not a computer graphics expert. I have been a computer graphics artist and enthusiast for years and only recently begun my journey into nitty gritty parts of computers and programming. 
+By all means I am not a computer graphics expert. I have been a computer graphics artist and enthusiast for years and only recently begun my journey into technical parts of computing. 
 
-Currently, I'm particularly interested in proprietary tooling, scene description and shader development for real-time and offline productions.
+Currently, I'm particularly interested in visualization, tooling, scene description and shader development for real-time and offline productions.
+
+<b>TL;DR</b> I aspire to make tools for creatives.
+
+---
 
 While I won't display my prior design work here, you can find them on my [Behance](https://www.behance.net/austinmaddison) portfolio. 
 
@@ -39,7 +43,7 @@ Growing up in South Africa I always had these interests clash, I was drawn to th
 <span class="font-sans-thai">ขนมจีนแกงไตปลา</span>
 
 
-### Who inspires you?
+<!-- ### Who inspires you?
 
 Besides all the amazing people in my life: family, friends, mentors and ajarns here are some people and places that really make me go wow, I want to do something like that.
 
@@ -56,7 +60,7 @@ Besides all the amazing people in my life: family, friends, mentors and ajarns h
 [Man Vs Machine](https://mvsm.com/)  
 [Remedy](https://www.remedygames.com/article/gdc2024) <span class="text-zinc-50 text-opacity-40">*Did I mention I love Remedy?*</span>  
 [Weta Digital/FX](https://www.wetafx.co.nz/)
-and many more...
+and many more... -->
 
 ### How was this site made?
-I use a static site generator [Hugo](https://gohugo.io/), and HTML and tailwind CSS. It's templating and content management features are powerful, flexible and blazing fast.  
+I use a static site generator [Hugo](https://gohugo.io/) with my own custom theme.  

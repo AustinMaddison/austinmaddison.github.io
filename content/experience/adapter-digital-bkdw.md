@@ -6,10 +6,11 @@ date: 01 Nov 2023
 date_end: 01 Mar 2024
 location: Bangkok, Ari
 ---
-Programmed custom but simple rendering features using Unity shaderlab HLSL for an interactive installation in Bangkok Design Week 2024.
+Worked on 3D interactive installation for Bangkok Design Week 2024 with innovation and creative lab’s team.
 
-Additionally, was responsible for creating art, procedural animation and VFX assets for the interactive experiences.
+Implemented rendering features using Unity’s shaderlab HLSL and HDRP pipeline.
 
-Extended Intel Realsense's Unity API with depth sensor camera normalization for the onsite camera calibration tool.
+Worked on all the modelling, rigging, animation, materials, shaders, lighting and VFX. 
 
-<!-- A little off topic but Intel's realsense API for Unity had a function definition for such a feature of normalization but ommited the implmentation, this was a very odd discovery.   -->
+Extended Intel Realsense’s Unity API with depth sensor camera normalization for 
+the onsite camera calibration tool.

@@ -76,6 +76,10 @@
     {
       "path": "[[workspace]]/content/about",
       "title": "about"
+    },
+    {
+      "title": "content",
+      "path": "[[workspace]]/WSL.LOCALHOST/UBUNTU-24.04/home/austin/dev/austinmaddison.github.io/content"
     }
   ],
   "frontMatter.content.publicFolder": "static",
