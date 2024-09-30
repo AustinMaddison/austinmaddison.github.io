@@ -72,15 +72,15 @@ Hello Mascot! is a product that I helped develop for Adapter Digitals portfolio 
 
 This project began last year in my first internship at Adapter Digital. They are a digital agency based in Bangkok. I arrived around the time they were debuting their software product [X-Sight Analysis](https://xsight.adapterdigital.com/en/). 
 
-How I landed the interview and internship is actually a funny story.  
-
+<!-- How I landed the interview and internship is actually a funny story.   -->
+<!-- 
 ## The Interview
  Initially a recruitment team approached me with a design tech / 3D motion designer position, I asked if I could get an internship instead because I was a full-time student. When I was interviewed by the people running the design/innovation lab they were surprised to learn that I was still in my first year of university because they really liked my work on Behance. 
 
 The interview was great. It was the first time I had a conversation with somebody who understood the craft as much as I did, and it felt amazing to connect with someone on that level. 
 
 ## Moving to Bangkok
-While my university dorm was in Nakhon Pathom, not far from Bangkok, my roots in Phuket made me accustomed to feeling isolated in my interests in computers, art, and technology. Discovering Bangkok's vibrant tech, engineering, and art scene was a revelation. Finally finding a community that shared some of my passions was an incredible feeling! Really got me pumped for the the work I was going to do.
+While my university dorm was in Nakhon Pathom, not far from Bangkok, my roots in Phuket made me accustomed to feeling isolated in my interests in computers, art, and technology. Discovering Bangkok's vibrant tech, engineering, and art scene was a revelation. Finally finding a community that shared some of my passions was an incredible feeling! Really got me pumped for the the work I was going to do. -->
 
 # The Brief
 The brief went a little something like this:
