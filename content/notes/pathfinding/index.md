@@ -8,7 +8,7 @@ tags:
     - simulation
 categories:
     - personal project
-draft: true
+draft: false
 weight: 1
 type: notes
 preview: ../interactive-installation/thumbnail.png
@@ -18,11 +18,19 @@ preview: ../interactive-installation/thumbnail.png
 
 {{% header %}}
 
-<iframe class="w-full" height="330px" src="https://www.youtube.com/embed/hmK6vug5r68?si=IfmBeWxxLIpL46_o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe class="w-full" height="360px" src="https://www.youtube.com/embed/KV5Zm-LCf6M?si=Ml-C8CoDPRSVb0f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <div class="mb-8"> </div>
 
-I made this program for a maths course (Heuristic Optimization) project for teaching purposes. I wanted a interactive way to demonstrate the behaviour of different pathfinding algorithms. Also gave me the oppotunity to learn through implementation. 
+
+I made this cute program for a maths course (Heuristic Optimization) project for teaching purposes. I wanted a interactive way to demonstrate the behaviour of different pathfinding algorithms. Also gave me the oppotunity to learn through implementation. 
+
+It has some usability/performance quirks, but for my use case it was more than good enough. 
+
+### Download
+
+[Visual Pathfinder - Release V0.1.0](https://github.com/AustinMaddison/Pathfinding-Visualizer/releases/tag/v0.1.0)
+
 
 ## Features
 
@@ -64,11 +72,16 @@ I made this program for a maths course (Heuristic Optimization) project for teac
         <img class="w-56 mx-auto" src="grid-resize.png">
     </div>
     <div class="hover:border-opacity-40
-  transition duration-300 min-w-full bg-zinc-950 backdrop-blur-xl bg-opacity-80 border-spacing-2 border-1 border-zinc-50 border-opacity-20 p-4">
+  transition duration-300 min-w-full bg-zinc-950 backdrop-blur-xl bg-opacity-80 border-spacing-2 border-1 border-zinc-50 border-opacity-20 p-4 flex flex-col">
         <div class="font-medium text-lg mb-2">
         Change algorithm
         </div>
-        <img class="w-56 mx-auto" src="algos.png">
+        <div class="flex flex-col justify-around grow py-2 font-normal opacity-80">
+            <div class="text-center">Breadth First Search</div>
+            <div class="text-center">Greedy Best First Search</div>
+            <div class="text-center">Dijkstra's</div>
+            <div class="text-center">A*</div>
+        </div>
     </div>
     <div class="hover:border-opacity-40
   transition duration-300 min-w-full bg-zinc-950 backdrop-blur-xl bg-opacity-80 border-spacing-2 border-1 border-zinc-50 border-opacity-20 p-4">
