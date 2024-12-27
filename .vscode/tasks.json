@@ -17,7 +17,7 @@
 		},
 		{
 			"type": "shell",
-			"command": "hugo server -D --disableFastRender --watch --port=2540 --noHTTPCache --ignoreCache",
+			"command": "hugo server -D --disableFastRender --watch --port=2541 --noHTTPCache --ignoreCache",
 			"problemMatcher": [],
 			"label": "hugo: Serve draft site",
 			"presentation": {
@@ -31,7 +31,7 @@
 		},
 		{
 			"type": "shell",
-			"command": "hugo server --disableFastRender --watch --port=2540 --noHTTPCache --ignoreCache",
+			"command": "hugo server --disableFastRender --watch --port=2541 --noHTTPCache --ignoreCache",
 			"problemMatcher": [],
 			"label": "hugo: Serve site",
 			"presentation": {
