@@ -1,6 +1,6 @@
 ---
 title: Hello Mascot!
-date: 17 Apr 2024
+date: 10 Sep 2023
 description: Interactive installation project for my internship at Adapter Digital. Mix of game design, and tech-art.
 thumbnail: thumbnail.jpg
 cover: null

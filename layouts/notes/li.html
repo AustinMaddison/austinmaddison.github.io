@@ -52,7 +52,8 @@ hover:border-opacity-40
 
             <div class="text-zinc-400  leading-3">
                 {{/*  <span class="text-xs"> {{.Params.date.Format "JAN 2006"}} — {{ $MinsToRead }} {{ if ne $MinsToRead 1 }}MINS{{else}}MIN{{end}} READ</span>  */}}
-                <span class="text-[0.7rem]"> {{.Params.date.Format "JAN"}} </span> <span class="text-xs"> {{.Params.date.Format "2006"}} </span> —  <span class="text-[0.7rem]">{{ index .Params.categories 0 | upper }}</span>
+                {{$m := .Params.date.Format "Jan"}}
+                <span class="text-[0.7rem]"> {{ upper $m }} {{.Params.date.Format "2006"}}</span> —  <span class="text-[0.7rem]">{{ index .Params.categories 0 | upper }}</span>
             </div>
         </div>
             

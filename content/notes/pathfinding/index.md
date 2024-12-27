@@ -1,8 +1,8 @@
 ---
 title: Visual Pathfinder
-date: 17 Apr 2024
+date: 20 Dec 2023
 description: 2D grid based pathfinding visualization program for learning.
-thumbnail: thumbnail.jpg
+thumbnail: thumbnail.jpg    
 cover: cover.png
 tags:
     - simulation
