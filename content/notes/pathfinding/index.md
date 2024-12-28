@@ -23,7 +23,7 @@ preview: ../interactive-installation/thumbnail.png
 <div class="mb-8"> </div>
 
 
-I made this cute program for a maths course (Heuristic Optimization) project for teaching purposes. I wanted a interactive way to demonstrate the behaviour of different pathfinding algorithms. Also gave me the oppotunity to learn through implementation. 
+I made this cute program for a maths course (Heuristic Optimization) project for teaching purposes. I wanted an interactive way to demonstrate the behaviour of different pathfinding algorithms. Also it gave me the oppotunity to learn each algorithms through implementation. 
 
 It has some usability/performance quirks, but for my use case it was more than good enough. 
 
@@ -115,7 +115,7 @@ public interface PathfinderInterface
 ```
 Implementing this interface allows for many types of pathfinding algorithms to implemented for the visualizer.
 
-You might of noticed that I have redundant varaibles `IsDone` and `PathfindderStatus` to store state. This is definatley not somthing you want to do, and there is other things I want to change that I mention in [here](#future-plans).
+You might of noticed that I have redundant varaibles `IsDone` and `PathfindderStatus` to store state. This is definatley somthing I want to change, and there is other things I want to improve on that I mention later [here](#future-plans).
 
 ---
 Here is a example implementation of Drijksta's:
@@ -261,6 +261,11 @@ public class DijkstrasPathfinder: PathfinderInterface
 
 
 ## Future Plans
+
+### UI/UX
+Right now there is not much help in understanding how to use the program other than the keybindings shown at the bottom. What do the numbers on each node on the grid mean? There a lot of frequent questions users might have that could be answered with some more UI features. Also providing an indicator of what state the simulator is in and what tool is selected. 
+
+### Performance
 Would like to make the program more performant because currently it begins to chug for grid sizes larger than 100x100. I should take a more data orientated approach to the archetecture of the program. Also I should opitmize the data types and containers I used to store state, I think this can dramtically increase performance. 
 
 There is this [video](https://www.youtube.com/watch?v=WwkuAqObplU&ab_channel=NicBarker) by Nic Barker that I really like on techniques on improving performance for interactive programs by using data-orientated approach. 
