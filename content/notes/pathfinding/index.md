@@ -7,7 +7,7 @@ cover: cover.png
 tags:
     - simulation
 categories:
-    - personal project
+    - personal
 draft: false
 weight: 1
 type: notes
