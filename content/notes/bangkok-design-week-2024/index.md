@@ -8,9 +8,8 @@ tags:
     - installation
     - interactive
 categories:
-    - commercial project
+    - commercial
 draft: true
 weight: 1
 type: notes
-preview: ../interactive-installation/thumbnail.png
 ---
