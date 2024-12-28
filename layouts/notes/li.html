@@ -62,8 +62,15 @@ hover:border-opacity-40
             {{/*  Thumbnail  */}}
             <div class="h-full flex-grow flex justify-center">
                 {{ with .Resources.GetMatch (.Params.thumbnail) }}
-                <img class="object-cover w-full" src="{{ .RelPermalink }}" alt="{{ $title }} thumbnail">
+                {{ $ext := .MediaType.SubType }}
+                {{ if in (slice "mp4" "webm" "ogv") $ext }}
+                    <video class="object-cover w-full" autoplay loop muted>
+                        <source src="{{ .RelPermalink }}" type="{{ .MediaType.Type }}">
+                    </video>
+                {{ else }}
+                    <img class="object-cover w-full" src="{{ .RelPermalink }}" alt="{{ $title }} thumbnail">
                 {{ end }}
+            {{ end }}
             </div>
         
             {{/*  <div class="absolute w-full h-full flex flex-col justify-end">
