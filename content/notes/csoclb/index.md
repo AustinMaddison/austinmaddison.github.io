@@ -1,7 +1,7 @@
 ---
 title: Circular Separable Convolutional Lens Blur In Unity
 date: 01 Dec 2023
-description: Experimental implementation of circular separable convolutional lens blur in Unity HDRP
+description: Experimental implementation of circular separable convolutional lens blur in Unity HDRP.
 thumbnail: thumbnail.png
 cover: thumbnail.png
 tags:
