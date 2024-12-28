@@ -23,7 +23,7 @@ preview: ../interactive-installation/thumbnail.png
 <div class="mb-8"> </div>
 
 
-I made this cute program for a maths course (Heuristic Optimization) project for teaching purposes. I wanted a interactive way to demonstrate the behaviour of different pathfinding algorithms. Also gave me the oppotunity to learn through implementation. 
+I made this cute program for a maths course (Heuristic Optimization) project for teaching purposes. I wanted an interactive way to demonstrate the behaviour of different pathfinding algorithms. Also gave me the oppotunity to learn through implementation. 
 
 It has some usability/performance quirks, but for my use case it was more than good enough. 
 
