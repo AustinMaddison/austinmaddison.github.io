@@ -215,7 +215,6 @@ color: #e6edf3;
 .markdown-body kbd,
 .markdown-body pre,
 .markdown-body samp {
-    font-family: monospace;
     font-size: 1em;
 }
 
@@ -756,20 +755,21 @@ color: #e6edf3;
 }
 
 .markdown-body pre code {
+    display: block;
     font-size: 100%;
-}
-
-.markdown-body pre>code {
     padding: 0;
     margin: 0;
     white-space: pre;
     background: transparent;
     border: 0;
+    overflow-x: auto;
+    scrollbar-width: thin;
 }
+
 
 .markdown-body .highlight {
     margin-bottom: 16px;
-    @apply border-1 border-zinc-50 border-opacity-15 overflow-hidden text-[10px] sm:text-[14px];
+    @apply border-1 border-zinc-50 border-opacity-15 text-[10px] sm:text-[14px];
 }
 
 
@@ -785,16 +785,7 @@ color: #e6edf3;
     color: #e6edf3;
 }
 
-.markdown-body pre code,
-.markdown-body pre tt {
-    /* display: inline; */
-    max-width: auto;
-    padding: 0;
-    margin: 0;
-    line-height: inherit;
-    background-color: transparent;
-    border: 0;
-}
+
 
 .markdown-body .csv-data td,
 .markdown-body .csv-data th {

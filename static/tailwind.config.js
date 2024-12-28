@@ -12,6 +12,7 @@ module.exports = {
       },
       fontFamily: {
         'sans': ['HelveticaNeueLTStd',  'sans-serif'],
+        // 'sans': ['HelveticaNowDisplay',  'sans-serif'],
         'sans-thai': ["Noto Sans Thai", 'sans-serif']
       },
     },
