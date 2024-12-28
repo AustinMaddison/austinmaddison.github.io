@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&Text=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
 
 .bg{
   --tw-bg-opacity: 1;
@@ -1542,7 +1542,23 @@ color: #e6edf3;
   background: transparent;
   border: 0;
   overflow-x: auto;
-  scrollbar-width: thin;
+  --sb-track-color: rgb(39 39 42 / var(--tw-bg-opacity, 1));
+  --sb-thumb-color: rgb(82 82 91 / var(--tw-bg-opacity, 1));
+  --sb-size: 4px;
+}
+
+.markdown-body pre code::-webkit-scrollbar {
+  height: 4px;
+}
+
+.markdown-body pre code::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 0px;
+}
+
+.markdown-body pre code::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 0px;
 }
 
 .markdown-body .highlight {
@@ -2456,7 +2472,7 @@ html{
 
   font-weight: 100;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-UltLt.otf) format('opentype');
 }
@@ -2468,7 +2484,7 @@ html{
 
   font-weight: 100;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-UltLtIt.otf) format('opentype');
 }
@@ -2480,7 +2496,7 @@ html{
 
   font-weight: 200;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Th.otf) format('opentype');
 }
@@ -2492,7 +2508,7 @@ html{
 
   font-weight: 200;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-ThIt.otf) format('opentype');
 }
@@ -2504,7 +2520,7 @@ html{
 
   font-weight: 300;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Lt.otf) format('opentype');
 }
@@ -2516,7 +2532,7 @@ html{
 
   font-weight: 300;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-LtIt.otf) format('opentype');
 }
@@ -2528,7 +2544,7 @@ html{
 
   font-weight: 400;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Roman.otf) format('opentype');
 }
@@ -2540,7 +2556,7 @@ html{
 
   font-weight: 400;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-It.otf) format('opentype');
 }
@@ -2552,7 +2568,7 @@ html{
 
   font-weight: 500;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Md.otf) format('opentype');
 }
@@ -2564,7 +2580,7 @@ html{
 
   font-weight: 500;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-MdIt.otf) format('opentype');
 }
@@ -2576,7 +2592,7 @@ html{
 
   font-weight: 600;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Bd.otf) format('opentype');
 }
@@ -2588,7 +2604,7 @@ html{
 
   font-weight: 600;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-BdIt.otf) format('opentype');
 }
@@ -2600,7 +2616,7 @@ html{
 
   font-weight: 700;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Hv.otf) format('opentype');
 }
@@ -2612,7 +2628,7 @@ html{
 
   font-weight: 700;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-HvIt.otf) format('opentype');
 }
@@ -2624,7 +2640,7 @@ html{
 
   font-weight: 800;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-Blk.otf) format('opentype');
 }
@@ -2636,7 +2652,7 @@ html{
 
   font-weight: 800;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-BlkIt.otf) format('opentype');
 }
@@ -2648,7 +2664,7 @@ html{
 
   font-weight: 900;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-XBlk.otf) format('opentype');
 }
@@ -2660,225 +2676,9 @@ html{
 
   font-weight: 900;
 
-  font-Text: swap;
+  font-display: swap;
 
   src: url(/fonts/HelveticaNeueLTStd/HelveticaNeueLTStd-XBlkIt.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: normal;
-
-  font-weight: 100;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-Hairline.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: italic;
-
-  font-weight: 100;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-HairlineI.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: normal;
-
-  font-weight: 200;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-Thin.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: italic;
-
-  font-weight: 200;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-ThinIta.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: normal;
-
-  font-weight: 300;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-ExtLt.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: italic;
-
-  font-weight: 300;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-ExtLtIta.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: normal;
-
-  font-weight: 400;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-Regular.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: italic;
-
-  font-weight: 400;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-RegIta.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: normal;
-
-  font-weight: 500;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-Medium.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: italic;
-
-  font-weight: 500;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-MedIta.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: normal;
-
-  font-weight: 700;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-Bold.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: italic;
-
-  font-weight: 700;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-BoldIta.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: normal;
-
-  font-weight: 800;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-ExtraBold.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: italic;
-
-  font-weight: 800;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-ExtBdIta.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: normal;
-
-  font-weight: 900;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-Black.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: italic;
-
-  font-weight: 900;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-BlackIta.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: normal;
-
-  font-weight: 950;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-ExtBlk.otf) format('opentype');
-}
-
-@font-face {
-  font-family: 'HelveticaNowText';
-
-  font-style: italic;
-
-  font-weight: 950;
-
-  font-Text: swap;
-
-  src: url(/fonts/HelveticaNow/HelveticaNowText-ExtBlkIta.otf) format('opentype');
 }
 
 .container{
@@ -2997,14 +2797,14 @@ body {
 }
 
 #FilterSmallInner {
-  Text: -webkit-box;
+  display: -webkit-box;
   -webkit-box-orient: horizontal;
 }
 
 @media screen and (min-width: 1280px) {
   #FilterSmall, #ScrollToTopSmall, #ScrollTopSmallSpacing {
-    Text: none;
-    /*Won't be Texted on screens below or equal to 980px width*/
+    display: none;
+    /*Won't be displayed on screens below or equal to 980px width*/
   }
 }
 
