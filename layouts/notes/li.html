@@ -64,7 +64,7 @@ hover:border-opacity-40
                 {{ with .Resources.GetMatch (.Params.thumbnail) }}
                 {{ $ext := .MediaType.SubType }}
                 {{ if in (slice "mp4" "webm" "ogv") $ext }}
-                    <video class="object-cover w-full" autoplay loop muted>
+                    <video class="object-cover w-full" autoplay loop muted playsinline>
                         <source src="{{ .RelPermalink }}" type="{{ .MediaType.Type }}">
                     </video>
                 {{ else }}
