@@ -1,5 +1,5 @@
 ---
-title: Terminal String Animation Library
+title: Toy Terminal String Animation Library
 date: 01 Jan 2024
 description: A toy terminal string animation library I put together for a custom shell using C/C++
 thumbnail: thumbnail.webm
