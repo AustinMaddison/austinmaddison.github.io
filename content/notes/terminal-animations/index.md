@@ -51,7 +51,7 @@ You can read all about them [here](https://en.wikipedia.org/wiki/ANSI_escape_cod
 
 For my systems class we were assigned to make a shell in C/C++. 
 
-The shell had to support all kinds of commands you would expect in a shell program such as echo, redirection, foreground and background jobs, and threading. Whilst looking for ways to make my terminal more appealing I came across ANSII escape codes for coloring and terminal cursor actions.
+The shell had to support all kinds of commands you would expect in a shell program such as echo, redirection, foreground and background jobs, and threading.
 
 I made some simple low level facilities to wrangle ANSI escape codes for coloring the terminal and moving the cursor around easily. Then I created functions for drawing boxes, reading a "string flipbook" and creating text transitions.
 
