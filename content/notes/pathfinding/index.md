@@ -2,7 +2,7 @@
 title: Visual Pathfinder
 date: 20 Dec 2023
 description: 2D grid based pathfinding visualization program for learning.
-thumbnail: thumbnail.jpg    
+thumbnail: thumbnail.webm    
 cover: cover.png
 tags:
     - simulation
@@ -263,7 +263,7 @@ public class DijkstrasPathfinder: PathfinderInterface
 ## Future Plans
 
 ### UI/UX
-Right now there is not much help in understanding how to use the program other than the keybindings shown at the bottom. What do the numbers on each node on the grid mean? There a lot of frequent questions users might have that could be answered with some more UI features. Also providing an indicator of what state the simulator is in and what tool is selected. 
+Right now there is not much help in understanding how to use the program other than the keybindings shown at the bottom.  There a lot of frequent questions users might have that could be answered with some more UI features. A common question I get a lot is "What do the numbers on each node on the grid mean?". They are the calculated costs used for pathfinding. Also providing an indicator of what state the simulator is in and what tool is selected would be nice to have. 
 
 ### Performance
 Would like to make the program more performant because currently it begins to chug for grid sizes larger than 100x100. I should take a more data orientated approach to the archetecture of the program. Also I should opitmize the data types and containers I used to store state, I think this can dramtically increase performance. 

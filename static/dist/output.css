@@ -2899,6 +2899,10 @@ body {
   grid-column: span 2 / span 2;
 }
 
+.m-4{
+  margin: 1rem;
+}
+
 .mx-10{
   margin-left: 2.5rem;
   margin-right: 2.5rem;
