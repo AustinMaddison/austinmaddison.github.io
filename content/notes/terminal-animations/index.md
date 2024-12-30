@@ -40,7 +40,7 @@ or even full blown **Fullscreen GUIs**?!
   <source src="lazygit.webm" type="video/webm">
 </video>
 
-Well I definitley curious on how these programs were able to do this. After researching I found that the secret sauce was in the use ANSII escape codes.  
+Well I was definitley curious on how these programs were able to do this. After researching I found that the secret sauce was in the use of ANSII escape codes.  
 
 ## What are ANSII escape codes?
 They are codes that allow developers to manipulate the cursor and character style in terminals. These codes when printed to the terminal, they won't show up as characters but does manipulate the state on how the terminal may print incoming characters. 
