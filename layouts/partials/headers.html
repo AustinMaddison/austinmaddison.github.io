@@ -2,6 +2,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{{.Title}}</title>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
 {{ with resources.Get .Site.Params.site_icon }}
 <link rel="icon" type="img/png" href="{{ .RelPermalink }}" />
 {{ end }} <link rel="stylesheet" href="{{"/dist/output.css" | relURL }}">
@@ -12,6 +14,9 @@
   async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 ></script>
+
+
+
 
 <script>
   MathJax = {

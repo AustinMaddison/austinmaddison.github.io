@@ -16,3 +16,12 @@
       });
     }
 </script>
+
+{{ with resources.Get "js/youtube_iframe_resize.js" }}
+<script src="{{ .RelPermalink }}"></script>
+{{ end }}
+
+
+{{ with resources.Get "js/lazyloading.js" }}
+<script src="{{ .RelPermalink }}"></script>
+{{ end }}
