@@ -1,7 +1,7 @@
 ---
 title: Seamless City | Bangkok Design Week 2024
-date: 17 Apr 2024
-description: Example Description
+date: 01 Feb 2024
+description: An interactive installation project showcased at BKKDW24, featuring games that explored themes of connection within immediate communities.
 thumbnail: thumbnail.jpg
 cover: cover.png
 tags:

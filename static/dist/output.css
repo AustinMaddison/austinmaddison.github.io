@@ -2887,6 +2887,10 @@ body {
   top: 0px;
 }
 
+.isolate{
+  isolation: isolate;
+}
+
 .z-0{
   z-index: 0;
 }
@@ -2897,10 +2901,6 @@ body {
 
 .col-span-2{
   grid-column: span 2 / span 2;
-}
-
-.m-4{
-  margin: 1rem;
 }
 
 .mx-10{
@@ -2921,6 +2921,11 @@ body {
 .my-3{
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .my-5{
