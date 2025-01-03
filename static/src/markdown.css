@@ -437,7 +437,6 @@ color: #e6edf3;
     outline: none;
 }
 
-.markdown-body p + p,
 .markdown-body p + blockquote,
 .markdown-body p + ul,
 .markdown-body p + ol,
@@ -471,8 +470,13 @@ color: #e6edf3;
 .markdown-body details + ul,
 .markdown-body p + .highlight,
 .markdown-body details + ol {
-    margin-top: 16px;
+    @apply mt-4;
 }
+
+.markdown-body p + p, {
+    @apply mt-2;
+}
+
 
 
 .markdown-body blockquote>:first-child {
