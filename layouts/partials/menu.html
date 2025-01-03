@@ -4,7 +4,7 @@
     {{ range site.Menus.main }}
     {{ $active := $.IsMenuCurrent .Menu . }}
         <span class="flex lg:block lg:my-5">
-            <a href="{{ .URL }}" class="text-lg lg:text-base lg:text-left font-medium {{ if not $active }} text-zinc-400 {{ end }} hover:text-zinc-50 transition-all ">
+            <a href="{{ .URL }}" class="text-lg lg:text-base lg:text-left font-semibold {{ if not $active }} text-zinc-400 {{ end }} hover:text-zinc-50 transition-all ">
                 {{ .Name | upper }}
             </a>
         </span>

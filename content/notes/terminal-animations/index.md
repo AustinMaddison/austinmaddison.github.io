@@ -22,7 +22,7 @@ type: notes
 
 <div class="h-5"></div>
 
-Have you ever wondered how some of our favourite CLI/terminal programs are able to have..
+Have you ever wondered how some of our favourite CLI/terminal programs are able to have...
 
 **Colored Text**
 <image class="mx-auto mb-5 mt-2" src="batcat.png">
@@ -360,7 +360,7 @@ void Log::LineFancyAnimation(string line, Color color, int leading, __useconds_t
 ```
 
 ## Gist
-https://gist.github.com/AustinMaddison/79bf7ee82d4cfde7e4fc1526b8ae61ef.js
+https://gist.githubusercontent.com/AustinMaddison/79bf7ee82d4cfde7e4fc1526b8ae61ef/raw/81a171f43917e3799b4f825d35c71b6f67a9e61f/terminal_animation_gist.cpp
 
 ## Thoughts
 In the future I hope to revisit this stuff but try making more interactive things such as UI or fullscreen terminal app or game.

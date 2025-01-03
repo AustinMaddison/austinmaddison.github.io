@@ -63,7 +63,7 @@ Just triggering all the animations simultaneously in a loop for demonstration pu
 # Introduction
 Hello Mascot! is a product that I helped develop for Adapter Digitals portfolio which compliments their ongoing efforts on diversifying the kind of media they can deliver to their clients. I will describe my journey to getting the internship as well as the general breakdown of the project. Let's begin!
 
-<div class="grid grid-cols-2 gap-1 mb-3">
+<div class="grid grid-cols-2 gap-1 my-3">
     <div class="flex"><img class="w-full object-cover bg-cover" src="intern-1.jpg"></div>
     <div class="flex"><img class="w-full object-cover bg-cover" src="intern-4.jpg"></div>
     <div class="flex"><img class="w-full object-cover bg-cover" src="xsight2.jpg"></div>
@@ -159,6 +159,9 @@ I was given the source files for Krungsri's banana character. I immediately real
 
 What is interesting about the character's shaders is the shader that drives the character's face. The <mark>scheduling of the blinks and mouth shapes are totally driven by wave functions.</mark> The CPU at anytime can interrupt and override a specific eye + mouth expression on an event.
 Each expression for the <mark>mouth and eyes are indexed</mark> and <mark>multiple sin cos, modulo functions are manually tuned and combined to get the desired mouth and eye index over time</mark>. Then the face expressions shader is composited onto the body's base yellow claymation shader. Maybe in a future article I write in detail how I made the shaders for the character.
+
+<div class="h-5"></div>
+
 {{< toggle "Shader Graph" >}}
 <video autoplay loop muted playsinline  >
   <source src="banana-boy-shader-graph.mp4" type="video/mp4">
@@ -217,7 +220,7 @@ I use Substance Designer for authoring materials because it is totally procedura
 
 There is some things that are just more intuitive to do painterly, when that does happen I use Substance Painter.   
 
-<div class="grid grid-cols-2 gap-3">
+<div class="grid grid-cols-2 gap-3 mt-3">
     <img class="h-auto max-w-full" src="mat-bake-1.jpg">
     <img class="h-auto max-w-full" src="mat-bake-2.jpg">
     <img class="h-auto max-w-full" src="mat-bake-3.jpg">
@@ -236,7 +239,7 @@ What I liked about the art direction of little big planet is that you can immedi
 ### Base Materials
 I made a set of base materials in substance designer. These base materials were used for props and the landscape. Since all the materials are parametric changing colors and other material properties could be done for per prop material. 
 
-<div class="grid grid-cols-3 gap-1">
+<div class="grid grid-cols-3 gap-1 mt-3">
     <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat8.jpg"><span class="mt-1 inline-block text-xs sm:text-sm">Clay Base</span></div>
     <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat1.jpg"><span class="mt-1 inline-block text-xs sm:text-sm">Clay River Water</span></div>
     <div class="text-center mb-2"><img class="h-auto max-w-full" src="mat2.jpg"><span class="mt-1 inline-block text-xs sm:text-sm">Striped Plastic w/ Grain</span></div>
@@ -440,7 +443,7 @@ Did lots of informal play tests letting people in the office or myself test the 
 ### Wish there was more time.
 My internship being as long as my summer break (4 weeks) it was admittedly short. This is due to it being an independent internship and not a university sponsored one. However, I was surprised how much was accomplished in the time I had. Wish I had more time to polish the features and turn it into a game with a fun gameplay loop. 
 
-<div class="grid grid-cols-2 gap-1 mb-3">
+<div class="grid grid-cols-2 gap-1 my-3">
     <div class="flex"><video autoplay loop muted playsinline class="bg-cover object-cover h-auto w-full"> <source src="end.mp4" type="video/mp4"> </video></div>
     <div class="flex"><img class="h-full object-cover bg-cover" src="adapter-team.jpg"></div>
 </div>

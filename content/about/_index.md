@@ -35,9 +35,9 @@ Growing up in South Africa I always had these interests clash, I was drawn to th
 
 ## FAQ
 ### What is your favorite show?
-**Severance**. The score, story, cinematography and performances are outstanding. You have to see it to believe it. Just thinking about it gives me goosebumps.  
+**Severance**. Its so weird, scifi and full of questions. It's also beautifully filmed for a show mostly set in clinical white rooms.  
 
-{{% figdiv src="3.jpg" class="mb-5" %}}
+{{% figdiv src="3.jpg" class="my-5" %}}
 
 ### What is one meal you can eat everyday?
 <span class="font-sans-thai">ขนมจีนแกงไตปลา</span>

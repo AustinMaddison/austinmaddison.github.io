@@ -25,6 +25,7 @@
 .markdown-body {
     @apply transition-all;
     @apply text-zinc-200 break-before-auto hyphens-auto lg:hyphens-none;
+    /* font-variation-settings:'wght' 400, 'wdth' 100, 'opsz' 12; */
     /* @apply mb-6; */
 }
 
@@ -66,7 +67,7 @@
 
 .markdown-body b,
 .markdown-body strong {
-    @apply font-semibold;
+    @apply font-bold;
 }
 
 .markdown-body mark {
@@ -74,7 +75,7 @@
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
     background: rgb(255, 216, 78);
-    padding: .2em .4em;
+    padding: .0em .4em;
     font-size: 96%;
     background: linear-gradient(278deg, rgba(0, 0, 0, 0) 0%, rgba(161, 138, 7, 0.815) 1%, rgba(124, 105, 0, 0.781) 3%, rgba(124, 105, 0, 0.589) 97%, rgba(160, 146, 67, 0.568) 99%, rgba(0, 0, 0, 0) 100%);
 }
@@ -129,14 +130,22 @@
 }
 
 
+.markdown-body p > ul,
+.markdown-body p > ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
 
 .markdown-body p, 
 .markdown-body ul {
     /* @apply font-light tracking-wide leading-relaxed text-sm sm:text-base text-justify; */
     @apply transition-all text-[0.95rem] leading-[1.5rem] sm:text-base sm:leading-relaxed;
     @apply font-normal text-left hyphens-auto;
-    margin-bottom: 10px;
 }
+
+
 
 .markdown-body blockquote {
     @apply m-0 px-[1em] text-zinc-50 text-opacity-60 border-l-[0.2em] border-zinc-50 border-opacity-50;
@@ -168,16 +177,23 @@
 .markdown-body tt,
 .markdown-body code,
 .markdown-body samp {
-    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
     font-size: 12px;
 }
+
 
 .markdown-body pre {
     margin-top: 0;
     margin-bottom: 0;
-    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
     font-size: 12px;
 }
+
+.markdown-body pre
+.markdown-body tt,
+.markdown-body code,
+.markdown-body samp {
+    @apply font-mono;
+}
+
 
 /* .markdown-body mark {
 background-color: rgba(187,128,9,0.15);
@@ -421,17 +437,43 @@ color: #e6edf3;
     outline: none;
 }
 
-.markdown-body p,
-.markdown-body blockquote,
-.markdown-body ul,
-.markdown-body ol,
-.markdown-body dl,
-.markdown-body table,
-.markdown-body pre,
-.markdown-body details {
-    margin-top: 0;
-    margin-bottom: 16px;
+.markdown-body p + p,
+.markdown-body p + blockquote,
+.markdown-body p + ul,
+.markdown-body p + ol,
+.markdown-body p + dl,
+.markdown-body p + table,
+.markdown-body p + pre,
+.markdown-body p + details,
+.markdown-body blockquote + p,
+.markdown-body blockquote + blockquote,
+.markdown-body blockquote + ul,
+.markdown-body ul + p,
+.markdown-body ul + ul,
+.markdown-body ul + ol,
+.markdown-body ol + p,
+.markdown-body ol + ul,
+.markdown-body ol + ol,
+.markdown-body dl + p,
+.markdown-body dl + blockquote,
+.markdown-body dl + ul,
+.markdown-body dl + ol,
+.markdown-body table + p,
+.markdown-body table + blockquote,
+.markdown-body table + ul,
+.markdown-body table + ol,
+.markdown-body pre + p,
+.markdown-body pre + blockquote,
+.markdown-body pre + ul,
+.markdown-body pre + ol,
+.markdown-body details + p,
+.markdown-body details + blockquote,
+.markdown-body details + ul,
+.markdown-body p + .highlight,
+.markdown-body details + ol {
+    margin-top: 16px;
 }
+
 
 .markdown-body blockquote>:first-child {
     margin-top: 0;
@@ -562,8 +604,6 @@ color: #e6edf3;
     /* Filled bullet points for unordered lists */
 }
 
-.markdown-body ul {
-}
 
 
 .markdown-body ol {
@@ -734,9 +774,9 @@ color: #e6edf3;
 
 .markdown-body code,
 .markdown-body tt {
-    padding: .2em .4em;
+    padding: .2em .2em;
     margin: 0;
-    font-size: 96%;
+    font-size: 86%;
     background-color: rgba(110, 118, 129, 0.4);
     border-radius: 6px;
 }

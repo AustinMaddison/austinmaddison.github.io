@@ -11,8 +11,9 @@ module.exports = {
         "1": 1,
       },
       fontFamily: {
-        'sans': ['HelveticaNeueLTStd',  'sans-serif'],
-        // 'sans': ['HelveticaNowDisplay',  'sans-serif'],
+        // 'sans': ['HelveticaNeueLTStd',  'sans-serif'],
+        'mono': [ 'Fragment Mono', 'ui-monospace', 'SFMono-Regular'],
+        'sans': ['HelveticaNow',  'sans-serif'],
         'sans-thai': ["Noto Sans Thai", 'sans-serif']
       },
     },

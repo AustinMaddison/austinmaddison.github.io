@@ -12,7 +12,7 @@ I'm Austin, an undergrad in computer science at Mahidol University. My focus is 
 ---
 <!-- On this site, I discuss **`🐇graphics and shader programming`**, **`🎨technical art`**, and whatever else that interests me. You can scroll down for [featured notes](#featured-notes) or go to [notes](notes) for all notes. -->
 
-On this site, I discuss **`🐇graphics and shader programming`**, **`🎨technical art`**, my own projects and whatever else that interests me. [Notes](notes).
+On this site, I discuss `🐇graphics and shader programming`, `🎨technical art`, my own projects and whatever else that interests me. [Notes](notes).
 
 
 {{% 3js "https://austin-maddison.xyz/Site-3D-Scenes/overview/teapot/index.html" %}}
