@@ -886,12 +886,6 @@ mjx-container[jax="CHTML"][display="true"]{
   margin-top: 1.5rem;
 }
 
-.markdown-body p > ul,
-.markdown-body p > ol {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 .markdown-body p, 
 .markdown-body ul {
   /* @apply font-light tracking-wide leading-relaxed text-sm sm:text-base text-justify; */
@@ -1221,7 +1215,6 @@ color: #e6edf3;
   outline: none;
 }
 
-.markdown-body p + p,
 .markdown-body p + blockquote,
 .markdown-body p + ul,
 .markdown-body p + ol,
@@ -1254,8 +1247,12 @@ color: #e6edf3;
 .markdown-body details + blockquote,
 .markdown-body details + ul,
 .markdown-body p + .highlight,
-.markdown-body details + ol {
-  margin-top: 16px;
+.markdown-body details + ol{
+  margin-top: 1rem;
+}
+
+.markdown-body p + p{
+  margin-top: 1rem;
 }
 
 .markdown-body blockquote>:first-child {
@@ -3002,6 +2999,10 @@ body {
   grid-column: span 2 / span 2;
 }
 
+.m-auto{
+  margin: auto;
+}
+
 .mx-10{
   margin-left: 2.5rem;
   margin-right: 2.5rem;
@@ -3035,6 +3036,11 @@ body {
 .my-auto{
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.my-2{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .mb-0{
@@ -3336,6 +3342,10 @@ body {
 
 .translate-y-0{
   --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -3724,6 +3734,10 @@ body {
 
 .leading-6{
   line-height: 1.5rem;
+}
+
+.tracking-normal{
+  letter-spacing: 0em;
 }
 
 .tracking-tight{
@@ -4377,12 +4391,12 @@ body {
   }
 }
 
-.\[\&\>p\]\:mb-2>p{
-  margin-bottom: 0.5rem;
+.\[\&\>p\]\:mt-2>p{
+  margin-top: 0.5rem;
 }
 
-.last\:\[\&\>p\]\:mb-0>p:last-child{
-  margin-bottom: 0px;
+.last\:\[\&\>p\]\:mt-0>p:last-child{
+  margin-top: 0px;
 }
 
 .\[\&\>span\]\:px-2>span{

@@ -130,22 +130,12 @@
 }
 
 
-.markdown-body p > ul,
-.markdown-body p > ol {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-
-
 .markdown-body p, 
 .markdown-body ul {
     /* @apply font-light tracking-wide leading-relaxed text-sm sm:text-base text-justify; */
     @apply transition-all text-[0.95rem] leading-[1.5rem] sm:text-base sm:leading-relaxed;
     @apply font-normal text-left hyphens-auto;
 }
-
-
 
 .markdown-body blockquote {
     @apply m-0 px-[1em] text-zinc-50 text-opacity-60 border-l-[0.2em] border-zinc-50 border-opacity-50;
@@ -473,11 +463,9 @@ color: #e6edf3;
     @apply mt-4;
 }
 
-.markdown-body p + p, {
-    @apply mt-2;
+.markdown-body p + p {
+    @apply mt-4;
 }
-
-
 
 .markdown-body blockquote>:first-child {
     margin-top: 0;
