@@ -269,7 +269,8 @@ void fragment(){
 
 
 ## Substrate Pixels
-In godot I have the snake game rendering to subviewport which can be sampled as a texture in the shader.
+### Subviewport Texture
+In godot I have the snake game rendering to [subviewport](https://docs.godotengine.org/en/stable/classes/class_subviewport.html) which can be sampled as a texture in the shader.
 
 <div class="grid sm:grid-cols-2 my-4">
   <img src="image-11.png" class="m-auto">
@@ -281,10 +282,16 @@ A `sampler2D` uniform is declared which the subviewport can be now selected as t
 ```cpp
 uniform sampler2D viewport_texture : hint_default_black, filter_nearest_mipmap, repeat_disable;
 ```
-
 <img src="image-13.png" class="m-auto my-4">
 
-Since textures are sampled as if they are square, the uv is scaled such that the dimensions of are 84px x 48px.
+---
+
+Since textures are sampled as if they are square, the uv is scaled such that the dimensions of are 84px x 48px. So I have 2 more uniforms `scale_texture` and `translate_texture` as input to do that.
+
+<img src="image-16.png" class="m-auto my-4">
+
+> Ignore the gridlines I will show how to get them later.
+
 ```cpp
 uniform vec2 scale_texture = vec2(1.0, 1.0);
 uniform vec2 translate_texture = vec2(0.0, 0.0);
@@ -306,14 +313,15 @@ void fragment() {
   ALBEDO = vec4(substrate, 1.0f);
 }
 
-
 ```
+These are the values I found that scaled the texture to the right dimensions for the quad I was using.
 
-<img src="image-13.png" class="m-auto my-4">
-
-
+<img src="image-14.png" class="m-auto my-4">
+<img src="image-18.png" class="m-auto my-4">
 
 ## Substrate Shadow
+
+The 
 
 ## Transflector Shimmer
 

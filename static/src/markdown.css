@@ -459,6 +459,7 @@ color: #e6edf3;
 .markdown-body details + blockquote,
 .markdown-body details + ul,
 .markdown-body p + .highlight,
+.markdown-body .highlight + p,
 .markdown-body details + ol {
     @apply mt-4;
 }
@@ -473,6 +474,10 @@ color: #e6edf3;
 
 .markdown-body blockquote>:last-child {
     margin-bottom: 0;
+}
+
+.markdown-body blockquote {
+
 }
 
 .markdown-body h1 .octicon-link,
@@ -618,9 +623,6 @@ color: #e6edf3;
 .markdown-body dl {
     padding: 0;
 }
-
-
-
 
 .markdown-body dl dt {
     padding: 0;
@@ -817,13 +819,10 @@ color: #e6edf3;
   border-radius: 0px;
 }
 
-
-
 .markdown-body .highlight {
-    margin-bottom: 16px;
+    margin-top: 16px;
     @apply border-1 border-zinc-50 border-opacity-15 text-[10px] sm:text-[14px];
 }
-
 
 .markdown-body .highlight pre {
     margin-bottom: 0;
@@ -836,8 +835,6 @@ color: #e6edf3;
     line-height: 1.45;
     color: #e6edf3;
 }
-
-
 
 .markdown-body .csv-data td,
 .markdown-body .csv-data th {

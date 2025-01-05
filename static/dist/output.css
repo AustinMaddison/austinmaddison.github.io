@@ -1247,6 +1247,7 @@ color: #e6edf3;
 .markdown-body details + blockquote,
 .markdown-body details + ul,
 .markdown-body p + .highlight,
+.markdown-body .highlight + p,
 .markdown-body details + ol{
   margin-top: 1rem;
 }
@@ -1261,6 +1262,9 @@ color: #e6edf3;
 
 .markdown-body blockquote>:last-child {
   margin-bottom: 0;
+}
+
+.markdown-body blockquote {
 }
 
 .markdown-body h1 .octicon-link,
@@ -1597,7 +1601,7 @@ color: #e6edf3;
 }
 
 .markdown-body .highlight {
-  margin-bottom: 16px;
+  margin-top: 16px;
   border-width: 1px;
   border-color: rgb(250 250 250 / var(--tw-border-opacity, 1));
   --tw-border-opacity: 0.15;
@@ -3038,11 +3042,6 @@ body {
   margin-bottom: auto;
 }
 
-.my-2{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
 .mb-0{
   margin-bottom: 0px;
 }
@@ -3342,10 +3341,6 @@ body {
 
 .translate-y-0{
   --tw-translate-y: 0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -4160,10 +4155,6 @@ body {
     display: flex;
   }
 
-  .sm\:grid{
-    display: grid;
-  }
-
   .sm\:h-\[250px\]{
     height: 250px;
   }
@@ -4391,12 +4382,12 @@ body {
   }
 }
 
-.\[\&\>p\]\:mt-2>p{
-  margin-top: 0.5rem;
+.\[\&\>p\]\:\!mt-2>p{
+  margin-top: 0.5rem !important;
 }
 
-.last\:\[\&\>p\]\:mt-0>p:last-child{
-  margin-top: 0px;
+.first\:\[\&\>p\]\:\!mt-4>p:first-child{
+  margin-top: 1rem !important;
 }
 
 .\[\&\>span\]\:px-2>span{

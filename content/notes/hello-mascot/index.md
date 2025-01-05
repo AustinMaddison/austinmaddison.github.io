@@ -20,8 +20,6 @@ type: notes
 
 <iframe class="w-full"  src="https://www.youtube.com/embed/hmK6vug5r68?si=IfmBeWxxLIpL46_o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
-
 <div class="h-5"></div>
 
 #### LookDev Stills
@@ -47,18 +45,15 @@ Just triggering all the animations simultaneously in a loop for demonstration pu
 
 <div class="h-5"></div>
 
-
 <video autoplay loop muted playsinline  >
   <source src="lookdev-right.mp4" type="video/mp4">
 </video>
 
-
 <div class="flex mt-5">
   <span class="flex-1 text-center text-opacity-50 text-zinc-50 italic text-sm"> 
-    I called the demo Banana Boy but the project was named to Hello Mascot to be more generic for their product portfolio's market. 
+    I called the demo Banana Boy but the project was named to Hello Mascot to be more generic for their product portfolio's market.
   </span>  
 </div>
-
 
 # Introduction
 Hello Mascot! is a product that I helped develop for Adapter Digitals portfolio which compliments their ongoing efforts on diversifying the kind of media they can deliver to their clients. I will describe my journey to getting the internship as well as the general breakdown of the project. Let's begin!
