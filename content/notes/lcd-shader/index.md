@@ -46,7 +46,8 @@ I’ve been curious if anyone has formally written about a visual phenomenon I n
 
 After a lot of digging, I finally found a [paper](https://www.researchgate.net/publication/3453662_Transflective_Liquid_Crystal_Displays) that mentions it, complete with a diagram.
 
-<img src="anatomy.png" width=320px class="my-4 mx-auto">
+<img src="anatomy.png" width=320px class="mt-4 mb-5 mx-auto">
+
 Interestingly, I also noticed something similar in Cyberpunk 2077. The interactive, world-space UI screens have a futuristic interpretation of this phenomenon. Instead of the shadow being cast by the substrate, it looks like the image emitted by the substrate is reflecting between two shiny inner surfaces of a transparent material. Very cool!
 
 <div class="grid sm:grid-cols-2 my-4">
@@ -282,15 +283,16 @@ A `sampler2D` uniform is declared which the subviewport can be now selected as t
 ```cpp
 uniform sampler2D viewport_texture : hint_default_black, filter_nearest_mipmap, repeat_disable;
 ```
-<img src="image-13.png" class="m-auto my-4">
-
----
+<img src="image-13.png" class="m-auto my-6">
 
 Since textures are sampled as if they are square, the uv is scaled such that the dimensions of are 84px x 48px. So I have 2 more uniforms `scale_texture` and `translate_texture` as input to do that.
 
-<img src="image-16.png" class="m-auto my-4">
+<img src="image-16.png" class="m-auto mt-6">
 
-> Ignore the gridlines I will show how to get them later.
+<div class="mb-6 text-center text-opacity-50 text-zinc-50 italic text-sm"> 
+Note: Ignore the pixel gridlines for now, I will get to them.
+</div>  
+
 
 ```cpp
 uniform vec2 scale_texture = vec2(1.0, 1.0);
@@ -319,9 +321,32 @@ These are the values I found that scaled the texture to the right dimensions for
 <img src="image-14.png" class="m-auto my-4">
 <img src="image-18.png" class="m-auto my-4">
 
-## Substrate Shadow
+---
+### Pixel Gridlines
 
-The 
+The lines are made by masking in the pixels using `grid(st)`, each pixel is defined as a square which is calculated using a simple distance function which is reapeated with `fract()`. 
+
+
+```cpp
+float grid(vec2 st)
+{
+	float v_line = abs((fract(st.x * screen_width) - 0.5) * 2.0);
+	float h_line = abs((fract(st.y * screen_height) - 0.5) * 2.0);
+
+	float grid = max(v_line, h_line);
+	grid = smoothstep(0.80, 1, grid);
+	return 1.0 - clamp(grid, 0., 1.);
+}
+void fragment() {
+	color = mix(color, substrate_color.rgb, screen_mask * grid(st) * 0.2);
+}
+```
+<div class="grid sm:grid-cols-2 my-4">
+  <img src="image-19.png" class="m-auto">
+  <img src="image-20.png" class="m-auto">
+</div>
+
+## Substrate Shadow
 
 ## Transflector Shimmer
 

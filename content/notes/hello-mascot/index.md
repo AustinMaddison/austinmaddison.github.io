@@ -203,7 +203,7 @@ Blocking out the scene is super duper important, allows me to <mark>use proxies 
 Like all kinds of visual mediums its a highly iterative process. I had to really <mark>trust the process and power through</mark> the not so flattering early stages of the environment's look development. What really transformed the scene was [set dressing](#set-dressing) obviously but not so obviously the the [post-processing](#post-processing).
 
 ## Set Dressing
-I export the blockouts out of engine and bring into my DCC as reference to model the props. The workflow for all the props are quite typical industry standard stuff.  
+I export the blockouts out of engine and bring into my DCC as reference to model the props. The workflow for all the props are quite typical industry standard stuff. 
 
 ## Materials
 

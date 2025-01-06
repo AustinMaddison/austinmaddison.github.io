@@ -25,10 +25,10 @@ I have always been intrigued by lens simulation and post process effects in game
 
 You can read more about the topic from Silicon Studio's RND Presentations on Real-time Rendering of Physically Based Optical Effect in Theory and Practice [here](https://www.siliconstudio.co.jp/en/rd/presentations/).
 
-For reference renderers such as ray-tracers and path-tracers this effect can simulated when rendering while realtime methods is a post process.
+For renderers such as ray-tracers and path-tracers this effect can simulated when rendering while realtime methods it is usually a post process.
 
 ## Gather and Scatter
-Solutions to achieving lens blur are categorized into either a gather or scatter solutions. Some modern methods use a hybrid of both. The gather runs convolution kernel over the target image while a scatter solution literally scatters quads with a bokeh texture over the target image. Both methods have unique tradeoffs, I think there is an obscure Epic Game's talk on the topic.From now onwards I will be ignoring scatter solutions.
+Solutions to achieving lens blur are categorized into either a gather or scatter solutions. Some modern methods use a hybrid of both. The gather runs convolution kernel over the target image while a scatter solution literally scatters quads with a bokeh texture over the target image. Both methods have unique tradeoffs, I think there is an obscure Epic Game's talk on the topic. From now onwards I will be discussing just about gather solutions.
 
 ## Whats wrong with gather? 
 Unlike gaussian blur which is seperable, a circular blur was thought to not be able to be serperable too. Gather based methods have that are not seperable have \(O(n^2)\) time complexity.
