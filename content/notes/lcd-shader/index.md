@@ -265,9 +265,7 @@ void fragment(){
 	CLEARCOAT = clear_coat_specular;
 	CLEARCOAT_ROUGHNESS = smoothstep(clear_coat_roughness_remap.x, clear_coat_roughness_remap.y,texture(clear_coat_roughness_map, UV).r);
 }
-
 ```
-
 
 ## Substrate Pixels
 ### Subviewport Texture
@@ -289,7 +287,7 @@ Since textures are sampled as if they are square, the uv is scaled such that the
 
 <img src="image-16.png" class="m-auto mt-6">
 
-<div class="mb-6 text-center text-opacity-50 text-zinc-50 italic text-sm"> 
+<div class="mt-2 mb-6 text-center text-opacity-50 text-zinc-50 italic text-sm"> 
 Note: Ignore the pixel gridlines for now, I will get to them.
 </div>  
 
@@ -322,12 +320,15 @@ These are the values I found that scaled the texture to the right dimensions for
 <img src="image-18.png" class="m-auto my-4">
 
 ---
-### Pixel Gridlines
+### Pixel Gridlines and Color
 
 The lines are made by masking in the pixels using `grid(st)`, each pixel is defined as a square which is calculated using a simple distance function which is reapeated with `fract()`. 
-
-
+We combine grid and viewport texture together create mask for mixing the desired substrate color in.
 ```cpp
+uniform vec4 substrate_color: source_color = vec4(0.0);
+
+//...
+
 float grid(vec2 st)
 {
 	float v_line = abs((fract(st.x * screen_width) - 0.5) * 2.0);
@@ -337,16 +338,41 @@ float grid(vec2 st)
 	grid = smoothstep(0.80, 1, grid);
 	return 1.0 - clamp(grid, 0., 1.);
 }
+
+float calc_substrate(vec2 uv)
+{
+	return texture(viewport_texture, uv).r * grid(uv) * calc_screen_rect_mask(uv);
+}
+
+//...
+
 void fragment() {
-	color = mix(color, substrate_color.rgb, screen_mask * grid(st) * 0.2);
+	vec2 st = scale_from_center(UV, scale_texture) + translate_texture;
+	float substrate =  calc_substrate(st);
+
+	//... Background Transflector ...
+
+	color = mix(color, substrate_color.rgb, screen_mask * grid(st) * 0.2); 	// Inactive Pixels
+	color = mix(color, substrate_color.rgb, substrate * substrate_color.a); // Active Pixels
+	// ...
 }
 ```
-<div class="grid sm:grid-cols-2 my-4">
-  <img src="image-19.png" class="m-auto">
-  <img src="image-20.png" class="m-auto">
-</div>
+
+**Subviewport Texture**
+<img class="mx-auto mt-3 mb-6" src="image-21.png">
+
+**Grid**
+<img class="mx-auto mt-3 mb-6" src="image-22.png">
+
+**Grid and Subviewport Texture**
+<img class="mx-auto mt-3 mb-6" src="image-23.png">
+
+**Mix Substrate Color**
+<img class="mx-auto mt-3 mb-6" src="image-26.png">
 
 ## Substrate Shadow
+Currently the display looks rather flat. In the reference, the lcd substrate casts shadows onto the transflector. We fake this effect by mapping mask in such that the surface appears deeper further back into the screen than the surface. Basically parralax mapping, a very unsophisticated version   
+
 
 ## Transflector Shimmer
 
@@ -355,11 +381,15 @@ void fragment() {
 ## Backlight
 
 
-
 # Github Repository
+
+I hope to work this project into a Nokia Emulator at some point, the code isn't super cute but if you wanna try it for yourself in Godot you can. 
 
 https://github.com/AustinMaddison/Nokia-Sim/tree/master
 
 
 # References
-Zhu, Xinyu & Ge, Zhibing & Wu, Thomas & Wu, Shin-Tson. (2005). Transflective Liquid Crystal Displays. Display Technology, Journal of. 1. 15 - 29. 10.1109/JDT.2005.852506. 
+
+[Zhu, Xinyu & Ge, Zhibing & Wu, Thomas & Wu, Shin-Tson. (2005). Transflective Liquid Crystal Displays. Display Technology, Journal of. 1. 15 - 29. 10.1109/JDT.2005.852506.](https://www.researchgate.net/publication/3453662_Transflective_Liquid_Crystal_Displays) 
+
+[Godot Shader Language Reference](https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/shading_language.html)
