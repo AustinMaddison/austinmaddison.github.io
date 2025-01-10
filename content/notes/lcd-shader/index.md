@@ -5,11 +5,10 @@ description: A realistic PM-LCD shader for Godot 4.3 featuring substrate paralla
 thumbnail: thumbnail.webm
 cover: thumbnail.webm
 tags:
-    - terminal
-    - animation
+    - shaders
 categories:
     - personal
-draft: true
+draft: false
 weight: 1
 type: notes
 ---
@@ -50,7 +49,7 @@ After a lot of digging, I finally found a [paper](https://www.researchgate.net/p
 
 Interestingly, I also noticed something similar in Cyberpunk 2077. The interactive, world-space UI screens have a futuristic interpretation of this phenomenon. Instead of the shadow being cast by the substrate, it looks like the image emitted by the substrate is reflecting between two shiny inner surfaces of a transparent material. Very cool!
 
-<div class="grid sm:grid-cols-2 my-4">
+<div class="grid grid-cols-2 sm:grid-cols-2 my-4">
   <img src="image-5.png" width=320px class="mx-auto my-auto">
   <img src="image-8.png" width=320px class="mx-auto my-auto">
 </div>
@@ -80,7 +79,7 @@ So the key componenets of the shader are...
   - Uneven diffusion of light.
 
 # The Shader
-This is the whole shader, it is definatley not the most elegant thing I have put together but I will break it down the best I can.
+This is the whole shader, it is definatley not the most elegant thing I have put together but I will break it down the best I can. The project can be downloaded [here](#github-repository) if you want to follow along in godot. 
 
 ```cpp
 shader_type spatial;
@@ -102,6 +101,7 @@ uniform float fade_falloff = 0.55;
 
 uniform sampler2D frame_shadow_map : hint_default_black, repeat_disable;
 uniform vec4 frame_shadow_color: source_color = vec4(0.0);
+
 
 uniform bool enable_backlight = false;
 uniform sampler2D backlight_map : hint_default_black;
@@ -148,6 +148,7 @@ float grid(vec2 st)
 	return 1.0 - clamp(grid, 0., 1.);
 }
 
+
 float grid_custom_smoothstep(vec2 st, vec2 edges)
 {
 	float v_line = abs((fract(st.x * screen_width) - 0.5) * 2.0);
@@ -179,6 +180,7 @@ float calc_substrate(vec2 uv)
 {
 	return texture(viewport_texture, uv).r * grid(uv) * calc_screen_rect_mask(uv);
 }
+
 
 float calc_substrate_bleed(vec2 uv, vec2 edges)
 {
@@ -230,11 +232,12 @@ void fragment(){
 	{
 		color = mix(color, frame_shadow_color.rgb, calc_frame_shadow(UV + offset - (vec2(bias.x, bias.y*-1.)*0.5)) * frame_shadow_color.a);
 	}
+	
 	color = mix(color, clear_coat_dirt_color.rgb, smoothstep(clear_coat_dirt_remap.x, clear_coat_dirt_remap.y, texture(clear_coat_roughness_map, UV).r) * clear_coat_dirt_color.a);
 
-	//-----------------------------------------------------------------------//
-	//                                Output                                 //
-	//-----------------------------------------------------------------------//
+	// -----------------
+	// Final Output
+	// -----------------
 
 	ALBEDO = color;
 	
@@ -261,7 +264,7 @@ void fragment(){
 
 	NORMAL_MAP = texture(clear_coat_normal_map, UV).rgb;
 	NORMAL_MAP_DEPTH = clear_coat_normal_depth;
-
+	METALLIC = smoothstep(0.1, 1.0, 1.0 - substrate) * 0.45;
 	CLEARCOAT = clear_coat_specular;
 	CLEARCOAT_ROUGHNESS = smoothstep(clear_coat_roughness_remap.x, clear_coat_roughness_remap.y,texture(clear_coat_roughness_map, UV).r);
 }
@@ -371,14 +374,239 @@ void fragment() {
 <img class="mx-auto mt-3 mb-6" src="image-26.png">
 
 ## Substrate Shadow
-Currently the display looks rather flat. In the reference, the lcd substrate casts shadows onto the transflector. We fake this effect by mapping mask in such that the surface appears deeper further back into the screen than the surface. Basically parralax mapping, a very unsophisticated version   
+Currently the display looks rather flat. In the reference, the lcd substrate casts shadows onto the transflector. We can fake a deeper layer using a simple parralax function. It simply returns a 2D offset which we can use the sample the subviewport texture.
+
+```cpp
+//...
+uniform float depth : hint_range(0.0, 1.0) = 0.1;
+uniform vec2 bias = vec2(0.0, 0.0);
+//...
+
+varying vec3 ro;
+varying vec3 p;
+varying vec3 vertex_normal_ws;
+
+void vertex()
+{
+	p = ((MODEL_MATRIX)*vec4(VERTEX,1.0)).xyz; // Get fragment position in world space coordinates
+}
+
+vec2 back_project_offset(vec3 camera_position)
+{
+	vec3 rd = normalize(p - camera_position) * depth * 0.1;
+	vec2 offset = rd.xy + bias;
+	offset.y *= -1.0;
+	return offset;
+}
+
+float calc_substrate_shadow(vec2 uv)
+{
+	float shadow_mask = 1.0 - smoothstep(0.-0.001, 0.+0.001, box((uv -0.5) * 2.0, vec2(1.0, 1.0)));
+	return texture(viewport_texture, uv).r * grid(uv) * calc_screen_rect_mask(uv);
+}
+
+
+//...
+
+void fragment() {
+	vec2 offset = back_project_offset(CAMERA_POSITION_WORLD);
+	float substrate_shadow =  calc_substrate_shadow(st + offset);
+
+	vec3 color = vec3(0.0);
+
+	// ...
+
+	if (!enable_backlight)
+	{
+		color = mix(color, substrate_shadow_color.rgb, substrate_shadow * substrate_shadow_color.a);
+	}
+	//...
+}
+```
+
+We first get the unit vector between the camera postion and the surface positions `rd`. We extract the `x` and `y` components to determine how much to shift the shadow for the parralax effect. We invert the y component `-y` to correct the direction. Additonally we add a `bias` and `depth` uniform floats to help control the effect's strength. This isn't the most robust parralax effect, especially when you trying to convey deep layers, however since this shadow is very shallow we can get away with this approximation.
+
+```cpp
+vec3 rd = normalize(p - camera_position) * depth * 0.1;
+vec2 offset = rd.xy + bias;
+offset.y *= -1.0;
+```
+
+
+Then we just sample the same substrate but with the co-ordinates offsetted by the `back_project_offset`, this achieves the parralaxed effect.
+
+```cpp
+float calc_substrate_shadow(vec2 uv)
+{
+	float shadow_mask = 1.0 - smoothstep(0.-0.001, 0.+0.001, box((uv -0.5) * 2.0, vec2(1.0, 1.0)));
+	return texture(viewport_texture, uv).r * grid(uv) * calc_screen_rect_mask(uv);
+}
+```
+
+<video class="mx-auto mt-4 mb-4" width=420px autoplay loop muted playsinline>
+	<source src="substrate_parralax_no.webm" type="video/webm">
+</video>
+<div class="mt-2 mb-6 text-center text-opacity-50 text-zinc-50 italic text-sm"> 
+Without Substrate Shadow
+</div>  
+
+<video class="mx-auto mt-2 mb-4" width=420px autoplay loop muted playsinline>
+	<source src="substrate_parralax.webm" type="video/webm">
+</video>
+<div class="mt-2 mb-6 text-center text-opacity-50 text-zinc-50 italic text-sm"> 
+With Substrate Shadow (Kinda hard to see bcs video compression)
+</div>  
+<video class="mx-auto mt-2 mb-4" width=420px autoplay loop muted playsinline>
+	<source src="substrate_shadow_parralax_bw.webm" type="video/webm">
+</video>
+<div class="mt-2 mb-6 text-center text-opacity-50 text-zinc-50 italic text-sm"> 
+With Substrate Shadow (BW and high contrast to better see the effect)
+</div>  
 
 
 ## Transflector Shimmer
+Looking at the reference images of the transflector. It is diffuse yet it slightly shimmers in the light. 
+
+<img class="w-80 mx-auto my-4" src="image-27.png">
+
+Also notice that when the light angle is steep the energy being recieved back to the camera terminates quickly, similar to the metal frame. We can guess that the fresnel IOR is somewhat low.
+<img class="w-80 mx-auto my-4" src="image-28.png">
+
+I found that using bluenoise for BRDF roughness input appoximates the shimer effect quite well and increased the metalic contribution to lower the IOR of the material. Godot doesn't expose the IOR so making the material metalic is bit of a hack.
+
+<div class="grid my-4 gap-2 grid-cols-2 sm:grid-cols-2 w-96 mx-auto">
+<div>
+	<img class="object-none" width=1200px src="bluenoise.jpeg">
+	<div class="w-full text-center">Bluenoise Greyscale</div>
+</div>
+<div>
+	<img class="object-none" width=1200px  src="bluenoise_normal.jpg">
+	<div class="w-full text-center">Bluenoise Normals</div>
+</div>
+</div>
+
+```cpp
+ROUGHNESS = smoothstep(back_roughness_remap.x, back_roughness_remap.y, texture(back_noise, UV*back_noise_scale + offset).r);
+METALLIC = smoothstep(0.1, 1.0, 1.0 - substrate) * 0.6;
+```
+<img class="mb-4 mt-2" src="without_transflector.png">
+<div class="mt-2 mb-6 text-center text-opacity-50 text-zinc-50 italic text-sm"> 
+Without roughness and metalic modifications.
+</div>  
+
+<img class="mb-4 mt-2" src="with_transflector.jpg">
+<div class="mt-2 mb-6 text-center text-opacity-50 text-zinc-50 italic text-sm"> 
+With roughness and metalic modifications.
+</div>  
 
 ## Transflector Housing Frame Shadow
+Godot's shadows are rendered using shadowmaps. One of the painpoints of shadowmaps is that they can introduce aliasing or lack of accuracy with insuffeicnt resolution and filtering. 
+
+Instead of relying on shadowmaps to capture the LCD's display housing geometry, I cheated and use a texture to create the shadow map. I project it onto the transflector as its the furthest back layer. 
+
+```cpp
+float calc_frame_shadow(vec2 uv)
+{
+	return texture(frame_shadow_map, uv).r;
+}
+
+color = mix(color, frame_shadow_color.rgb, 
+			calc_frame_shadow(UV + offset - (vec2(bias.x, bias.y*-1.)*0.5)) 
+			* frame_shadow_color.a);
+```
+
+
+<img class="mb-2 mt-4 mt-2 mx-auto" width=320px src="shadow.png">
+<div class="w-full text-center mb-6">Frame Shadow Texture</div>
+
+
+<img class="mb-4 mt-2" src="Desktop 1-10-2025 7-08-09 PM-793.jpg">
+<div class="mt-2 mb-6 text-center text-opacity-50 text-zinc-50 italic text-sm"> 
+No frame shadow texture.
+</div> 
+
+<img class="mb-4 mt-2" src="Desktop 1-10-2025 7-08-41 PM-566.jpg">
+<div class="mt-2 mb-6 text-center text-opacity-50 text-zinc-50 italic text-sm"> 
+With frame shadow texture.
+</div>  
+
+Now there is fake contact shadows but notice at the top left that the specular is responding incorrectly, the specular construbition can simply be masked out using the shadow texture. 
+
+```cpp
+SPECULAR = max((1.0 - substrate), (1.0 - screen_mask * grid(st))) - calc_frame_shadow(UV + offset - (vec2(bias.x, bias.y*-1.)*0.5)) * specular;
+```
+
+<img class="mb-4 mt-2" src="Desktop 1-10-2025 7-08-54 PM-71.jpg">
+<div class="mt-2 mb-6 text-center text-opacity-50 text-zinc-50 italic text-sm"> 
+Modified specular.
+</div>  
+
+This contact shadow makes a big difference, now the frame actaully looks like it sits on top of the screen.
 
 ## Backlight
+Last thing to address is the backlight. Looking at reference images, backlights then were not very uniform. I guess it wasn't such a big deal when this phone came out?
+
+<img class="my-4" src="image-29.png">
+
+ Anyways I use a texture to mask areas where I want the material to be emmisive.
+
+<img class="mb-2 mt-4 mt-2 mx-auto" width=320px src="backlight.png">
+<div class="w-full text-center mb-6">Backlight Mask Texture</div>
+
+```cpp
+EMISSION = vec3(backlight_color.rgb
+		* smoothstep(backlight_remap.x, backlight_remap.y, texture(backlight_map, scale_from_center(UV, vec2(.98)) + offset).r)
+		* backlight_emmission_strength*4.
+		* clamp(
+			(1.0 - min(calc_substrate_bleed(st, vec2(1. - backlight_edge_bleed_strength, 1.0 + backlight_edge_bleed_strength)) * (1.- backlight_bleed_strength * 0.1), substrate) ) + backlight_bleed_strength * 0.1,
+			0.0, 1.0));
+```
+
+The extra smoothstep and clamp functions are there to introduce a bit of light bleed around each pixel when the backlight is on. Its also important to add `if` cases to swithch on/off the effect and disable effects that don't make sense when the backlight is on, like the shadows.
+
+```cpp
+
+if (!enable_backlight)
+{
+	color = mix(color, substrate_shadow_color.rgb, substrate_shadow * substrate_shadow_color.a);
+}
+
+//...
+
+if (!enable_backlight)
+{
+	color = mix(color, frame_shadow_color.rgb, calc_frame_shadow(UV + offset - (vec2(bias.x, bias.y*-1.)*0.5)) * frame_shadow_color.a);
+}
+
+// ...
+
+if (enable_backlight)
+{
+	EMISSION = vec3(backlight_color.rgb
+	* smoothstep(backlight_remap.x, backlight_remap.y, texture(backlight_map, scale_from_center(UV, vec2(.98)) + offset).r)
+	* backlight_emmission_strength*4.
+	* clamp(
+		(1.0 - min(calc_substrate_bleed(st, vec2(1. - backlight_edge_bleed_strength, 1.0 + backlight_edge_bleed_strength)) * (1.- backlight_bleed_strength * 0.1), substrate) ) + backlight_bleed_strength * 0.1,
+		0.0, 1.0));
+}
+
+if (enable_backlight)
+{
+	SPECULAR = max((1.0 - substrate), (1.0 - screen_mask * grid(st)))  * specular;
+}
+else
+{
+	SPECULAR = max((1.0 - substrate), (1.0 - screen_mask * grid(st))) - calc_frame_shadow(UV + offset - (vec2(bias.x, bias.y*-1.)*0.5))  * specular;
+}
+
+```
+<img class="mb-4 mt-2 mx-auto" src="Desktop 1-10-2025 8-06-22 PM-184.jpg">
+
+## Results
+
+<video autoplay loop muted playsinline >
+  <source src="thumbnail.webm" type="video/webm">
+</video>
 
 
 # Github Repository
@@ -390,6 +618,6 @@ https://github.com/AustinMaddison/Nokia-Sim/tree/master
 
 # References
 
-[Zhu, Xinyu & Ge, Zhibing & Wu, Thomas & Wu, Shin-Tson. (2005). Transflective Liquid Crystal Displays. Display Technology, Journal of. 1. 15 - 29. 10.1109/JDT.2005.852506.](https://www.researchgate.net/publication/3453662_Transflective_Liquid_Crystal_Displays) 
+[Zhu, Xinyu & Ge, Zhibing & Wu, Thomas & Wu, Shin-Tson. (2005). Transflective Liquid Crystal Displays. Display Technology, Journal of. 1. 15 - 29. 10.1109/JDT.2005.852506.](https://www.researchgate.net/publication/3453662_Transflective_Liquid_Crystal_Displays)  
 
 [Godot Shader Language Reference](https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/shading_language.html)

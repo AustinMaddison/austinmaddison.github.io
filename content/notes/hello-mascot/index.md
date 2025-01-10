@@ -174,7 +174,7 @@ Each expression for the <mark>mouth and eyes are indexed</mark> and <mark>multip
 
 ### Concept
 
-![alt text](image-5.jpg)
+<img class="mx-auto my-4" src="image-5.jpg">
 
 So I made a sketch, it isn't amazing by any means but it <mark>provides guidance on what props, shaders, and materials</mark> will the scene need as well as the <mark>loose placement and overall composition</mark>. It also gives me an opportunity to decide where to put triggers in the level for the interactive events.
 

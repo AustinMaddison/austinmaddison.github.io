@@ -1,5 +1,5 @@
 
-const observer_lozad = lozad('img, video', {
+const observer_lozad = lozad('video', {
     loaded: (el) => {
         if (el.tagName === 'IMG') {
             // Image has been lazy-loaded
@@ -15,14 +15,14 @@ const observer_lozad = lozad('img, video', {
             el.play(); // Auto-play video
         }
     },
-    threshold: 0.5, // Load elements when 50% in view
+    threshold: 0.3,
 });
 
 // Start observing elements
 observer_lozad.observe();
 
 // Pause videos when out of view
-const lazyVideos = document.querySelectorAll('video.lozad');
+const lazyVideos = document.querySelectorAll('video');
 const pauseObserver = new IntersectionObserver(
     (entries) => {
 
@@ -30,15 +30,15 @@ const pauseObserver = new IntersectionObserver(
 
             if (entry.isIntersecting) {
                 entry.target.play();
-                // console.log("play");
+                console.log("play");
 
             } else {
                 entry.target.pause();
-                // console.log("pause");
+                console.log("pause");
             }
         });
     },
-    { threshold: 0.5 }
+    { threshold: 0.3 }
 );
 
 // Observe all videos
