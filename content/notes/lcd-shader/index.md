@@ -21,7 +21,7 @@ type: notes
 
 <div class="h-5"></div>
 
-I have always been fascinated by how different materials respond under various conditions, and LCDs are no exception. A good friend of mine, [Prompt](https://thegreatwaves.github.io/) , recommended that I try a relatively new game engine on the block, [Godot 4.3](https://godotengine.org/releases/4.3/) , as we were planning to participate in a game jam soon. During my summer break, I decided to give its shader authoring system and rendering features a spin.  
+I have always been fascinated by how different materials respond under various conditions, and LCDs are no exception. A good friend of mine, [Prompt](https://thegreatwaves.github.io/), recommended that I try a relatively new game engine on the block, [Godot 4.3](https://godotengine.org/releases/4.3/), as we were planning to participate in a game jam soon. During my summer break, I decided to give its shader authoring system and rendering features a spin.  
 
 I aimed to recreate the iconic Snake game from Nokia phones but in 3D. To achieve this, I knew I had to craft an authentic-looking LCD screen; otherwise, it just wouldn't feel right. More specifically, I wanted to simulate a monochrome passive matrix LCD.
 
