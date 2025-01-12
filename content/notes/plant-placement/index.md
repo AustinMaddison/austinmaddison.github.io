@@ -5,8 +5,7 @@ description: Climate space and plant optimility based simulation that aims to tr
 thumbnail: thumbnail.webm
 cover: thumbnail.webm
 tags:
-    - terminal
-    - animation
+    - simulation
 categories:
     - personal
 draft: false
@@ -45,24 +44,21 @@ To side step simulation time, a friend of mine suggested training a machine lear
 
 ## References
 **Reference Images**  
-Forza Horizon 5 (Game)  
-Playground Games  
-Far Cry 6 (Game)  
-Ubisoft  
-The Lion King Remake (Animated Feature Film)  
-Disney + MPC VFX  
+Forza Horizon 5 (Game) - Playground Games  
+Far Cry 6 (Game) - Ubisoft  
+The Lion King Remake (Animated Feature Film) - Disney & MPC VFX  
 
 **Textbook**   
-Digital Design of Nature: Computer Generated Plants and Organics 
-Oliver Deussen, Bernd Lintermann
+Digital Design of Nature: Computer Generated Plants and Organics - Oliver Deussen, Bernd Lintermann
 
 **Current Methods**   
 Synthetic Silviculture: Multi-scale Modeling of Plant Ecosystem
 https://storage.googleapis.com/pirk.io/projects/synthetic_silviculture/index.html
+
 GPU-Based Procedural Placement in Horizon Zero Dawn
 https://www.slideshare.net/guerrillagames/gpubased-procedural-placement-in-horizon-zero-dawn
 
-Foliage Atlas Textures
+**Foliage Atlas Textures**  
 Quixel Megascans - https://quixel.com/megascans
 
 **Technology Used**  
