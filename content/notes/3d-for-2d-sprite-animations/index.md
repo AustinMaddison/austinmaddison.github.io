@@ -1,7 +1,7 @@
 ---
-title: ATK Generator
-date: 01 Aug 2021
-description: During COVID my univesity required students to take ATK tests, date them and upload the results to gain entry to onsite buildings. I thought it would funny if I could make a tool to create these images synthetically.   
+title: 3D for 2D Sprite Animations
+date: 01 Jan 2022
+description: My game-dev course assignmet required us to create pixel art sprite character animations. I really didn't want to draw frame by frame walk cycle so I resorted to rasterizing 3D animations into 2D animation sprite sheets. 
 thumbnail: thumbnail.png 
 cover: thumbnail.png
 tags:

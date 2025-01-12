@@ -1,7 +1,7 @@
 ---
-title: Simulating Realsitic Plant Placement
-date: 01 Dec 2024
-description: Climate space and plant optimility based simulation that aims to try to solve the caveats of noise/topological based scattering techniques.  
+title: Sky and Cloud Realtime Rendering Methods
+date: 01 Jul 2024
+description: I took the oppotunity to explore methods to rendering realtime sky and clouds using LUTs and raymarching for my Numerical Computation course.  
 thumbnail: thumbnail.webm
 cover: thumbnail.webm
 tags:
@@ -19,15 +19,10 @@ type: notes
   <source src="thumbnail.webm" type="video/webm">
 </video>
 
-<div class="h-5"></div>
-
-I created a set of tools to generate plant placement to used in internally in houdini or externally via houdini engine. Plant placement is fully derived by climate space attributes (preciptation, sun occlusion, temperature and so on) and plant species optimality attributes. This in hopes solves the caveat of purely noise/topological based scattering techniques for many plants species. Go see slides [here](https://www.slideshare.net/slideshow/faithful-foliage-placement-for-realtime-virtual-terrain/274538137).
-
 ## Slides 
 <iframe src="https://www.slideshare.net/slideshow/embed_code/key/UPDVcQ2ZVwoki?hostedIn=slideshare&page=upload" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 <div class="h-5"></div>
-
 
 ## Results
 <img class="mx-auto my-4" src=render_0.jpg>

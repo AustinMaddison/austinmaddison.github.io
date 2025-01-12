@@ -1,7 +1,7 @@
 ---
 title: Your Name Hero Art 
-date: 01 Jan 2024
-description: Fan art recreation of one Your Name's hero art using procedural shaders. I breakdown procedural NPR shaders in Blender 4 to compositing in After Effects.  
+date: 20 Feb 2024
+description: Fan art recreation of one Your Name's hero art. I breakdown procedural NPR shaders in Blender 4 to compositing in After Effects.  
 thumbnail: thumbnail.png
 cover: thumbnail.png
 tags:

@@ -1,7 +1,7 @@
 ---
-title: ATK Generator
-date: 01 Aug 2021
-description: During COVID my univesity required students to take ATK tests, date them and upload the results to gain entry to onsite buildings. I thought it would funny if I could make a tool to create these images synthetically.   
+title: Cozy Stylized Substance Materials
+date: 01 Apr 2022
+description: For the final project of my game-dev class, we were required to make a 3D game. I made a set of stylized materials to be used for the game.
 thumbnail: thumbnail.png 
 cover: thumbnail.png
 tags:
