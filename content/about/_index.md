@@ -35,13 +35,14 @@ Growing up in South Africa I always had these interests clash, I was drawn to th
 
 ## FAQ
 ### What is your favorite show?
-**Severance**. Its so weird, scifi and full of questions. It's also beautifully filmed for a show mostly set in clinical white rooms.  
+**Severance**. It's so weird, sci-fi and full of questions. It's also beautifully filmed, especially for a show set mostly in eerily clinical white rooms.  
 
 {{% figdiv src="3.jpg" class="my-5" %}}
 
-### What is one meal you can eat everyday?
+### What can you eat everyday?
 <span class="font-sans-thai">ขนมจีนแกงไตปลา</span>
 
+<img class="mx-auto my-5" width=600px src="image.jpg">
 
 <!-- ### Who inspires you?
 

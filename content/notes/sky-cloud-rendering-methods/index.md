@@ -8,7 +8,7 @@ tags:
     - simulation
 categories:
     - personal
-draft: false
+draft: true
 weight: 1
 type: notes
 ---
