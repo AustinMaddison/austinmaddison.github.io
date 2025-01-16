@@ -1,7 +1,7 @@
 ---
 title: Sky and Cloud Realtime Rendering Methods
 date: 01 Jul 2024
-description: I took the oppotunity to explore methods to rendering realtime sky and clouds using LUTs and raymarching for my Numerical Computation course.  
+description: I took the opportunity to explore methods to rendering realtime sky and clouds using LUTs and raymarching for my Numerical Computation course.  
 thumbnail: thumbnail.webm
 cover: thumbnail.webm
 tags:
