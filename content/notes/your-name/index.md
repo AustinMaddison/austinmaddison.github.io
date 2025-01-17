@@ -21,11 +21,14 @@ type: notes
 
 <div class="mb-8"> </div>
 
-I bought a new laptop after wrapping up work for bangkok design week. My 5 year old laptop rocking GTX 1050 and 7th generation i5 could no longer keep up. I wanted to give my new laptop for a spin. I downloaded the latest version of Blender (version 4.1 at the time) and found some inspiration and got to work.
+I bought a new laptop after wrapping up work for Bangkok Design Week. My 5-year-old laptop, equipped with a GTX 1050 and a 7th-generation i5, could no longer keep up. Eager to put my new machine to the test, I downloaded the latest version of Blender (version 4.1 at the time), found some inspiration, and got to work.
 
+---
 
+The shaders I created turned out to be surprisingly simple. Many of the components rely on remapping fractal and Voronoi noise. Thanks to Blender's shading system, all the noise textures I needed were readily available, making it easy to create the different elements. If these noise types weren’t implemented out of the box, the process would have been far more involved.
 
 <mark>You can download the .blend file [here](#project-file) if you want to follow along!</mark>
+
 
 # Breakdown
 No special plugins, just vanilla blender here. All elements are relativley simple geometry, most geometry is just a vehicle for the shaders applied over them. The shaders are actually more simple than it seems. 
@@ -102,7 +105,7 @@ I mix the mask and the colors from earlier to get the final trail
 Using blender's world shader, first I get the coordinates of the sky.
 <img src="image-21.png" class="mx-auto my-4">
 
-Then I apply some noise along an axis. This covers a hole hemisphere. 
+Then I apply some noise along an axis. This covers a whole hemisphere. 
 <div class="grid grid-cols-2 sm:grid-cols-2 my-4 gap-4">
   <img src="image-20.png" class="mx-auto my-auto">
   <img src="image-22.png" class="mx-auto my-auto">
@@ -113,6 +116,7 @@ A ramp is then used to limit the values to form a ring.
 <img src="image-23.png" class="mx-auto my-4">
 
 Lastly I mix the night sky blue colors to the greyscale mask made previously and from the sky vertical cooridinates.
+
 <img src="image-40.png" class="mx-auto my-4">
 <img src="image-24.png" class="mx-auto my-4">
 
