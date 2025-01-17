@@ -1,7 +1,7 @@
 ---
 title: Your Name Hero Art 
 date: 20 Feb 2024
-description: Fan art recreation of one Your Name's hero art. I breakdown procedural NPR shaders in Blender 4 to compositing in After Effects.  
+description: Fan art recreation of one Your Name's hero art. I breakdown procedural NPR shaders in Blender 4.  
 thumbnail: thumbnail.webm
 cover: thumbnail.png
 tags:
@@ -15,7 +15,7 @@ type: notes
 
 {{% header %}}
 
-<iframe class="w-full" height="360px" src="https://www.youtube.com/embed/x5DszBeoHWU?si=E6zmq-Kp3f46g7dh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1047475777?h=d586fa63b6&amp;muted=1&amp;autoplay=1&amp;loop=1&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Your Name Fan Art [Free Blender .blend Project File]"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 
 
@@ -28,64 +28,137 @@ I bought a new laptop after wrapping up work for bangkok design week. My 5 year 
 <mark>You can download the .blend file [here](#project-file) if you want to follow along!</mark>
 
 # Breakdown
-All elements are relativley simple geometry, most geometry is just a vehicle for the shaders applied over them. I do not use any special plugins, just vanilla blender here.
+No special plugins, just vanilla blender here. All elements are relativley simple geometry, most geometry is just a vehicle for the shaders applied over them. The shaders are actually more simple than it seems. 
 
 ## Trail
 
 #### Geometry
 The trails are made from simple quad ribbons that that are shaped by splines. Splines are easy to manipulate to make the arcs in the trail. I also ensure their UVs are reasonably layed out so I can map colors and create shapes onto them. 
 
-![alt text](image-1.png)
+
+<div class="grid grid-cols-2 sm:grid-cols-2 my-4 gap-4">
+  <img src="image-1.png" class="mx-auto my-auto">
+  <img src="image-8.png" class="mx-auto my-auto">
+</div>
+
+
 
 
 #### Color
 
-![alt text](image-6.png)
+I isolate vertical axis and map the purple, blue 'ish' gradient to like you find in the anime. I alos add some fractal noise to break up the uniformity.
 
-![alt text](image-7.png)
-
-
-
-#### Transparency
-Since the trail is UVed, to make a verical fade, we just need to isolate 1 of the axes.
-
-![alt text](image.png)
-
-![alt text](image-3.png)
-
-![alt text](image-4.png)
+<div class="grid grid-cols-2 sm:grid-cols-2 my-4 gap-4">
+  <img src="image-6.png" class="mx-auto my-auto">
+  <img src="image-7.png" class="mx-auto my-auto">
+</div>
 
 
+#### Mask
+Since the trail is UVed, to make a verical fade, again can isolate the vertical axis. We can use the vertical positions and remap them to new values to create streaks, like we did for the color gradient earlier.
+
+<img src="image.png" class="my-4 mx-auto">
+
+<div class="grid grid-cols-2 sm:grid-cols-2 my-4 gap-4">
+  <img src="image-3.png" class="mx-auto my-auto">
+  <img src="image-4.png" class="mx-auto my-auto">
+</div>
+
+To break up uniformity, I add some fractal noise. 
+
+<div class="grid grid-cols-2 sm:grid-cols-2 my-4 gap-4">
+  <img src="image-9.png" class="mx-auto my-auto">
+  <img src="image-11.png" class="mx-auto my-auto">
+</div>
+
+Then for the cool magical waves I used a vornoi noise but stretched vertically.
+<div class="grid grid-cols-2 sm:grid-cols-2 my-4 gap-4">
+  <img src="image-10.png" class="mx-auto my-auto">
+  <img src="image-12.png" class="mx-auto my-auto">
+</div>
+
+To animate the waves I used the python expression (field highlighted in purple) on the mapping nodes's translation `frame * 0.001` translate it along the horizontal direction overtime.
+
+<img src="image-10.png" class="my-4 mx-auto">
 
 
-
-#### Waves
-
+Then I combine back with the streaks to get this.
 
 
+<img src="image-13.png" class="my-4 mx-auto">
 
 
+#### Combine
+I mix the mask and the colors from earlier to get the final trail
 
-
+<img src="image-15.png" class="mx-auto my-4">
+<img src="image-14.png" class="mx-auto my-4">
 
 
 
 ## Sky
 
-#### Geometry
+#### Simple Sky Gradient and Ring
+Using blender's world shader, first I get the coordinates of the sky.
+<img src="image-21.png" class="mx-auto my-4">
 
-#### Vornoi Noise
+Then I apply some noise along an axis. This covers a hole hemisphere. 
+<div class="grid grid-cols-2 sm:grid-cols-2 my-4 gap-4">
+  <img src="image-20.png" class="mx-auto my-auto">
+  <img src="image-22.png" class="mx-auto my-auto">
+</div>
 
-#### 3D Fractal Noise  
+A ramp is then used to limit the values to form a ring.
+
+<img src="image-23.png" class="mx-auto my-4">
+
+Lastly I mix the night sky blue colors to the greyscale mask made previously and from the sky vertical cooridinates.
+<img src="image-40.png" class="mx-auto my-4">
+<img src="image-24.png" class="mx-auto my-4">
+
+
+#### Colored Stars
+
+![alt text](image-16.png)
+
+![alt text](image-17.png)
+
+![alt text](image-19.png)
+
+![alt text](image-18.png)
+
+#### Combine
+![alt text](image-25.png)
+
+
+
 
 ## Clouds
 
-#### 3D Vornoi Noise
+![alt text](image-26.png)
+![alt text](image-27.png)
+
+
+![alt text](image-29.png)
+![alt text](image-30.png)
+![alt text](image-33.png)
+![alt text](image-35.png)
+
+#### Shaping Clouds
+![alt text](image-39.png)
+![alt text](image-28.png)
+
+#### Coloring Clouds
+![alt text](image-38.png)
+![alt text](image-36.png)
+
+#### Combine
+![alt text](image-37.png)
 
 
 
 ## Compositing
-I wanted to push the render a little more with some post-process effects and color grading that to enhance the composition. Also I add the official typography over the top to seal the deal. 
+Did some color grading, added lensflares, glare, and film grain to seal the deal in After Effects. 
 
 # Project File
 https://github.com/AustinMaddison/Your-Name/releases/tag/V1
