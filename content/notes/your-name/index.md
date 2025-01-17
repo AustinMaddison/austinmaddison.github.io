@@ -31,7 +31,6 @@ The shaders I created turned out to be surprisingly simple. Many of the componen
 
 
 # Breakdown
-No special plugins, just vanilla blender here. All elements are relativley simple geometry, most geometry is just a vehicle for the shaders applied over them. The shaders are actually more simple than it seems. 
 
 ## Trail
 
@@ -122,10 +121,12 @@ Lastly I mix the night sky blue colors to the greyscale mask made previously and
 
 
 #### Colored Stars
+To create many randomly distrubuted dots of diifferent sizes and positions, I found inverted vornoi to be a good way to do this.
 
-![alt text](image-16.png)
-
-![alt text](image-17.png)
+<div class="grid grid-cols-2 sm:grid-cols-2 my-4 gap-4">
+  <img src="image-16.png" class="mx-auto my-auto">
+  <img src="image-17.png" class="mx-auto my-auto">
+</div>
 
 ![alt text](image-19.png)
 
