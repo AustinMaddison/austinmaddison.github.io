@@ -1,7 +1,7 @@
 ---
-title: Your Name Hero Art 
+title: Your Name 
 date: 20 Feb 2024
-description: Fan art recreation of one Your Name's hero art. I breakdown procedural NPR shaders in Blender 4.  
+description: Fan art recreation of one Your Name's art. I breakdown procedural NPR shaders in Blender 4.  
 thumbnail: thumbnail.webm
 cover: thumbnail.png
 tags:
