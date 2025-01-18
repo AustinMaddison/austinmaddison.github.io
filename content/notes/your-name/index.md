@@ -114,21 +114,21 @@ A ramp is then used to limit the values to form a ring.
 
 <img src="image-23.png" class="mx-auto my-4">
 
-Lastly I mix the night sky blue colors to the greyscale mask made previously and from the sky vertical cooridinates.
+Lastly I mix the night sky blue colors to the greyscale mask made previously and from the sky vertical coordinates.
 
 <img src="image-40.png" class="mx-auto my-4">
 <img src="image-24.png" class="mx-auto my-4">
 
 
 #### Colored Stars
-To create many randomly distrubuted dots of diifferent sizes and positions, I found inverted vornoi to be a good way to do this.
+To create many randomly distributed dots of different sizes and positions, I found inverted vornoi to be a good way to do this.
 
 <div class="grid grid-cols-2 sm:grid-cols-2 my-4 gap-4">
   <img src="image-16.png" class="mx-auto my-auto">
   <img src="image-17.png" class="mx-auto my-auto">
 </div>
 
-Since the stars are a little too unifrom, I clustered the stars using a mask. The mask again using scaled up fractal noise.  
+Since the stars are a little too uniform, I clustered the stars using a mask. The mask again using scaled up fractal noise.  
 
 <img src="image-19.png" class="mx-auto my-4">
 
@@ -152,7 +152,7 @@ Used a modified uv sphere primitive to encompass the scene to render the clouds 
 
 
 #### Base Noise
-The base noise used to shape and color the clouds are made from 3 noises. 2 vornois with different scales and detailed 1 fractal noise.
+The base noise used to shape and color the clouds are made from 3 noises. 2 vornois with different scales and 1 detailed fractal noise.
 
 <img src="image-27.png" class="mx-auto my-4">
 
@@ -163,13 +163,13 @@ The base noise used to shape and color the clouds are made from 3 noises. 2 vorn
   <img src="image-33.png" class="mx-auto my-auto">
 </div>
 
-The output of all these 3 noises mixed together
+The output of all these 3 noises mixed together.
 <img src="image-35.png" class="mx-auto my-4">
 
 
 #### Shaping Clouds
 
-Using the base the noise, shape of the clouds can be defined with a ramp.
+Using the base noise, to shape the clouds a ramp is used.
 
 <img src="image-39.png" class="mx-auto my-4">
 <img src="image-28.png" class="mx-auto my-4">
@@ -188,7 +188,7 @@ Lastly mask the colors out using the shape made earlier... 'tada', clouds.
 <img src="image-37.png" class="mx-auto my-4">
 
 ## Compositing
-For post-processing, I added lens-flares, color grades and added film grain in after effects. Made a 16x9 and 9x19 version for desktop and mobile phone wallpapers.
+For post-processing, I added lens-flares, color graded a little and applied film grain in after effects. Made a 16x9 and 9x19 version for desktop and mobile phone wallpapers.
 
 
 <div class="grid grid-cols-2 sm:grid-cols-2 my-4 gap-4">
