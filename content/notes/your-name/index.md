@@ -128,43 +128,76 @@ To create many randomly distrubuted dots of diifferent sizes and positions, I fo
   <img src="image-17.png" class="mx-auto my-auto">
 </div>
 
-![alt text](image-19.png)
+Since the stars are a little too unifrom, I clustered the stars using a mask. The mask again using scaled up fractal noise.  
 
-![alt text](image-18.png)
+<img src="image-19.png" class="mx-auto my-4">
+
+
+Then to apply colors on the stars, multiplying colored noise made using fractal noise and a color ramp does the trick. 
+
+<img src="image-18.png" class="mx-auto my-4">
+
 
 #### Combine
-![alt text](image-25.png)
 
-
+Lastly mix the stars with the sky gradient made earlier.
+<img src="image-25.png" class="mx-auto my-4">
 
 
 ## Clouds
 
-![alt text](image-26.png)
-![alt text](image-27.png)
+#### Geometry
+Used a modified uv sphere primitive to encompass the scene to render the clouds on. 
+<img src="image-26.png" class="mx-auto my-4">
 
 
-![alt text](image-29.png)
-![alt text](image-30.png)
-![alt text](image-33.png)
-![alt text](image-35.png)
+#### Base Noise
+The base noise used to shape and color the clouds are made from 3 noises. 2 vornois with different scales and detailed 1 fractal noise.
+
+<img src="image-27.png" class="mx-auto my-4">
+
+
+<div class="grid grid-cols-3 sm:grid-cols-3 my-4 gap-2">
+  <img src="image-29.png" class="mx-auto my-auto">
+  <img src="image-30.png" class="mx-auto my-auto">
+  <img src="image-33.png" class="mx-auto my-auto">
+</div>
+
+The output of all these 3 noises mixed together
+<img src="image-35.png" class="mx-auto my-4">
+
 
 #### Shaping Clouds
-![alt text](image-39.png)
-![alt text](image-28.png)
+
+Using the base the noise, shape of the clouds can be defined with a ramp.
+
+<img src="image-39.png" class="mx-auto my-4">
+<img src="image-28.png" class="mx-auto my-4">
+
 
 #### Coloring Clouds
-![alt text](image-38.png)
-![alt text](image-36.png)
+Similarly, to color the clouds, a color ramp was used to map the desired cloud colors onto the base noise.
 
-#### Combine
-![alt text](image-37.png)
+<img src="image-38.png" class="mx-auto my-4">
+<img src="image-36.png" class="mx-auto my-4">
 
+#### Combine  
 
+Lastly mask the colors out using the shape made earlier... 'tada', clouds.
+
+<img src="image-37.png" class="mx-auto my-4">
 
 ## Compositing
-Did some color grading, added lensflares, glare, and film grain to seal the deal in After Effects. 
+For post-processing, I added lens-flares, color grades and added film grain in after effects. Made a 16x9 and 9x19 version for desktop and mobile phone wallpapers.
 
-# Project File
+
+<div class="grid grid-cols-2 sm:grid-cols-2 my-4 gap-4">
+<img src="Wallpaper 16x9 720p.png" class="mx-auto my-auto">
+<img src="9x19.png" class="mx-auto my-auto">
+</div>
+
+
+
+# Blender Project File (.blend)
 https://github.com/AustinMaddison/Your-Name/releases/tag/V1
 
