@@ -198,6 +198,6 @@ For post-processing, I added lens-flares, color graded a little and applied film
 
 
 
-# Blender Project File (.blend)
+# Project File
 https://github.com/AustinMaddison/Your-Name/releases/tag/V1
 
