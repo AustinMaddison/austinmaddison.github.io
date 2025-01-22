@@ -2,7 +2,7 @@
 title: Hello Mascot!
 date: 10 Sep 2023
 description: Interactive installation project for my internship at Adapter Digital.
-thumbnail: thumbnail.jpg
+thumbnail: thumbnail.webm
 cover: null
 tags:
   - installation
