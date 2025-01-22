@@ -1,7 +1,7 @@
 ---
 title: Lanterns
 date: 01 Jan 2022
-description: One of the early assignments for my game-dev course required us to create very simple emmisive lanterns. I took some liberties and brought the assignment to the max. 
+description: One of the early assignments for my game-dev course required us to create very simple emmisive lanterns in Unity. I took some liberties and brought the assignment to the max. 
 thumbnail: thumbnail.webm 
 cover: thumbnail.png
 tags:
