@@ -8,7 +8,7 @@ menus:
 # About Me
 
 <b>TL;DR</b>  
-I aspire to develop high-performance interactive tools and software for creatives and engineers in areas related to computer graphics.
+I aspire to develop real-time interactive tools and software for creatives and engineers in areas related to computer graphics.
 
 ---
 
