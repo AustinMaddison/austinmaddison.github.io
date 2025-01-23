@@ -6,19 +6,19 @@ menus:
 ---
 
 # About Me
-I am a programmer and designer navigating the intersection of technology and art. I'm currently an undergraduate student majoring in computer science at Mahidol University. Although I'm pivoting away from a career focused in purely on design and technical art, my passion remains in computer graphics. 
 
-By all means I am not a computer graphics expert. I have been a computer graphics artist and enthusiast for years and only recently begun my journey into technical parts of computing. 
-
-Currently, I'm particularly interested in visualization, tooling, scene description and shader development for real-time and offline productions.
-
-<b>TL;DR</b> I aspire to make tools for creatives.
+<b>TL;DR</b>  
+I aspire to develop high-performance interactive tools and software for creatives and engineers in areas related to computer graphics.
 
 ---
 
-While I won't display my prior design work here, you can find them on my [Behance](https://www.behance.net/austinmaddison) portfolio. 
+I am a <mark>programmer and designer</mark> navigating the intersection of technology and art. I'm currently an undergraduate student majoring in computer science at Mahidol University. Although I'm pivoting away from a career focused in purely on design and technical art, my passion remains in computer graphics. 
+
+Currently, I'm particularly interested in <mark>visualization/simulation, tooling, scene description and shader development for real-time and offline productions.</mark>
 
 Other things that I like doing outside of computers and art is cooking, binging albums, horror games, a hike in nature and sipping on ice cold <span class="font-sans-thai font-normal tracking-tight">ชามะนาว</span>.
+
+
 
 <!-- ---
 
@@ -32,6 +32,10 @@ Growing up in South Africa I always had these interests clash, I was drawn to th
 ## Experience
 
 {{< experience >}}
+
+<div class="my-5">
+
+> While I won't display my prior design work here, you can find them on my [Behance](https://www.behance.net/austinmaddison) portfolio. 
 
 ## FAQ
 ### What is your favorite show?
