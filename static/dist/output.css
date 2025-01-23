@@ -4428,8 +4428,66 @@ body {
   line-height: 1.25rem;
 }
 
+.\[\&\>p\]\:text-\[15pt\]>p{
+  font-size: 15pt;
+}
+
+.\[\&\>p\]\:text-\[0\.8rem\]>p{
+  font-size: 0.8rem;
+}
+
+.\[\&\>p\]\:text-\[0\.9rem\]>p{
+  font-size: 0.9rem;
+}
+
+.\[\&\>p\]\:text-\[0\.95rem\]>p{
+  font-size: 0.95rem;
+}
+
+.\[\&\>p\]\:text-\[0\.85rem\]>p{
+  font-size: 0.85rem;
+}
+
+.\[\&\>p\]\:text-\[0\.90rem\]>p{
+  font-size: 0.90rem;
+}
+
+.\[\&\>p\]\:text-\[\]>p{
+  color: ;
+}
+
+.\[\&\>p\]\:text-\[1\]>p{
+  color: 1;
+}
+
+.\[\&\>p\]\:text-\[15\]>p{
+  color: 15;
+}
+
+.\[\&\>p\]\:text-\[0\.\]>p{
+  color: 0.;
+}
+
+.\[\&\>p\]\:text-\[0\.8re\]>p{
+  color: 0.8re;
+}
+
+.\[\&\>p\]\:text-\[0\.rem\]>p{
+  color: 0.rem;
+}
+
 .first\:\[\&\>p\]\:\!mt-4>p:first-child{
   margin-top: 1rem !important;
+}
+
+@media (min-width: 640px){
+  .sm\:\[\&\>p\]\:text-\[0\.95rem\]>p{
+    font-size: 0.95rem;
+  }
+
+  .sm\:\[\&\>p\]\:text-\[0\.15rem\]>p{
+    font-size: 0.15rem;
+  }
 }
 
 .\[\&\>span\]\:px-2>span{
