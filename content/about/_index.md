@@ -12,22 +12,15 @@ I aspire to develop real-time interactive tools and software for creatives and e
 
 ---
 
-I am a <mark>programmer and designer</mark> navigating the intersection of technology and art. I'm currently an undergraduate student majoring in computer science at Mahidol University. Although I'm pivoting away from a career focused in purely on design and technical art, my passion remains in computer graphics. 
+I am a programmer navigating and undergraduate student majoring in computer science at Mahidol University. Although I'm pivoting away from a career focused on design and technical art, my passion remains in computer graphics. 
 
-Currently, I'm particularly interested in <mark>visualization/simulation, tooling, scene description and shader development for real-time and offline productions.</mark>
+Currently, I'm particularly interested in <mark>visualization, simulation, tooling, and computer aided design applications for real-time and offline productions.</mark>
 
 Other things that I like doing outside of computers and art is cooking, binging albums, horror games, a hike in nature and sipping on ice cold <span class="font-sans-thai font-normal tracking-tight">ชามะนาว</span>.
 
-
-
 <!-- ---
-
 Growing up in South Africa I always had these interests clash, I was drawn to the arts but I was also drawn to the maths and sciences. I was fascinated to know how things were made, I always watched the extras on all the DVDs I had at home and binged the hell out of How Its Made on the Discovery channel. I loved creation and how math and sciences were the means of doing that. However there was this notion growing up that these interests were to be separate. Attempting of having a deep interest in both were seen as counterproductive or unrealistic. Yet to me it always made sense that having a deep interest in both the arts and STEM could coexist and even intersect each other in interesting ways.
-
 --- -->
-
-
-
 
 ## Experience
 
