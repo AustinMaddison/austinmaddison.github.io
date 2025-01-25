@@ -4209,10 +4209,6 @@ body {
     line-height: 1;
   }
 
-  .sm\:text-\[0\.65rem\]{
-    font-size: 0.65rem;
-  }
-
   .sm\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
