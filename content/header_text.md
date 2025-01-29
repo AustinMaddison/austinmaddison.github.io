@@ -5,7 +5,6 @@ draft: "false"
 
 <div class=" text-zinc-50 transition-all cursor-default text-sm">Computer finger painter.</div>
 <div class="text-zinc-50 transition-all cursor-default text-sm mb-2">CS undergraduate at MUIC, TH.</div>
-<div class="text-zinc-50 transition-all cursor-default text-sm mb-2">"Art challenges technology; technology inspires the art."</div>
 
 <div class="text-zinc-50 transition-all cursor-default text-sm"> <span class="font-sans-thai text-base">ชามะนาว</span> addict.</div>
 <div class="text-zinc-50 transition-all cursor-default text-xs"> 
