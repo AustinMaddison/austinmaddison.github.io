@@ -12,7 +12,7 @@ I aspire to develop real-time interactive tools and software for creatives and e
 
 ---
 
-I am a programmer navigating and undergraduate student majoring in computer science at Mahidol University. Although I'm pivoting away from a career focused on design and technical art, my passion remains in computer graphics. 
+I am an undergraduate student majoring in computer science at Mahidol University. Although I'm pivoting away from a career focused on design and technical art, my passion remains in computer graphics. 
 
 Currently, I'm particularly interested in <mark>visualization, simulation, tooling, and computer aided design applications for real-time and offline productions.</mark>
 
